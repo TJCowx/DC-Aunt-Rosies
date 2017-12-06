@@ -4,7 +4,7 @@
 library
 C#
 .cs
-D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\
 eisiWare
 none
 false
@@ -16,5 +16,5 @@ DEBUG;TRACE
 13-998043398
 NumericUpDown.xaml;
 
-False
+True
 

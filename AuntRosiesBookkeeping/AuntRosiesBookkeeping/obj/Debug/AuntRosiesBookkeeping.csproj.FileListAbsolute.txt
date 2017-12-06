@@ -87,3 +87,6 @@ D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\AuntRosiesBookkeeping\AuntR
 D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\AuntRosiesBookkeeping.csproj.GenerateResource.Cache
 D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\Views\ManageEmployeesView.g.cs
 D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\Views\ManageEmployeesView.baml
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\AuntRosiesBookkeeping.exe.config
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\AuntRosiesBookkeeping.exe
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\AuntRosiesBookkeeping.pdb

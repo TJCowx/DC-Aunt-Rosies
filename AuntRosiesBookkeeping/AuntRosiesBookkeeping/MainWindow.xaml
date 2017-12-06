@@ -1,0 +1,115 @@
+﻿<Window x:Class="AuntRosiesBookkeeping.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:AuntRosiesBookkeeping"
+    xmlns:viewmodels="clr-namespace:AuntRosiesBookkeeping.ViewModels"
+    xmlns:views="clr-namespace:AuntRosiesBookkeeping.Views"
+    mc:Ignorable="d"
+    Title="Aunt Rosie's Bookkeeping" MinHeight="496" MinWidth="696" MaxHeight="496" MaxWidth="696" Loaded="MainWindow_Loaded"
+        Background="WhiteSmoke" >
+
+    <Window.Resources>
+        <!-- FILES ITEMS VIEWS -->
+        <DataTemplate x:Name="homeViewTemplate" DataType="{x:Type viewmodels:HomeViewModel}">
+            <Grid Margin="5,5,5,5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.40*"/>
+                    <ColumnDefinition Width="0.30*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0.30*"/>
+                    <ColumnDefinition Width="0.40*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.25*"/>
+                    <RowDefinition Height="1.25*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="0.70*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="0.70*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="0.70*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="0.70*"/>
+                    <RowDefinition Height="0.5*"/>
+                </Grid.RowDefinitions>
+                <!--TITLE-->
+                <Image Name="imgLogo" Source="/AuntRosiesBookkeeping;component/Resources/logo.png" Grid.Row="1" Grid.Column="1" />
+                <Viewbox Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3">
+                    <Label Name="lblTitle" Content="Aunt Rosie's Pies and Preserves Bookkeeping" BorderThickness="0.5" BorderBrush="Black"/>
+                </Viewbox>
+                <!--NAVIGATION BUTTONS-->
+                <Button Name="btnTransactions" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="3" Click="btnTransactions_Click" >
+                    <Viewbox>
+                        <Label Content="Process Transactions"/>
+                    </Viewbox>
+                </Button>
+                <Button Name="btnReports" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3" Click="btnReports_Click">
+                    <Viewbox>
+                        <Label Content="Reports" />
+                    </Viewbox>
+                </Button>
+                <Button Name="btnProductInventory" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="3" Click="btnProductInventory_Click">
+                    <Viewbox>
+                        <Label Content="Manage Product Inventory"/>
+                    </Viewbox>
+                </Button>
+                <Button Name="btnIngredientInventory" Grid.Row="9" Grid.Column="2" Grid.ColumnSpan="3" Click="btnIngredientInventory_Click">
+                    <Viewbox>
+                        <Label Content="Manage Ingredient Inventory"/>
+                    </Viewbox>
+                </Button>
+            </Grid>
+        </DataTemplate>
+        <!-- TOOLS ITEMS VIEWS -->
+        <DataTemplate x:Name="transactionViewTemplate" DataType="{x:Type viewmodels:TransactionViewModel}">
+            <views:TransactionView DataContext="{Binding}" />
+        </DataTemplate>
+        <DataTemplate x:Name="manageProductsViewTemplate" DataType="{x:Type viewmodels:ManageProductsViewModel}">
+            <views:ManageProductsView DataContext="{Binding}" />
+        </DataTemplate>
+        <DataTemplate x:Name="manageInventoryViewTemplate" DataType="{x:Type viewmodels:ManageInventoryViewModel}" >
+            <views:ManageInventoryView DataContext="{Binding}" />
+        </DataTemplate>
+        <DataTemplate x:Name="manageEmployeesViewTemplate" DataType="{x:Type viewmodels:ManageEmployeeViewModel}" >
+            <views:ManageEmployeesView DataContext="{Binding}" />
+        </DataTemplate>
+        <!-- REPORT ITEMS VIEWS -->
+        <DataTemplate x:Name="reportsViewTemplate" DataType="{x:Type viewmodels:ReportsViewModel}">
+            <views:ReportsView DataContext="{Binding}" />
+        </DataTemplate>
+        <!-- HELP ITEMS VIEWS -->
+    </Window.Resources>
+    
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Home" Name="mnuHome" Click="mnuHome_Click"/>
+                <Separator />
+                <MenuItem Header="_Quit" Name="mnuQuit" Click="mnuQuit_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Tools">
+                <MenuItem Header="_Process Transactions" Name="mnuProcessTransactions" Click="mnuProcessTransactions_Click"/>
+                <MenuItem Header="Manage _Ingredients" Name="mnuManageIngredients" Click="mnuManageIngredients_Click"/>
+                <MenuItem Header="_Manage Products" Name="mnuManageProducts" Click="mnuManageProducts_Click"/>
+                <MenuItem Header="Manage _Employees" Name="mnuManageEmployees" Click="mnuManageEmployees_Click" />
+            </MenuItem>
+            <MenuItem Header="_Reports">
+                <MenuItem Header="_Ingredients Inventory" Name="mnuRptIngredientsInv" Click="mnuRptIngredientsInv_Click"/>
+                <MenuItem Header="_Products Inventory" Name="mnuRptProductsInv" Click="mnuRptProductsInv_Click"/>
+                <MenuItem Header="_Sales" Name="mnuRptSales" Click="mnuRptSales_Click"/>
+                <MenuItem Header="_Employees" Name="mnuRptEmployees" Click="mnuRptEmployees_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="_About" Name="mnuAbout"/>
+            </MenuItem>
+        </Menu>
+
+        <ContentControl Content="{Binding}"/>
+
+    </DockPanel>
+
+</Window>

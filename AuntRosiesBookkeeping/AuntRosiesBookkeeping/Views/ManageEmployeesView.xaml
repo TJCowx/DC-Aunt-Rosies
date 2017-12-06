@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="AuntRosiesBookkeeping.Views.ManageEmployeesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AuntRosiesBookkeeping.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="496" d:DesignWidth="696">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.75*"/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="0.75*"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="0.9*"/>
+        </Grid.RowDefinitions>
+        
+        <!-- LISTBOX HORIZONTAL DISPLAYS EVERYTHING-->
+        <ListBox Name="lstEmployees" Grid.Row="1" Margin="10,5,10,5" Grid.ColumnSpan="4"/>
+
+        <!-- EMPLOYEE INFORMATION OTHER HALF OF THE FORM -->
+        <!-- First Name ** Textbox -->
+        <Label Name="lblEmployeeFirstName" Content="_First Name" Grid.Row="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
+        <TextBox Name="txtEmployeeFirstName" Grid.Row="2" Grid.Column="1" Margin="5" />
+
+        <!-- Last Name ** Textbox -->
+        <Label Name="lblEmployeeLastName" Content="_Last Name" Grid.Row="3"  HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
+        <TextBox Name="txtEmployeeLastName" Grid.Row="3" Grid.Column="1" Margin="5"/>
+
+        <!-- Type ** Combobox(Part-time, Full-time) -->
+        <Label Name="lblEmployeeType" Content="_Type" Grid.Row="4" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
+        <ComboBox Name="cmbEmployeeType" Grid.Row="4" Grid.Column="1"  Margin="5"/>
+
+        <!-- Phone number ** textbox-->
+        <Label Name="lblPhoneNumber" Content="_Phone Number" Grid.Row="5" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
+        <TextBox Name="txtPhoneNumber" Grid.Row="5" Grid.Column="1" Margin="5" />
+
+        <!-- Altername phone number **textbox -->
+        <Label Name="lblCellPhoneNumber" Content="Cell Phone _Number" Grid.Row="6" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
+        <TextBox Name="txtCellPhoneNumber" Grid.Row="6" Grid.Column="1" Margin="5" />
+        
+        <!-- Address ** textbox -->
+        <Label Name="lblAddress" Content="_Address" Grid.Row="2" Grid.Column="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
+        <TextBox Name="txtAddress" Grid.Column="3" Grid.Row="2" HorizontalContentAlignment="Right" Margin="5" />
+        
+        <!-- City ** textbox -->
+        <Label Name="lblCity" Content="_City" Grid.Row="3" Grid.Column="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
+        <TextBox Name="txtCity" Grid.Column="3" Grid.Row="3" HorizontalContentAlignment="Right" Margin="5" />
+        
+        <!-- Province ** texbox -->
+        <Label Name="lblProvince" Content="Pro_vince" Grid.Row="4" Grid.Column="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
+        <TextBox Name="txtProvince" Grid.Column="3" Grid.Row="4" HorizontalContentAlignment="Right" Margin="5" />
+        
+        <!-- Postal Code ** textbot -->
+        <Label Name="lblPostalCode" Content="Pos_tal Code" Grid.Row="5" Grid.Column="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
+        <TextBox Name="txtPostalCode" Grid.Column="3" Grid.Row="5" HorizontalContentAlignment="Right" Margin="5" />
+
+        <!-- Salary -->
+        <Label Name="lblSalary" Content="Employee _Salary" Grid.Row="6" Grid.Column="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
+        <TextBox Name="txtSalary" Grid.Row="6" Grid.Column="3" Margin="5" />
+
+        <!-- Add new employee -->
+        <Button Name="btnNew" Content="_New Employee" Grid.Row="7" Grid.Column="2" Margin="5" />
+
+        <!-- Save Changes -->
+        <Button Name="btnSave" Content="Save Changes" Grid.Row="7" Grid.Column="3" Margin="5" />
+        
+    </Grid>
+    
+</UserControl>

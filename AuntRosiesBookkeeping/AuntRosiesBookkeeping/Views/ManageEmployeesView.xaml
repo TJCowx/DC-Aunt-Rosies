@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:AuntRosiesBookkeeping.Views"
+             xmlns:custom="clr-namespace:eisiWare;assembly=NumericUpDown"
              mc:Ignorable="d" 
              d:DesignHeight="496" d:DesignWidth="696">
     <Grid>
@@ -75,7 +76,7 @@
 
         <!-- Salary -->
         <Label Name="lblSalary" Content="Employee _Salary" Grid.Row="7" Grid.Column="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
-        <TextBox Name="txtSalary" Grid.Row="7" Grid.Column="3" Margin="5" />
+        <TextBox Name="txtSalary" Grid.Row="7" Grid.Column="3" Margin="5" PreviewTextInput="txtSalary_PreviewTextInput" />
 
         <!-- Add new employee -->
         <Button Name="btnNew" Content="_New Employee" Grid.Row="8" Grid.Column="2" Margin="5" />

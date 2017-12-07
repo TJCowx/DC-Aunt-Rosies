@@ -37,11 +37,11 @@
         <!-- EMPLOYEE INFORMATION OTHER HALF OF THE FORM -->
         <!-- First Name ** Textbox -->
         <Label Name="lblEmployeeFirstName" Content="_First Name" Grid.Row="3" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
-        <TextBox Name="txtEmployeeFirstName" Grid.Row="3" Grid.Column="1" Margin="5" />
+        <TextBox Name="txtEmployeeFirstName" Grid.Row="3" Grid.Column="1" Margin="5" PreviewTextInput="txtEmployeeFirstName_PreviewTextInput" />
 
         <!-- Last Name ** Textbox -->
         <Label Name="lblEmployeeLastName" Content="_Last Name" Grid.Row="4"  HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
-        <TextBox Name="txtEmployeeLastName" Grid.Row="4" Grid.Column="1" Margin="5"/>
+        <TextBox Name="txtEmployeeLastName" Grid.Row="4" Grid.Column="1" Margin="5" PreviewTextInput="txtEmployeeLastName_PreviewTextInput"/>
 
         <!-- Type ** Combobox(Part-time, Full-time) -->
         <Label Name="lblEmployeeType" Content="_Type" Grid.Row="5" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />

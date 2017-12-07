@@ -118,3 +118,6 @@ D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBo
 D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\AuntRosiesBookkeeping.g.resources
 D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\AuntRosiesBookkeeping.Properties.Resources.resources
 D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\AuntRosiesBookkeeping.csproj.GenerateResource.Cache
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\AuntRosiesBookkeeping.exe.config
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\AuntRosiesBookkeeping.exe
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\AuntRosiesBookkeeping.pdb

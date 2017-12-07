@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -36,5 +37,25 @@ namespace AuntRosiesBookkeeping.Views
             recipe.Show();
         }
 
+        private void txtPrice_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            var salary = sender as TextBox;     // Stores the textbox as a variable
+
+            // Checks to see if there is a number to two decimal points
+            if (Regex.IsMatch(salary.Text, @"^[0-9]+\.[0-9]{2}$"))
+            {
+                e.Handled = !Regex.IsMatch(e.Text, "a^");   // Filters out any input
+            }
+            // Checks to see if there is a decimal point
+            else if (salary.Text.Contains("."))
+            {
+                e.Handled = Regex.IsMatch(e.Text, "[^0-9]+");  // Allows only numbers 
+            }
+            // Otherwise
+            else
+            {
+                e.Handled = Regex.IsMatch(e.Text, "[^0-9.-]+");     // Allows numbers and decimals
+            }
+        }
     }
 }

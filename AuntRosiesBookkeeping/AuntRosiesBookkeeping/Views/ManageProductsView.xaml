@@ -48,7 +48,7 @@
                 <Label Name="lblQtyTitle" Content="_Qty" Grid.Column="0" Grid.Row="2" HorizontalContentAlignment="Right"/>
                 <custom:NumericUpDown Name="numQtyProd" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2"  />
                 <Label Name="lblPriceTitle" Content="_Price" Grid.Row="3" HorizontalContentAlignment="Right" />
-                <TextBox Name="txtPrice" Grid.Row="3" Grid.Column="1" Margin="5" Grid.ColumnSpan="3"/>
+                <TextBox Name="txtPrice" Grid.Row="3" Grid.Column="1" Margin="5" Grid.ColumnSpan="3" PreviewTextInput="txtPrice_PreviewTextInput"/>
                 <Button Name="btnChangeRecipe" Content="_Change Recipe" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" Click="btnChangeRecipe_Click"/>
                 <Button Name="btnSaveChanges" Content="_Save Changes" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Margin="5"/>
             </Grid>

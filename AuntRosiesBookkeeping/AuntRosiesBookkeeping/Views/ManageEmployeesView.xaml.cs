@@ -52,6 +52,91 @@ namespace AuntRosiesBookkeeping.Views
                 e.Handled = Regex.IsMatch(e.Text, "[^0-9.-]+");     // Allows numbers and decimals
             }
         }
-        
+
+        /// <summary>
+        /// Validates all the fields and a confirmation before it submits the changes to the database
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            // TODO: VALIDATE FIELDS
+
+
+            // TODO: CONFIRM SAVED CHANGES
+            if (MessageBox.Show("Save changes?", "Confirm Changes", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes)
+            {
+                // TODO: INSERT CHANGES INTO THE DATABASE
+
+            }
+            else
+            {
+                // TODO: idk sometihng if necessary
+            }
+            
+        }
+
+        /// <summary>
+        /// Validates the input in the phone number textbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void txtPhoneNumber_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            var phoneNumber = sender as TextBox;     // Stores the textbox as a variable
+            if (phoneNumber.Text.Length >= 10)
+            {
+                e.Handled = !Regex.IsMatch(e.Text, "a^");   // Filters out any input
+            }
+            else
+            {
+                e.Handled = Regex.IsMatch(e.Text, "[^0-9]+");  // Allows only numbers 
+            }
+
+        }
+
+        /// <summary>
+        /// Validates the input in the cellphone number textbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void txtCellPhoneNumber_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            var phoneNumber = sender as TextBox;     // Stores the textbox as a variable
+            if(phoneNumber.Text.Length >= 10)
+            {
+                e.Handled = !Regex.IsMatch(e.Text, "a^");   // Filters out any input
+            }
+            else
+            {
+                e.Handled = Regex.IsMatch(e.Text, "[^0-9]+");  // Allows only numbers 
+            }
+        }
+
+        /// <summary>
+        /// Validates the input in the hours worked textbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void txtHoursWorked_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            var hours = sender as TextBox;     // Stores the textbox as a variable
+
+            // Checks to see if there is a number to two decimal points
+            if (Regex.IsMatch(hours.Text, @"^[0-9]+\.[0-9]{2}$"))
+            {
+                e.Handled = !Regex.IsMatch(e.Text, "a^");   // Filters out any input
+            }
+            // Checks to see if there is a decimal point
+            else if (hours.Text.Contains("."))
+            {
+                e.Handled = Regex.IsMatch(e.Text, "[^0-9]+");  // Allows only numbers 
+            }
+            // Otherwise
+            else
+            {
+                e.Handled = Regex.IsMatch(e.Text, "[^0-9.-]+");     // Allows numbers and decimals
+            }
+        }
     }
 }

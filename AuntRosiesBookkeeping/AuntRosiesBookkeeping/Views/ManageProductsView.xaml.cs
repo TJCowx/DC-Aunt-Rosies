@@ -41,9 +41,19 @@ namespace AuntRosiesBookkeeping.Views
         {
             var price = sender as TextBox;     // Stores the textbox as a variable
             //Tests if text is numeric
-            if (Regex.IsMatch(price.Text, @"^[0-9]*"))
+            if (Regex.IsMatch(price.Text, @"^[0-9]+\.[0-9]{2}$"))
             {
                 e.Handled = !Regex.IsMatch(e.Text, "a^");   // Filters out any input
+            }
+            // Checks to see if there is a decimal point
+            else if (price.Text.Contains("."))
+            {
+                e.Handled = Regex.IsMatch(e.Text, "[^0-9]+");  // Allows only numbers 
+            }
+            // Otherwise
+            else
+            {
+                e.Handled = Regex.IsMatch(e.Text, "[^0-9.-]+");     // Allows numbers and decimals
             }
         }
     }

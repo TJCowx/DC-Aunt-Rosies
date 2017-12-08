@@ -30,10 +30,7 @@ namespace AuntRosiesBookkeeping.Views
         {
             var quantity = sender as TextBox;     // Stores the textbox as a variable
             //Tests if text is numeric
-            if (Regex.IsMatch(quantity.Text, @"^[0-9]*"))
-            {
-                e.Handled = !Regex.IsMatch(e.Text, "a^");   // Filters out any input
-            }
+            e.Handled = Regex.IsMatch(e.Text, "[^0-9]+");  // Allows only numbers 
         }
     }
 }

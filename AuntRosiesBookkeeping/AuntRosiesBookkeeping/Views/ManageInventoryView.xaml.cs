@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,6 +24,16 @@ namespace AuntRosiesBookkeeping.Views
         public ManageInventoryView()
         {
             InitializeComponent();
+        }
+
+        private void txtQty_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            var quantity = sender as TextBox;     // Stores the textbox as a variable
+            //Tests if text is numeric
+            if (Regex.IsMatch(quantity.Text, @"^[0-9]*"))
+            {
+                e.Handled = !Regex.IsMatch(e.Text, "a^");   // Filters out any input
+            }
         }
     }
 }

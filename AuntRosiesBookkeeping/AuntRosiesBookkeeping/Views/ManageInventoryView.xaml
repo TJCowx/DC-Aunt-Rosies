@@ -46,7 +46,7 @@
                 <ComboBox Name="cmbType" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Margin="5" />
                 <Label Name="lblQuantity" Content="_Quantity" Grid.Row="3" HorizontalContentAlignment="Right" />
                 <ComboBox Name="cmbMeasurementScale" Grid.Row="3" Grid.Column="2" Margin="5"/>
-                <TextBox Name="txtQty" Grid.Row="3" Grid.Column="1" Margin="5" />
+                <TextBox Name="txtQty" Grid.Row="3" Grid.Column="1" Margin="5" PreviewTextInput="txtQty_PreviewTextInput" />
                 <Button Name="btnSaveChanges" Content="_Save Changes" Grid.Row="4" Grid.ColumnSpan="3" Margin="5"/>
             </Grid>
         </GroupBox>

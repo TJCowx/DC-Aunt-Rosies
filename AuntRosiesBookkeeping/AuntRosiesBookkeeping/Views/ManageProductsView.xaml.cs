@@ -39,22 +39,11 @@ namespace AuntRosiesBookkeeping.Views
 
         private void txtPrice_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            var salary = sender as TextBox;     // Stores the textbox as a variable
-
-            // Checks to see if there is a number to two decimal points
-            if (Regex.IsMatch(salary.Text, @"^[0-9]+\.[0-9]{2}$"))
+            var price = sender as TextBox;     // Stores the textbox as a variable
+            //Tests if text is numeric
+            if (Regex.IsMatch(price.Text, @"^[0-9]*"))
             {
                 e.Handled = !Regex.IsMatch(e.Text, "a^");   // Filters out any input
-            }
-            // Checks to see if there is a decimal point
-            else if (salary.Text.Contains("."))
-            {
-                e.Handled = Regex.IsMatch(e.Text, "[^0-9]+");  // Allows only numbers 
-            }
-            // Otherwise
-            else
-            {
-                e.Handled = Regex.IsMatch(e.Text, "[^0-9.-]+");     // Allows numbers and decimals
             }
         }
     }

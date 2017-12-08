@@ -37,11 +37,11 @@
         <!-- EMPLOYEE INFORMATION OTHER HALF OF THE FORM -->
         <!-- First Name ** Textbox -->
         <Label Name="lblEmployeeFirstName" Content="_First Name" Grid.Row="3" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
-        <TextBox Name="txtEmployeeFirstName" Grid.Row="3" Grid.Column="1" Margin="5" />
+        <TextBox Name="txtEmployeeFirstName" Grid.Row="3" Grid.Column="1" Margin="5" PreviewTextInput="txtEmployeeFirstName_PreviewTextInput" />
 
         <!-- Last Name ** Textbox -->
         <Label Name="lblEmployeeLastName" Content="_Last Name" Grid.Row="4"  HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
-        <TextBox Name="txtEmployeeLastName" Grid.Row="4" Grid.Column="1" Margin="5"/>
+        <TextBox Name="txtEmployeeLastName" Grid.Row="4" Grid.Column="1" Margin="5" PreviewTextInput="txtEmployeeLastName_PreviewTextInput"/>
 
         <!-- Type ** Combobox(Part-time, Full-time) -->
         <Label Name="lblEmployeeType" Content="_Type" Grid.Row="5" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
@@ -61,19 +61,19 @@
         
         <!-- Address ** textbox -->
         <Label Name="lblAddress" Content="_Address" Grid.Row="3" Grid.Column="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
-        <TextBox Name="txtAddress" Grid.Column="3" Grid.Row="3" HorizontalContentAlignment="Right" Margin="5" />
+        <TextBox Name="txtAddress" Grid.Column="3" Grid.Row="3"  Margin="5" PreviewTextInput="txtAddress_PreviewTextInput" />
         
         <!-- City ** textbox -->
         <Label Name="lblCity" Content="_City" Grid.Row="4" Grid.Column="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
-        <TextBox Name="txtCity" Grid.Column="3" Grid.Row="4" HorizontalContentAlignment="Right" Margin="5" />
+        <TextBox Name="txtCity" Grid.Column="3" Grid.Row="4"  Margin="5" PreviewTextInput="txtCity_PreviewTextInput" />
         
         <!-- Province ** texbox -->
         <Label Name="lblProvince" Content="Pro_vince" Grid.Row="5" Grid.Column="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
-        <TextBox Name="txtProvince" Grid.Column="3" Grid.Row="5" HorizontalContentAlignment="Right" Margin="5" />
+        <TextBox Name="txtProvince" Grid.Column="3" Grid.Row="5" Margin="5" PreviewTextInput="txtProvince_PreviewTextInput" />
         
         <!-- Postal Code ** textbot -->
         <Label Name="lblPostalCode" Content="Pos_tal Code" Grid.Row="6" Grid.Column="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
-        <TextBox Name="txtPostalCode" Grid.Column="3" Grid.Row="6" HorizontalContentAlignment="Right" Margin="5" />
+        <TextBox Name="txtPostalCode" Grid.Column="3" Grid.Row="6" Margin="5" PreviewTextInput="txtPostalCode_PreviewTextInput" />
 
         <!-- Salary -->
         <Label Name="lblSalary" Content="Employee _Salary" Grid.Row="7" Grid.Column="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />

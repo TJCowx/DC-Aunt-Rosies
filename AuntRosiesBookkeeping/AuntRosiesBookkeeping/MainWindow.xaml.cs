@@ -167,7 +167,7 @@ namespace AuntRosiesBookkeeping
         /// <param name="e"></param>
         private void btnIngredientInventory_Click(object sender, RoutedEventArgs e)
         {
-            DataContext = new ManageProductsViewModel();
+            DataContext = new ManageInventoryViewModel();
         }
 
         /// <summary>

@@ -64,11 +64,11 @@
         </Border>
         <!-- INTERACTABLE OBJECTS & ACCOMPANYING LABELS-->
         <Label Name="lblQty" Content="_Qty" Grid.Column="3" Grid.Row="1" VerticalContentAlignment="Bottom"/>
-        <custom:NumericUpDown  Name="numQty" Grid.Column="3" Grid.Row="2" Width="50"/>
         <Button Name="btnAddProduct" Content="&lt;" Grid.Column="3" Grid.Row="3" Margin="5" />
         <Button Name="btnRemoveProduct" Content="&gt;" Grid.Column="3" Grid.Row="4" Margin="5" />
         <Button Name="btnRemoveAllProduct" Content="&gt;&gt;" Grid.Column="3" Grid.Row="5" Margin="5" />
         <Button Name="btnCompleteTransaction" Content="Complete _Transaction" Grid.Row="11" Grid.Column="6" Margin="5,5,5,5"/>
+        <TextBox x:Name="txtQuant" Grid.Column="3" Grid.Row="2" Width="50" Height="28" Margin="5.2,10,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" PreviewTextInput="txtQuant_PreviewTextInput"/>
 
 
     </Grid>

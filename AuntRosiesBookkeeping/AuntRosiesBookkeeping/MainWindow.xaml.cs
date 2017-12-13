@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using AuntRosiesBookkeeping.ViewModels;
+using AuntRosiesBookkeeping.Views;
 using AuntRosiesBookkeeping.SpecialClass;
 
 namespace AuntRosiesBookkeeping
@@ -144,15 +145,26 @@ namespace AuntRosiesBookkeeping
         }
 
         /// <summary>
-        /// Open the manage employees page
+        /// Open the manage employees page on correct login
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void mnuManageEmployees_Click(object sender, RoutedEventArgs e)
         {
-            DataContext = new ManageEmployeeViewModel();
+            AdminLoginView login = new AdminLoginView();
+            login.LoginSuccessful += loginSuccessful_OpenEmployee;      // Add loginsuccessful event trigger
+            login.ShowDialog();     // Opens the login view
         }
 
+        /// <summary>
+        /// EventHandler: if the login is successful open the employee view
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void loginSuccessful_OpenEmployee(object sender, EventArgs e)
+        {
+            DataContext = new ManageEmployeeViewModel();
+        }
 
         #endregion
 

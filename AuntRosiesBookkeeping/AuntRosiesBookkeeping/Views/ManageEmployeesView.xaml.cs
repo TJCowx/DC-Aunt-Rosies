@@ -229,7 +229,7 @@ namespace AuntRosiesBookkeeping.Views
             var salary = sender as TextBox;     // Stores the textbox as a variable
 
             // Checks to see if there is a number to two decimal points
-            if (Regex.IsMatch(salary.Text, @"^[0-9]+\.[0-9]{2}$"))
+            if (Regex.IsMatch(salary.Text, @"^[0-9]*\.[0-9]{2}$"))
             {
                 e.Handled = !Regex.IsMatch(e.Text, "a^");   // Filters out any input
             }

@@ -80,10 +80,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="aunt_rosieDataSet.Designer.cs">
+    <Compile Include="aunt_rosieDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>aunt_rosieDataSet.xsd</DependentUpon>
+      <DependentUpon>aunt_rosieDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reports\EmployeeReport.cs">
       <AutoGen>True</AutoGen>
@@ -214,16 +214,16 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>SalesReport.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="aunt_rosieDataSet.xsc">
-      <DependentUpon>aunt_rosieDataSet.xsd</DependentUpon>
+    <None Include="aunt_rosieDataSet1.xsc">
+      <DependentUpon>aunt_rosieDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="aunt_rosieDataSet.xsd">
+    <None Include="aunt_rosieDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>aunt_rosieDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>aunt_rosieDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="aunt_rosieDataSet.xss">
-      <DependentUpon>aunt_rosieDataSet.xsd</DependentUpon>
+    <None Include="aunt_rosieDataSet1.xss">
+      <DependentUpon>aunt_rosieDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("aunt_rosie.mdf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("aunt_rosie_log.ldf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("customcontrols/numericupdown.dll")]
 
 

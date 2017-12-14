@@ -56,5 +56,10 @@ namespace AuntRosiesBookkeeping.Views
                 e.Handled = Regex.IsMatch(e.Text, "[^0-9.-]+");     // Allows numbers and decimals
             }
         }
+
+        private void lstProductList_Loaded(object sender, RoutedEventArgs e)
+        {
+           
+        }
     }
 }

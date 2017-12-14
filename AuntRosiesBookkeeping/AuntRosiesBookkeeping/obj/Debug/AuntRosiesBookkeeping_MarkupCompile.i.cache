@@ -11,9 +11,15 @@ false
 DEBUG;TRACE
 C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\App.xaml
 8-1137288191
+<<<<<<< HEAD
 116720924
 24385621889
 15334351100
+=======
+3-291139754
+29579595810
+24412388521
+>>>>>>> effff47c99d2dee3cf0b35e5f0021e295b5d121b
 MainWindow.xaml;Views\AdminLoginView.xaml;Views\ManageEmployeesView.xaml;Views\ManageInventoryView.xaml;Views\ManageProductsView.xaml;Views\RecipeView.xaml;Views\ReportsView.xaml;Views\TransactionView.xaml;
 
 False

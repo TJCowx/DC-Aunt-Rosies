@@ -25,7 +25,7 @@
             <ColumnDefinition  Width="0.1*"/>
         </Grid.ColumnDefinitions>
         <Label Name="lblProductList" Content="Product _List" Grid.Row="0" Grid.Column="4" VerticalContentAlignment="Bottom"/>
-        <ListView Name="lstProductList" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Grid.RowSpan ="3" Margin="5" />
+        <ListView Name="lstProductList" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Grid.RowSpan ="3" Margin="5" Loaded="lstProductList_Loaded" />
         <GroupBox Header="Change Product" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="1" BorderBrush="Black">
             <Grid>
                 <Grid.RowDefinitions>
@@ -46,7 +46,7 @@
                 </Label>
                 <TextBox Name="txtProductName" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="5"/>
                 <Label Name="lblQtyTitle" Content="_Qty" Grid.Column="0" Grid.Row="2" HorizontalContentAlignment="Right"/>
-                <custom:NumericUpDown Name="numQtyProd" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2"  />
+                <TextBox Name="txtQtyProd" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2"  />
                 <Label Name="lblPriceTitle" Content="_Price" Grid.Row="3" HorizontalContentAlignment="Right" />
                 <TextBox Name="txtPrice" Grid.Row="3" Grid.Column="1" Margin="5" Grid.ColumnSpan="3" PreviewTextInput="txtPrice_PreviewTextInput"/>
                 <Button Name="btnChangeRecipe" Content="_Change Recipe" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" Click="btnChangeRecipe_Click"/>

@@ -53,3 +53,17 @@ C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug
 C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.csproj.GenerateResource.Cache
 C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.dll
 C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.pdb
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\bin\Debug\NumericUpDown.dll.config
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\bin\Debug\NumericUpDown.XML
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\bin\Debug\NumericUpDown.dll
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\bin\Debug\NumericUpDown.pdb
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.g.cs
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown_MarkupCompile.cache
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown_MarkupCompile.lref
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.baml
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.g.resources
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\eisiWare.Properties.Resources.resources
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.csproj.GenerateResource.Cache
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.dll
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.pdb

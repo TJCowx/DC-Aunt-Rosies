@@ -81,6 +81,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="aunt_rosieDataSet1.cs">
+      <DependentUpon>aunt_rosieDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="aunt_rosieDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

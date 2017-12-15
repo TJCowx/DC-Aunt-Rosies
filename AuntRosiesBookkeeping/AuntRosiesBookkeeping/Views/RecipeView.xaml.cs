@@ -78,7 +78,11 @@ namespace AuntRosiesBookkeeping.Views
         /// <param name="e"></param>
         private void btnRemoveIngredient_Click(object sender, RoutedEventArgs e)
         {
-            // TODO: Remove ingredient from recipe listbox
+            // Remove selected ingredients from recipe listbox
+            foreach(ListViewItem item in lstRecipe.SelectedItems)
+            {
+                lstRecipe.Items.Remove(item);
+            }
         }
 
         /// <summary>
@@ -88,7 +92,9 @@ namespace AuntRosiesBookkeeping.Views
         /// <param name="e"></param>
         private void btnRemoveAllIngredients_Click(object sender, RoutedEventArgs e)
         {
-            // TODO: Clear recipe listbox
+            // Clear recipe listbox
+            lstRecipe.Items.Clear();
+            
         }
 
         /// <summary>

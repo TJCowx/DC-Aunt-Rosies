@@ -192,6 +192,8 @@ C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\b
 C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\stdole.dll
 C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\ShockwaveFlashObjects.dll
-C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\AuntRosiesBookkeeping.csproj.AuntRosiesBookkeeping.exe.config
 C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\Views\AdminLoginView.g.cs
 C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\Views\AdminLoginView.baml
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\CrystalDecisions.Shared.dll

@@ -463,5 +463,15 @@ namespace AuntRosiesBookkeeping.Views
                 txtSalary.Text = Convert.ToString(empSalary);
             }
         }
+
+        /// <summary>
+        /// Create a new pay period for the 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnNewPayPeriod_Click(object sender, RoutedEventArgs e)
+        {
+            string sqlInsertPayPeriod = "INSERT INTO";
+        }
     }
 }

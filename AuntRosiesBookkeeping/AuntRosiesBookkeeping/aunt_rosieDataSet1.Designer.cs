@@ -54,23 +54,25 @@ namespace AuntRosiesBookkeeping {
         
         private productQuantityReportDataTable tableproductQuantityReport;
         
-        private global::System.Data.DataRelation relationFK__inventory__inven__7849DB76;
+        private global::System.Data.DataRelation relationFK__inventory__inven__7AF13DF7;
         
-        private global::System.Data.DataRelation relationFK__inventory__measu__793DFFAF;
+        private global::System.Data.DataRelation relationFK__inventory__measu__7BE56230;
         
-        private global::System.Data.DataRelation relationFK__product_r__produ__02C769E9;
+        private global::System.Data.DataRelation relationFK__product_r__produ__0662F0A3;
         
-        private global::System.Data.DataRelation relationFK__products__produc__7FEAFD3E;
+        private global::System.Data.DataRelation relationFK__products__produc__038683F8;
         
-        private global::System.Data.DataRelation relationFK__recipe_in__inven__0697FACD;
+        private global::System.Data.DataRelation relationFK__recipe_in__inven__0A338187;
         
-        private global::System.Data.DataRelation relationFK__recipe_in__produ__05A3D694;
+        private global::System.Data.DataRelation relationFK__recipe_in__produ__093F5D4E;
         
-        private global::System.Data.DataRelation relationFK__staffHour__staff__719CDDE7;
+        private global::System.Data.DataRelation relationFK__staffHour__staff__74444068;
         
-        private global::System.Data.DataRelation relationFK__transacti__produ__0A688BB1;
+        private global::System.Data.DataRelation relationFK__transacti__produ__0E04126B;
         
-        private global::System.Data.DataRelation relationFK__transacti__trans__09746778;
+        private global::System.Data.DataRelation relationFK__transacti__trans__0D0FEE32;
+        
+        private global::System.Data.DataRelation relationFK__transacti__staff__7EC1CEDB;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -548,15 +550,16 @@ namespace AuntRosiesBookkeeping {
                     this.tableproductQuantityReport.InitVars();
                 }
             }
-            this.relationFK__inventory__inven__7849DB76 = this.Relations["FK__inventory__inven__7849DB76"];
-            this.relationFK__inventory__measu__793DFFAF = this.Relations["FK__inventory__measu__793DFFAF"];
-            this.relationFK__product_r__produ__02C769E9 = this.Relations["FK__product_r__produ__02C769E9"];
-            this.relationFK__products__produc__7FEAFD3E = this.Relations["FK__products__produc__7FEAFD3E"];
-            this.relationFK__recipe_in__inven__0697FACD = this.Relations["FK__recipe_in__inven__0697FACD"];
-            this.relationFK__recipe_in__produ__05A3D694 = this.Relations["FK__recipe_in__produ__05A3D694"];
-            this.relationFK__staffHour__staff__719CDDE7 = this.Relations["FK__staffHour__staff__719CDDE7"];
-            this.relationFK__transacti__produ__0A688BB1 = this.Relations["FK__transacti__produ__0A688BB1"];
-            this.relationFK__transacti__trans__09746778 = this.Relations["FK__transacti__trans__09746778"];
+            this.relationFK__inventory__inven__7AF13DF7 = this.Relations["FK__inventory__inven__7AF13DF7"];
+            this.relationFK__inventory__measu__7BE56230 = this.Relations["FK__inventory__measu__7BE56230"];
+            this.relationFK__product_r__produ__0662F0A3 = this.Relations["FK__product_r__produ__0662F0A3"];
+            this.relationFK__products__produc__038683F8 = this.Relations["FK__products__produc__038683F8"];
+            this.relationFK__recipe_in__inven__0A338187 = this.Relations["FK__recipe_in__inven__0A338187"];
+            this.relationFK__recipe_in__produ__093F5D4E = this.Relations["FK__recipe_in__produ__093F5D4E"];
+            this.relationFK__staffHour__staff__74444068 = this.Relations["FK__staffHour__staff__74444068"];
+            this.relationFK__transacti__produ__0E04126B = this.Relations["FK__transacti__produ__0E04126B"];
+            this.relationFK__transacti__trans__0D0FEE32 = this.Relations["FK__transacti__trans__0D0FEE32"];
+            this.relationFK__transacti__staff__7EC1CEDB = this.Relations["FK__transacti__staff__7EC1CEDB"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -597,42 +600,46 @@ namespace AuntRosiesBookkeeping {
             base.Tables.Add(this.tableinventoryQuantityReport);
             this.tableproductQuantityReport = new productQuantityReportDataTable();
             base.Tables.Add(this.tableproductQuantityReport);
-            this.relationFK__inventory__inven__7849DB76 = new global::System.Data.DataRelation("FK__inventory__inven__7849DB76", new global::System.Data.DataColumn[] {
+            this.relationFK__inventory__inven__7AF13DF7 = new global::System.Data.DataRelation("FK__inventory__inven__7AF13DF7", new global::System.Data.DataColumn[] {
                         this.tableinventory_type.inventoryTypeIdColumn}, new global::System.Data.DataColumn[] {
                         this.tableinventory.inventoryTypeIdColumn}, false);
-            this.Relations.Add(this.relationFK__inventory__inven__7849DB76);
-            this.relationFK__inventory__measu__793DFFAF = new global::System.Data.DataRelation("FK__inventory__measu__793DFFAF", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__inventory__inven__7AF13DF7);
+            this.relationFK__inventory__measu__7BE56230 = new global::System.Data.DataRelation("FK__inventory__measu__7BE56230", new global::System.Data.DataColumn[] {
                         this.tablemeasurement_type.measurementIdColumn}, new global::System.Data.DataColumn[] {
                         this.tableinventory.measurementIdColumn}, false);
-            this.Relations.Add(this.relationFK__inventory__measu__793DFFAF);
-            this.relationFK__product_r__produ__02C769E9 = new global::System.Data.DataRelation("FK__product_r__produ__02C769E9", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__inventory__measu__7BE56230);
+            this.relationFK__product_r__produ__0662F0A3 = new global::System.Data.DataRelation("FK__product_r__produ__0662F0A3", new global::System.Data.DataColumn[] {
                         this.tableproducts.productIdColumn}, new global::System.Data.DataColumn[] {
                         this.tableproduct_recipes.productIdColumn}, false);
-            this.Relations.Add(this.relationFK__product_r__produ__02C769E9);
-            this.relationFK__products__produc__7FEAFD3E = new global::System.Data.DataRelation("FK__products__produc__7FEAFD3E", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__product_r__produ__0662F0A3);
+            this.relationFK__products__produc__038683F8 = new global::System.Data.DataRelation("FK__products__produc__038683F8", new global::System.Data.DataColumn[] {
                         this.tableproduct_types.productTypeIdColumn}, new global::System.Data.DataColumn[] {
                         this.tableproducts.productTypeIdColumn}, false);
-            this.Relations.Add(this.relationFK__products__produc__7FEAFD3E);
-            this.relationFK__recipe_in__inven__0697FACD = new global::System.Data.DataRelation("FK__recipe_in__inven__0697FACD", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__products__produc__038683F8);
+            this.relationFK__recipe_in__inven__0A338187 = new global::System.Data.DataRelation("FK__recipe_in__inven__0A338187", new global::System.Data.DataColumn[] {
                         this.tableinventory.inventoryIdColumn}, new global::System.Data.DataColumn[] {
                         this.tablerecipe_inventory.inventoryIdColumn}, false);
-            this.Relations.Add(this.relationFK__recipe_in__inven__0697FACD);
-            this.relationFK__recipe_in__produ__05A3D694 = new global::System.Data.DataRelation("FK__recipe_in__produ__05A3D694", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__recipe_in__inven__0A338187);
+            this.relationFK__recipe_in__produ__093F5D4E = new global::System.Data.DataRelation("FK__recipe_in__produ__093F5D4E", new global::System.Data.DataColumn[] {
                         this.tableproduct_recipes.productRecipeIdColumn}, new global::System.Data.DataColumn[] {
                         this.tablerecipe_inventory.productRecipeIdColumn}, false);
-            this.Relations.Add(this.relationFK__recipe_in__produ__05A3D694);
-            this.relationFK__staffHour__staff__719CDDE7 = new global::System.Data.DataRelation("FK__staffHour__staff__719CDDE7", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__recipe_in__produ__093F5D4E);
+            this.relationFK__staffHour__staff__74444068 = new global::System.Data.DataRelation("FK__staffHour__staff__74444068", new global::System.Data.DataColumn[] {
                         this.tablestaff.staffIdColumn}, new global::System.Data.DataColumn[] {
                         this.tablestaffHours.staffIdColumn}, false);
-            this.Relations.Add(this.relationFK__staffHour__staff__719CDDE7);
-            this.relationFK__transacti__produ__0A688BB1 = new global::System.Data.DataRelation("FK__transacti__produ__0A688BB1", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__staffHour__staff__74444068);
+            this.relationFK__transacti__produ__0E04126B = new global::System.Data.DataRelation("FK__transacti__produ__0E04126B", new global::System.Data.DataColumn[] {
                         this.tableproducts.productIdColumn}, new global::System.Data.DataColumn[] {
                         this.tabletransaction_products.productIdColumn}, false);
-            this.Relations.Add(this.relationFK__transacti__produ__0A688BB1);
-            this.relationFK__transacti__trans__09746778 = new global::System.Data.DataRelation("FK__transacti__trans__09746778", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__transacti__produ__0E04126B);
+            this.relationFK__transacti__trans__0D0FEE32 = new global::System.Data.DataRelation("FK__transacti__trans__0D0FEE32", new global::System.Data.DataColumn[] {
                         this.tabletransactions.transactionsIdColumn}, new global::System.Data.DataColumn[] {
                         this.tabletransaction_products.transactionsIdColumn}, false);
-            this.Relations.Add(this.relationFK__transacti__trans__09746778);
+            this.Relations.Add(this.relationFK__transacti__trans__0D0FEE32);
+            this.relationFK__transacti__staff__7EC1CEDB = new global::System.Data.DataRelation("FK__transacti__staff__7EC1CEDB", new global::System.Data.DataColumn[] {
+                        this.tablestaff.staffIdColumn}, new global::System.Data.DataColumn[] {
+                        this.tabletransactions.staffIdColumn}, false);
+            this.Relations.Add(this.relationFK__transacti__staff__7EC1CEDB);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -962,7 +969,7 @@ namespace AuntRosiesBookkeeping {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public inventoryRow AddinventoryRow(int inventoryId, string inventoryDescription, inventory_typeRow parentinventory_typeRowByFK__inventory__inven__7849DB76, int inventoryQuantity, measurement_typeRow parentmeasurement_typeRowByFK__inventory__measu__793DFFAF, double inventoryPrice) {
+            public inventoryRow AddinventoryRow(int inventoryId, string inventoryDescription, inventory_typeRow parentinventory_typeRowByFK__inventory__inven__7AF13DF7, int inventoryQuantity, measurement_typeRow parentmeasurement_typeRowByFK__inventory__measu__7BE56230, double inventoryPrice) {
                 inventoryRow rowinventoryRow = ((inventoryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         inventoryId,
@@ -971,11 +978,11 @@ namespace AuntRosiesBookkeeping {
                         inventoryQuantity,
                         null,
                         inventoryPrice};
-                if ((parentinventory_typeRowByFK__inventory__inven__7849DB76 != null)) {
-                    columnValuesArray[2] = parentinventory_typeRowByFK__inventory__inven__7849DB76[0];
+                if ((parentinventory_typeRowByFK__inventory__inven__7AF13DF7 != null)) {
+                    columnValuesArray[2] = parentinventory_typeRowByFK__inventory__inven__7AF13DF7[0];
                 }
-                if ((parentmeasurement_typeRowByFK__inventory__measu__793DFFAF != null)) {
-                    columnValuesArray[4] = parentmeasurement_typeRowByFK__inventory__measu__793DFFAF[0];
+                if ((parentmeasurement_typeRowByFK__inventory__measu__7BE56230 != null)) {
+                    columnValuesArray[4] = parentmeasurement_typeRowByFK__inventory__measu__7BE56230[0];
                 }
                 rowinventoryRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowinventoryRow);
@@ -1805,13 +1812,13 @@ namespace AuntRosiesBookkeeping {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public product_recipesRow Addproduct_recipesRow(int productRecipeId, productsRow parentproductsRowByFK__product_r__produ__02C769E9) {
+            public product_recipesRow Addproduct_recipesRow(int productRecipeId, productsRow parentproductsRowByFK__product_r__produ__0662F0A3) {
                 product_recipesRow rowproduct_recipesRow = ((product_recipesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         productRecipeId,
                         null};
-                if ((parentproductsRowByFK__product_r__produ__02C769E9 != null)) {
-                    columnValuesArray[1] = parentproductsRowByFK__product_r__produ__02C769E9[0];
+                if ((parentproductsRowByFK__product_r__produ__0662F0A3 != null)) {
+                    columnValuesArray[1] = parentproductsRowByFK__product_r__produ__0662F0A3[0];
                 }
                 rowproduct_recipesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowproduct_recipesRow);
@@ -2384,7 +2391,7 @@ namespace AuntRosiesBookkeeping {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public productsRow AddproductsRow(int productId, product_typesRow parentproduct_typesRowByFK__products__produc__7FEAFD3E, string productDescription, int productQuantity, double productPrice) {
+            public productsRow AddproductsRow(int productId, product_typesRow parentproduct_typesRowByFK__products__produc__038683F8, string productDescription, int productQuantity, double productPrice) {
                 productsRow rowproductsRow = ((productsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         productId,
@@ -2392,8 +2399,8 @@ namespace AuntRosiesBookkeeping {
                         productDescription,
                         productQuantity,
                         productPrice};
-                if ((parentproduct_typesRowByFK__products__produc__7FEAFD3E != null)) {
-                    columnValuesArray[1] = parentproduct_typesRowByFK__products__produc__7FEAFD3E[0];
+                if ((parentproduct_typesRowByFK__products__produc__038683F8 != null)) {
+                    columnValuesArray[1] = parentproduct_typesRowByFK__products__produc__038683F8[0];
                 }
                 rowproductsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowproductsRow);
@@ -2683,17 +2690,17 @@ namespace AuntRosiesBookkeeping {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public recipe_inventoryRow Addrecipe_inventoryRow(product_recipesRow parentproduct_recipesRowByFK__recipe_in__produ__05A3D694, inventoryRow parentinventoryRowByFK__recipe_in__inven__0697FACD, double inventoryQty) {
+            public recipe_inventoryRow Addrecipe_inventoryRow(product_recipesRow parentproduct_recipesRowByFK__recipe_in__produ__093F5D4E, inventoryRow parentinventoryRowByFK__recipe_in__inven__0A338187, double inventoryQty) {
                 recipe_inventoryRow rowrecipe_inventoryRow = ((recipe_inventoryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         inventoryQty};
-                if ((parentproduct_recipesRowByFK__recipe_in__produ__05A3D694 != null)) {
-                    columnValuesArray[0] = parentproduct_recipesRowByFK__recipe_in__produ__05A3D694[0];
+                if ((parentproduct_recipesRowByFK__recipe_in__produ__093F5D4E != null)) {
+                    columnValuesArray[0] = parentproduct_recipesRowByFK__recipe_in__produ__093F5D4E[0];
                 }
-                if ((parentinventoryRowByFK__recipe_in__inven__0697FACD != null)) {
-                    columnValuesArray[1] = parentinventoryRowByFK__recipe_in__inven__0697FACD[0];
+                if ((parentinventoryRowByFK__recipe_in__inven__0A338187 != null)) {
+                    columnValuesArray[1] = parentinventoryRowByFK__recipe_in__inven__0A338187[0];
                 }
                 rowrecipe_inventoryRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowrecipe_inventoryRow);
@@ -3403,15 +3410,15 @@ namespace AuntRosiesBookkeeping {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public staffHoursRow AddstaffHoursRow(staffRow parentstaffRowByFK__staffHour__staff__719CDDE7, System.DateTime staffHoursStartDate, System.DateTime staffHoursEndDate, int staffHoursNumberOfHours) {
+            public staffHoursRow AddstaffHoursRow(staffRow parentstaffRowByFK__staffHour__staff__74444068, System.DateTime staffHoursStartDate, System.DateTime staffHoursEndDate, int staffHoursNumberOfHours) {
                 staffHoursRow rowstaffHoursRow = ((staffHoursRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         staffHoursStartDate,
                         staffHoursEndDate,
                         staffHoursNumberOfHours};
-                if ((parentstaffRowByFK__staffHour__staff__719CDDE7 != null)) {
-                    columnValuesArray[0] = parentstaffRowByFK__staffHour__staff__719CDDE7[0];
+                if ((parentstaffRowByFK__staffHour__staff__74444068 != null)) {
+                    columnValuesArray[0] = parentstaffRowByFK__staffHour__staff__74444068[0];
                 }
                 rowstaffHoursRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowstaffHoursRow);
@@ -3702,17 +3709,17 @@ namespace AuntRosiesBookkeeping {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public transaction_productsRow Addtransaction_productsRow(transactionsRow parenttransactionsRowByFK__transacti__trans__09746778, productsRow parentproductsRowByFK__transacti__produ__0A688BB1, int numberOfProductsSold) {
+            public transaction_productsRow Addtransaction_productsRow(transactionsRow parenttransactionsRowByFK__transacti__trans__0D0FEE32, productsRow parentproductsRowByFK__transacti__produ__0E04126B, int numberOfProductsSold) {
                 transaction_productsRow rowtransaction_productsRow = ((transaction_productsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         numberOfProductsSold};
-                if ((parenttransactionsRowByFK__transacti__trans__09746778 != null)) {
-                    columnValuesArray[0] = parenttransactionsRowByFK__transacti__trans__09746778[0];
+                if ((parenttransactionsRowByFK__transacti__trans__0D0FEE32 != null)) {
+                    columnValuesArray[0] = parenttransactionsRowByFK__transacti__trans__0D0FEE32[0];
                 }
-                if ((parentproductsRowByFK__transacti__produ__0A688BB1 != null)) {
-                    columnValuesArray[1] = parentproductsRowByFK__transacti__produ__0A688BB1[0];
+                if ((parentproductsRowByFK__transacti__produ__0E04126B != null)) {
+                    columnValuesArray[1] = parentproductsRowByFK__transacti__produ__0E04126B[0];
                 }
                 rowtransaction_productsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtransaction_productsRow);
@@ -3898,6 +3905,8 @@ namespace AuntRosiesBookkeeping {
             
             private global::System.Data.DataColumn columntransactionsId;
             
+            private global::System.Data.DataColumn columnstaffId;
+            
             private global::System.Data.DataColumn columntransactionDate;
             
             private global::System.Data.DataColumn columntransactionSubTotal;
@@ -3942,6 +3951,14 @@ namespace AuntRosiesBookkeeping {
             public global::System.Data.DataColumn transactionsIdColumn {
                 get {
                     return this.columntransactionsId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn staffIdColumn {
+                get {
+                    return this.columnstaffId;
                 }
             }
             
@@ -4006,13 +4023,17 @@ namespace AuntRosiesBookkeeping {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public transactionsRow AddtransactionsRow(int transactionsId, System.DateTime transactionDate, double transactionSubTotal, double transactionTotal) {
+            public transactionsRow AddtransactionsRow(int transactionsId, staffRow parentstaffRowByFK__transacti__staff__7EC1CEDB, System.DateTime transactionDate, double transactionSubTotal, double transactionTotal) {
                 transactionsRow rowtransactionsRow = ((transactionsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         transactionsId,
+                        null,
                         transactionDate,
                         transactionSubTotal,
                         transactionTotal};
+                if ((parentstaffRowByFK__transacti__staff__7EC1CEDB != null)) {
+                    columnValuesArray[1] = parentstaffRowByFK__transacti__staff__7EC1CEDB[0];
+                }
                 rowtransactionsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtransactionsRow);
                 return rowtransactionsRow;
@@ -4043,6 +4064,7 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columntransactionsId = base.Columns["transactionsId"];
+                this.columnstaffId = base.Columns["staffId"];
                 this.columntransactionDate = base.Columns["transactionDate"];
                 this.columntransactionSubTotal = base.Columns["transactionSubTotal"];
                 this.columntransactionTotal = base.Columns["transactionTotal"];
@@ -4053,6 +4075,8 @@ namespace AuntRosiesBookkeeping {
             private void InitClass() {
                 this.columntransactionsId = new global::System.Data.DataColumn("transactionsId", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntransactionsId);
+                this.columnstaffId = new global::System.Data.DataColumn("staffId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstaffId);
                 this.columntransactionDate = new global::System.Data.DataColumn("transactionDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntransactionDate);
                 this.columntransactionSubTotal = new global::System.Data.DataColumn("transactionSubTotal", typeof(double), null, global::System.Data.MappingType.Element);
@@ -4063,6 +4087,7 @@ namespace AuntRosiesBookkeeping {
                                 this.columntransactionsId}, true));
                 this.columntransactionsId.AllowDBNull = false;
                 this.columntransactionsId.Unique = true;
+                this.columnstaffId.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5491,10 +5516,10 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public inventory_typeRow inventory_typeRow {
                 get {
-                    return ((inventory_typeRow)(this.GetParentRow(this.Table.ParentRelations["FK__inventory__inven__7849DB76"])));
+                    return ((inventory_typeRow)(this.GetParentRow(this.Table.ParentRelations["FK__inventory__inven__7AF13DF7"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__inventory__inven__7849DB76"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__inventory__inven__7AF13DF7"]);
                 }
             }
             
@@ -5502,10 +5527,10 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public measurement_typeRow measurement_typeRow {
                 get {
-                    return ((measurement_typeRow)(this.GetParentRow(this.Table.ParentRelations["FK__inventory__measu__793DFFAF"])));
+                    return ((measurement_typeRow)(this.GetParentRow(this.Table.ParentRelations["FK__inventory__measu__7BE56230"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__inventory__measu__793DFFAF"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__inventory__measu__7BE56230"]);
                 }
             }
             
@@ -5548,11 +5573,11 @@ namespace AuntRosiesBookkeeping {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public recipe_inventoryRow[] Getrecipe_inventoryRows() {
-                if ((this.Table.ChildRelations["FK__recipe_in__inven__0697FACD"] == null)) {
+                if ((this.Table.ChildRelations["FK__recipe_in__inven__0A338187"] == null)) {
                     return new recipe_inventoryRow[0];
                 }
                 else {
-                    return ((recipe_inventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__recipe_in__inven__0697FACD"])));
+                    return ((recipe_inventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__recipe_in__inven__0A338187"])));
                 }
             }
         }
@@ -5614,11 +5639,11 @@ namespace AuntRosiesBookkeeping {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public inventoryRow[] GetinventoryRows() {
-                if ((this.Table.ChildRelations["FK__inventory__inven__7849DB76"] == null)) {
+                if ((this.Table.ChildRelations["FK__inventory__inven__7AF13DF7"] == null)) {
                     return new inventoryRow[0];
                 }
                 else {
-                    return ((inventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__inventory__inven__7849DB76"])));
+                    return ((inventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__inventory__inven__7AF13DF7"])));
                 }
             }
         }
@@ -5680,11 +5705,11 @@ namespace AuntRosiesBookkeeping {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public inventoryRow[] GetinventoryRows() {
-                if ((this.Table.ChildRelations["FK__inventory__measu__793DFFAF"] == null)) {
+                if ((this.Table.ChildRelations["FK__inventory__measu__7BE56230"] == null)) {
                     return new inventoryRow[0];
                 }
                 else {
-                    return ((inventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__inventory__measu__793DFFAF"])));
+                    return ((inventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__inventory__measu__7BE56230"])));
                 }
             }
         }
@@ -5729,21 +5754,21 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public productsRow productsRow {
                 get {
-                    return ((productsRow)(this.GetParentRow(this.Table.ParentRelations["FK__product_r__produ__02C769E9"])));
+                    return ((productsRow)(this.GetParentRow(this.Table.ParentRelations["FK__product_r__produ__0662F0A3"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__product_r__produ__02C769E9"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__product_r__produ__0662F0A3"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public recipe_inventoryRow[] Getrecipe_inventoryRows() {
-                if ((this.Table.ChildRelations["FK__recipe_in__produ__05A3D694"] == null)) {
+                if ((this.Table.ChildRelations["FK__recipe_in__produ__093F5D4E"] == null)) {
                     return new recipe_inventoryRow[0];
                 }
                 else {
-                    return ((recipe_inventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__recipe_in__produ__05A3D694"])));
+                    return ((recipe_inventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__recipe_in__produ__093F5D4E"])));
                 }
             }
         }
@@ -5805,11 +5830,11 @@ namespace AuntRosiesBookkeeping {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public productsRow[] GetproductsRows() {
-                if ((this.Table.ChildRelations["FK__products__produc__7FEAFD3E"] == null)) {
+                if ((this.Table.ChildRelations["FK__products__produc__038683F8"] == null)) {
                     return new productsRow[0];
                 }
                 else {
-                    return ((productsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__products__produc__7FEAFD3E"])));
+                    return ((productsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__products__produc__038683F8"])));
                 }
             }
         }
@@ -5902,10 +5927,10 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public product_typesRow product_typesRow {
                 get {
-                    return ((product_typesRow)(this.GetParentRow(this.Table.ParentRelations["FK__products__produc__7FEAFD3E"])));
+                    return ((product_typesRow)(this.GetParentRow(this.Table.ParentRelations["FK__products__produc__038683F8"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__products__produc__7FEAFD3E"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__products__produc__038683F8"]);
                 }
             }
             
@@ -5948,22 +5973,22 @@ namespace AuntRosiesBookkeeping {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public product_recipesRow[] Getproduct_recipesRows() {
-                if ((this.Table.ChildRelations["FK__product_r__produ__02C769E9"] == null)) {
+                if ((this.Table.ChildRelations["FK__product_r__produ__0662F0A3"] == null)) {
                     return new product_recipesRow[0];
                 }
                 else {
-                    return ((product_recipesRow[])(base.GetChildRows(this.Table.ChildRelations["FK__product_r__produ__02C769E9"])));
+                    return ((product_recipesRow[])(base.GetChildRows(this.Table.ChildRelations["FK__product_r__produ__0662F0A3"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public transaction_productsRow[] Gettransaction_productsRows() {
-                if ((this.Table.ChildRelations["FK__transacti__produ__0A688BB1"] == null)) {
+                if ((this.Table.ChildRelations["FK__transacti__produ__0E04126B"] == null)) {
                     return new transaction_productsRow[0];
                 }
                 else {
-                    return ((transaction_productsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__transacti__produ__0A688BB1"])));
+                    return ((transaction_productsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__transacti__produ__0E04126B"])));
                 }
             }
         }
@@ -6024,10 +6049,10 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public inventoryRow inventoryRow {
                 get {
-                    return ((inventoryRow)(this.GetParentRow(this.Table.ParentRelations["FK__recipe_in__inven__0697FACD"])));
+                    return ((inventoryRow)(this.GetParentRow(this.Table.ParentRelations["FK__recipe_in__inven__0A338187"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__recipe_in__inven__0697FACD"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__recipe_in__inven__0A338187"]);
                 }
             }
             
@@ -6035,10 +6060,10 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public product_recipesRow product_recipesRow {
                 get {
-                    return ((product_recipesRow)(this.GetParentRow(this.Table.ParentRelations["FK__recipe_in__produ__05A3D694"])));
+                    return ((product_recipesRow)(this.GetParentRow(this.Table.ParentRelations["FK__recipe_in__produ__093F5D4E"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__recipe_in__produ__05A3D694"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__recipe_in__produ__093F5D4E"]);
                 }
             }
             
@@ -6210,11 +6235,22 @@ namespace AuntRosiesBookkeeping {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public staffHoursRow[] GetstaffHoursRows() {
-                if ((this.Table.ChildRelations["FK__staffHour__staff__719CDDE7"] == null)) {
+                if ((this.Table.ChildRelations["FK__staffHour__staff__74444068"] == null)) {
                     return new staffHoursRow[0];
                 }
                 else {
-                    return ((staffHoursRow[])(base.GetChildRows(this.Table.ChildRelations["FK__staffHour__staff__719CDDE7"])));
+                    return ((staffHoursRow[])(base.GetChildRows(this.Table.ChildRelations["FK__staffHour__staff__74444068"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public transactionsRow[] GettransactionsRows() {
+                if ((this.Table.ChildRelations["FK__transacti__staff__7EC1CEDB"] == null)) {
+                    return new transactionsRow[0];
+                }
+                else {
+                    return ((transactionsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__transacti__staff__7EC1CEDB"])));
                 }
             }
         }
@@ -6281,10 +6317,10 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public staffRow staffRow {
                 get {
-                    return ((staffRow)(this.GetParentRow(this.Table.ParentRelations["FK__staffHour__staff__719CDDE7"])));
+                    return ((staffRow)(this.GetParentRow(this.Table.ParentRelations["FK__staffHour__staff__74444068"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__staffHour__staff__719CDDE7"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__staffHour__staff__74444068"]);
                 }
             }
         }
@@ -6346,10 +6382,10 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public productsRow productsRow {
                 get {
-                    return ((productsRow)(this.GetParentRow(this.Table.ParentRelations["FK__transacti__produ__0A688BB1"])));
+                    return ((productsRow)(this.GetParentRow(this.Table.ParentRelations["FK__transacti__produ__0E04126B"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__transacti__produ__0A688BB1"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__transacti__produ__0E04126B"]);
                 }
             }
             
@@ -6357,10 +6393,10 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public transactionsRow transactionsRow {
                 get {
-                    return ((transactionsRow)(this.GetParentRow(this.Table.ParentRelations["FK__transacti__trans__09746778"])));
+                    return ((transactionsRow)(this.GetParentRow(this.Table.ParentRelations["FK__transacti__trans__0D0FEE32"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__transacti__trans__09746778"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__transacti__trans__0D0FEE32"]);
                 }
             }
             
@@ -6399,6 +6435,17 @@ namespace AuntRosiesBookkeeping {
                 }
                 set {
                     this[this.tabletransactions.transactionsIdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int staffId {
+                get {
+                    return ((int)(this[this.tabletransactions.staffIdColumn]));
+                }
+                set {
+                    this[this.tabletransactions.staffIdColumn] = value;
                 }
             }
             
@@ -6452,6 +6499,17 @@ namespace AuntRosiesBookkeeping {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public staffRow staffRow {
+                get {
+                    return ((staffRow)(this.GetParentRow(this.Table.ParentRelations["FK__transacti__staff__7EC1CEDB"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__transacti__staff__7EC1CEDB"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IstransactionDateNull() {
                 return this.IsNull(this.tabletransactions.transactionDateColumn);
             }
@@ -6489,11 +6547,11 @@ namespace AuntRosiesBookkeeping {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public transaction_productsRow[] Gettransaction_productsRows() {
-                if ((this.Table.ChildRelations["FK__transacti__trans__09746778"] == null)) {
+                if ((this.Table.ChildRelations["FK__transacti__trans__0D0FEE32"] == null)) {
                     return new transaction_productsRow[0];
                 }
                 else {
-                    return ((transaction_productsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__transacti__trans__09746778"])));
+                    return ((transaction_productsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__transacti__trans__0D0FEE32"])));
                 }
             }
         }
@@ -10734,32 +10792,12 @@ SELECT staffId, staffHoursStartDate, staffHoursEndDate, staffHoursNumberOfHours 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT staffId, staffHoursStartDate, staffHoursEndDate, staffHoursNumberOfHours F" +
                 "ROM dbo.staffHours";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        staffHoursStartDate, staffHoursEndDate, staffId\r\nFROM            st" +
-                "affHours\r\nWHERE        (staffId = @staffID)";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@staffID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "staffId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT        staffHoursNumberOfHours\r\nFROM            staffHours\r\nWHERE        (" +
-                "staffId = @staffId) AND (staffHoursStartDate = @staffHoursStartDate)";
-            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@staffId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "staffId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@staffHoursStartDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "staffHoursStartDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT staffHoursNumberOfHours FROM staffHours WHERE (staffId = @staffId) AND (st" +
-                "affHoursStartDate = @staffHoursStartDate)";
-            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@staffId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "staffId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@staffHoursStartDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "staffHoursStartDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10781,32 +10819,6 @@ SELECT staffId, staffHoursStartDate, staffHoursEndDate, staffHoursNumberOfHours 
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual aunt_rosieDataSet.staffHoursDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            aunt_rosieDataSet.staffHoursDataTable dataTable = new aunt_rosieDataSet.staffHoursDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(aunt_rosieDataSet.staffHoursDataTable dataTable, int staffID) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(staffID));
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual aunt_rosieDataSet.staffHoursDataTable GetDataBy(int staffID) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(staffID));
             aunt_rosieDataSet.staffHoursDataTable dataTable = new aunt_rosieDataSet.staffHoursDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -10926,76 +10938,6 @@ SELECT staffId, staffHoursStartDate, staffHoursEndDate, staffHoursNumberOfHours 
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(int staffHoursNumberOfHours, int Original_staffId, System.DateTime Original_staffHoursStartDate, System.DateTime Original_staffHoursEndDate, int Original_staffHoursNumberOfHours) {
             return this.Update(Original_staffId, Original_staffHoursStartDate, Original_staffHoursEndDate, staffHoursNumberOfHours, Original_staffId, Original_staffHoursStartDate, Original_staffHoursEndDate, Original_staffHoursNumberOfHours);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual global::System.Nullable<int> GetHoursWorked(int staffId, string staffHoursStartDate) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
-            command.Parameters[0].Value = ((int)(staffId));
-            if ((staffHoursStartDate == null)) {
-                throw new global::System.ArgumentNullException("staffHoursStartDate");
-            }
-            else {
-                command.Parameters[1].Value = ((string)(staffHoursStartDate));
-            }
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            object returnValue;
-            try {
-                returnValue = command.ExecuteScalar();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            if (((returnValue == null) 
-                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
-                return new global::System.Nullable<int>();
-            }
-            else {
-                return new global::System.Nullable<int>(((int)(returnValue)));
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual global::System.Nullable<int> HoursWorkedInRange(int staffId, string staffHoursStartDate) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
-            command.Parameters[0].Value = ((int)(staffId));
-            if ((staffHoursStartDate == null)) {
-                throw new global::System.ArgumentNullException("staffHoursStartDate");
-            }
-            else {
-                command.Parameters[1].Value = ((string)(staffHoursStartDate));
-            }
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            object returnValue;
-            try {
-                returnValue = command.ExecuteScalar();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            if (((returnValue == null) 
-                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
-                return new global::System.Nullable<int>();
-            }
-            else {
-                return new global::System.Nullable<int>(((int)(returnValue)));
-            }
         }
     }
     
@@ -11455,15 +11397,17 @@ SELECT transactionsId, productId, numberOfProductsSold FROM transaction_products
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "transactions";
             tableMapping.ColumnMappings.Add("transactionsId", "transactionsId");
+            tableMapping.ColumnMappings.Add("staffId", "staffId");
             tableMapping.ColumnMappings.Add("transactionDate", "transactionDate");
             tableMapping.ColumnMappings.Add("transactionSubTotal", "transactionSubTotal");
             tableMapping.ColumnMappings.Add("transactionTotal", "transactionTotal");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[transactions] WHERE (([transactionsId] = @Original_transactionsId) AND ((@IsNull_transactionDate = 1 AND [transactionDate] IS NULL) OR ([transactionDate] = @Original_transactionDate)) AND ((@IsNull_transactionSubTotal = 1 AND [transactionSubTotal] IS NULL) OR ([transactionSubTotal] = @Original_transactionSubTotal)) AND ((@IsNull_transactionTotal = 1 AND [transactionTotal] IS NULL) OR ([transactionTotal] = @Original_transactionTotal)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[transactions] WHERE (([transactionsId] = @Original_transactionsId) AND ([staffId] = @Original_staffId) AND ((@IsNull_transactionDate = 1 AND [transactionDate] IS NULL) OR ([transactionDate] = @Original_transactionDate)) AND ((@IsNull_transactionSubTotal = 1 AND [transactionSubTotal] IS NULL) OR ([transactionSubTotal] = @Original_transactionSubTotal)) AND ((@IsNull_transactionTotal = 1 AND [transactionTotal] IS NULL) OR ([transactionTotal] = @Original_transactionTotal)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_transactionsId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "transactionsId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_staffId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "staffId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_transactionDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "transactionDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_transactionDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "transactionDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_transactionSubTotal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "transactionSubTotal", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -11472,23 +11416,26 @@ SELECT transactionsId, productId, numberOfProductsSold FROM transaction_products
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_transactionTotal", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "transactionTotal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[transactions] ([transactionsId], [transactionDate], [transactionSubTotal], [transactionTotal]) VALUES (@transactionsId, @transactionDate, @transactionSubTotal, @transactionTotal);
-SELECT transactionsId, transactionDate, transactionSubTotal, transactionTotal FROM transactions WHERE (transactionsId = @transactionsId)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[transactions] ([transactionsId], [staffId], [transactionDate], [transactionSubTotal], [transactionTotal]) VALUES (@transactionsId, @staffId, @transactionDate, @transactionSubTotal, @transactionTotal);
+SELECT transactionsId, staffId, transactionDate, transactionSubTotal, transactionTotal FROM transactions WHERE (transactionsId = @transactionsId)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@transactionsId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "transactionsId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@staffId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "staffId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@transactionDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "transactionDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@transactionSubTotal", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "transactionSubTotal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@transactionTotal", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "transactionTotal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[transactions] SET [transactionsId] = @transactionsId, [transactionDate] = @transactionDate, [transactionSubTotal] = @transactionSubTotal, [transactionTotal] = @transactionTotal WHERE (([transactionsId] = @Original_transactionsId) AND ((@IsNull_transactionDate = 1 AND [transactionDate] IS NULL) OR ([transactionDate] = @Original_transactionDate)) AND ((@IsNull_transactionSubTotal = 1 AND [transactionSubTotal] IS NULL) OR ([transactionSubTotal] = @Original_transactionSubTotal)) AND ((@IsNull_transactionTotal = 1 AND [transactionTotal] IS NULL) OR ([transactionTotal] = @Original_transactionTotal)));
-SELECT transactionsId, transactionDate, transactionSubTotal, transactionTotal FROM transactions WHERE (transactionsId = @transactionsId)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[transactions] SET [transactionsId] = @transactionsId, [staffId] = @staffId, [transactionDate] = @transactionDate, [transactionSubTotal] = @transactionSubTotal, [transactionTotal] = @transactionTotal WHERE (([transactionsId] = @Original_transactionsId) AND ([staffId] = @Original_staffId) AND ((@IsNull_transactionDate = 1 AND [transactionDate] IS NULL) OR ([transactionDate] = @Original_transactionDate)) AND ((@IsNull_transactionSubTotal = 1 AND [transactionSubTotal] IS NULL) OR ([transactionSubTotal] = @Original_transactionSubTotal)) AND ((@IsNull_transactionTotal = 1 AND [transactionTotal] IS NULL) OR ([transactionTotal] = @Original_transactionTotal)));
+SELECT transactionsId, staffId, transactionDate, transactionSubTotal, transactionTotal FROM transactions WHERE (transactionsId = @transactionsId)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@transactionsId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "transactionsId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@staffId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "staffId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@transactionDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "transactionDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@transactionSubTotal", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "transactionSubTotal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@transactionTotal", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "transactionTotal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_transactionsId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "transactionsId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_staffId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "staffId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_transactionDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "transactionDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_transactionDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "transactionDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_transactionSubTotal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "transactionSubTotal", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -11510,8 +11457,8 @@ SELECT transactionsId, transactionDate, transactionSubTotal, transactionTotal FR
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT transactionsId, transactionDate, transactionSubTotal, transactionTotal FRO" +
-                "M dbo.transactions";
+            this._commandCollection[0].CommandText = "SELECT transactionsId, staffId, transactionDate, transactionSubTotal, transaction" +
+                "Total FROM dbo.transactions";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -11572,31 +11519,32 @@ SELECT transactionsId, transactionDate, transactionSubTotal, transactionTotal FR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_transactionsId, global::System.Nullable<global::System.DateTime> Original_transactionDate, global::System.Nullable<double> Original_transactionSubTotal, global::System.Nullable<double> Original_transactionTotal) {
+        public virtual int Delete(int Original_transactionsId, int Original_staffId, global::System.Nullable<global::System.DateTime> Original_transactionDate, global::System.Nullable<double> Original_transactionSubTotal, global::System.Nullable<double> Original_transactionTotal) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_transactionsId));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_staffId));
             if ((Original_transactionDate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_transactionDate.Value));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((System.DateTime)(Original_transactionDate.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             if ((Original_transactionSubTotal.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((double)(Original_transactionSubTotal.Value));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((double)(Original_transactionSubTotal.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             if ((Original_transactionTotal.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((double)(Original_transactionTotal.Value));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((double)(Original_transactionTotal.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -11618,25 +11566,26 @@ SELECT transactionsId, transactionDate, transactionSubTotal, transactionTotal FR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int transactionsId, global::System.Nullable<global::System.DateTime> transactionDate, global::System.Nullable<double> transactionSubTotal, global::System.Nullable<double> transactionTotal) {
+        public virtual int Insert(int transactionsId, int staffId, global::System.Nullable<global::System.DateTime> transactionDate, global::System.Nullable<double> transactionSubTotal, global::System.Nullable<double> transactionTotal) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(transactionsId));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(staffId));
             if ((transactionDate.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(transactionDate.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((transactionSubTotal.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((double)(transactionSubTotal.Value));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(transactionDate.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((transactionTotal.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((double)(transactionTotal.Value));
+            if ((transactionSubTotal.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((double)(transactionSubTotal.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((transactionTotal.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((double)(transactionTotal.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -11658,50 +11607,52 @@ SELECT transactionsId, transactionDate, transactionSubTotal, transactionTotal FR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int transactionsId, global::System.Nullable<global::System.DateTime> transactionDate, global::System.Nullable<double> transactionSubTotal, global::System.Nullable<double> transactionTotal, int Original_transactionsId, global::System.Nullable<global::System.DateTime> Original_transactionDate, global::System.Nullable<double> Original_transactionSubTotal, global::System.Nullable<double> Original_transactionTotal) {
+        public virtual int Update(int transactionsId, int staffId, global::System.Nullable<global::System.DateTime> transactionDate, global::System.Nullable<double> transactionSubTotal, global::System.Nullable<double> transactionTotal, int Original_transactionsId, int Original_staffId, global::System.Nullable<global::System.DateTime> Original_transactionDate, global::System.Nullable<double> Original_transactionSubTotal, global::System.Nullable<double> Original_transactionTotal) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(transactionsId));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(staffId));
             if ((transactionDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(transactionDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((transactionSubTotal.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((double)(transactionSubTotal.Value));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(transactionDate.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((transactionTotal.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((double)(transactionTotal.Value));
+            if ((transactionSubTotal.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((double)(transactionSubTotal.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_transactionsId));
-            if ((Original_transactionDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(Original_transactionDate.Value));
+            if ((transactionTotal.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((double)(transactionTotal.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Original_transactionSubTotal.HasValue == true)) {
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_transactionsId));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_staffId));
+            if ((Original_transactionDate.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((double)(Original_transactionSubTotal.Value));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_transactionDate.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Original_transactionTotal.HasValue == true)) {
+            if ((Original_transactionSubTotal.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((double)(Original_transactionTotal.Value));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((double)(Original_transactionSubTotal.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Original_transactionTotal.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((double)(Original_transactionTotal.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -11723,8 +11674,8 @@ SELECT transactionsId, transactionDate, transactionSubTotal, transactionTotal FR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<global::System.DateTime> transactionDate, global::System.Nullable<double> transactionSubTotal, global::System.Nullable<double> transactionTotal, int Original_transactionsId, global::System.Nullable<global::System.DateTime> Original_transactionDate, global::System.Nullable<double> Original_transactionSubTotal, global::System.Nullable<double> Original_transactionTotal) {
-            return this.Update(Original_transactionsId, transactionDate, transactionSubTotal, transactionTotal, Original_transactionsId, Original_transactionDate, Original_transactionSubTotal, Original_transactionTotal);
+        public virtual int Update(int staffId, global::System.Nullable<global::System.DateTime> transactionDate, global::System.Nullable<double> transactionSubTotal, global::System.Nullable<double> transactionTotal, int Original_transactionsId, int Original_staffId, global::System.Nullable<global::System.DateTime> Original_transactionDate, global::System.Nullable<double> Original_transactionSubTotal, global::System.Nullable<double> Original_transactionTotal) {
+            return this.Update(Original_transactionsId, staffId, transactionDate, transactionSubTotal, transactionTotal, Original_transactionsId, Original_staffId, Original_transactionDate, Original_transactionSubTotal, Original_transactionTotal);
         }
     }
     
@@ -12763,6 +12714,15 @@ SELECT transactionsId, transactionDate, transactionSubTotal, transactionTotal FR
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._staffTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.staff.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._staffTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._inventoryTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.inventory.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -12787,15 +12747,6 @@ SELECT transactionsId, transactionDate, transactionSubTotal, transactionTotal FR
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._productsTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._staffTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.staff.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._staffTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -12869,6 +12820,14 @@ SELECT transactionsId, transactionDate, transactionSubTotal, transactionTotal FR
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._staffTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.staff.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._staffTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._inventoryTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.inventory.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -12890,14 +12849,6 @@ SELECT transactionsId, transactionDate, transactionSubTotal, transactionTotal FR
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._productsTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._staffTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.staff.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._staffTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -12975,14 +12926,6 @@ SELECT transactionsId, transactionDate, transactionSubTotal, transactionTotal FR
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._staffTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.staff.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._staffTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._productsTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.products.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -13004,6 +12947,14 @@ SELECT transactionsId, transactionDate, transactionSubTotal, transactionTotal FR
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._inventoryTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._staffTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.staff.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._staffTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

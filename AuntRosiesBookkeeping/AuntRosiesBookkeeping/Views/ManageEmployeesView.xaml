@@ -1,11 +1,11 @@
-﻿<UserControl x:Class="AuntRosiesBookkeeping.Views.ManageEmployeesView"
+﻿<UserControl x:Name="EmployeeForm" x:Class="AuntRosiesBookkeeping.Views.ManageEmployeesView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:AuntRosiesBookkeeping.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="496" d:DesignWidth="696">
+             d:DesignHeight="496" d:DesignWidth="696" Loaded="EmployeeForm_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.75*"/>
@@ -26,7 +26,23 @@
         </Grid.RowDefinitions>
         
         <!-- LISTBOX HORIZONTAL DISPLAYS EVERYTHING-->
-        <ListBox Name="lstEmployees" Grid.Row="1" Margin="10,5,10,5" Grid.ColumnSpan="4"/>
+        <ListView Name="lstEmployees" Grid.Row="1" Margin="10,5,10,5" Grid.ColumnSpan="4" SelectionChanged="lstEmployees_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=staffId}" Header="ID" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=staffFirstName}" Header="First Name" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=staffLastName}" Header="Last Name" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=staffType}" Header="Type" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=staffPhoneNumber}" Header="Phone Number" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=staffMobileNumber}" Header="Mobile Number" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=staffStreetAddress}" Header="Address" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=staffCity}" Header="City" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=staffProvince}" Header="Province" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=staffPostalCode}" Header="Postal Code" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=staffSalary, StringFormat='{}{0:C}'}" Header="Salary" />
+                </GridView>
+            </ListView.View>
+        </ListView>
 
         <!-- PAY PERIOD -->
         <Label Name="lblPayPeriod" Content="_Pay Period" Grid.Row="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
@@ -44,11 +60,14 @@
 
         <!-- Type ** Combobox(Part-time, Full-time) -->
         <Label Name="lblEmployeeType" Content="_Type" Grid.Row="5" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
-        <ComboBox Name="cmbEmployeeType" Grid.Row="5" Grid.Column="1"  Margin="5"/>
+        <ComboBox Name="cmbEmployeeType" Grid.Row="5" Grid.Column="1"  Margin="5">
+            <ComboBoxItem />
+            <ComboBoxItem />
+        </ComboBox>
 
         <!-- Phone number ** textbox-->
         <Label Name="lblPhoneNumber" Content="_Phone Number" Grid.Row="6" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
-        <TextBox Name="txtPhoneNumber" Grid.Row="6" Grid.Column="1" Margin="5" PreviewTextInput="txtPhoneNumber_PreviewTextInput" />
+        <TextBox Name="txtPhoneNumber" Grid.Row="6" Grid.Column="1" Margin="5" PreviewTextInput="txtPhoneNumber_PreviewTextInput" Text="{Binding Path=staffHoursNumberOfHours}"/>
 
         <!-- Altername phone number **textbox -->
         <Label Name="lblCellPhoneNumber" Content="Cell Phone _Number" Grid.Row="7" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />

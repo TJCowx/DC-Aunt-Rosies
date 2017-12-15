@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -13,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Configuration;
 
 namespace AuntRosiesBookkeeping.Views
 {
@@ -22,6 +25,7 @@ namespace AuntRosiesBookkeeping.Views
     public partial class ManageEmployeesView : UserControl
     {
         #region ========VARIABLES===========
+        // Constants
         private const int NAME_MAX_LENGTH = 30;
         private const int PHONE_LENGTH = 10;
         private const int ADDRESS_MAX_LENGTH = 50;
@@ -29,6 +33,14 @@ namespace AuntRosiesBookkeeping.Views
         private const int PROVINCE_MAX_LENGTH = 2;
         private const int POSTAL_CODE_LENGTH = 6;
         private const int HOURS_WORKED_MAX_LENGTH = 6;
+
+        private int empId;      // Employee that is currently selected
+
+        // Dataset
+        private aunt_rosieDataSet auntRosieDataset;
+        // Table Adapters
+        private aunt_rosieDataSetTableAdapters.staffTableAdapter employeeTableAdapter;
+        private aunt_rosieDataSetTableAdapters.staffHoursTableAdapter staffHoursTableAdapter;
         #endregion
 
         public ManageEmployeesView()
@@ -373,5 +385,83 @@ namespace AuntRosiesBookkeeping.Views
         }
 
         #endregion
+
+        /// <summary>
+        /// Loads the listview on startup
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void EmployeeForm_Loaded(object sender, RoutedEventArgs e)
+        {
+            // Load the listview
+            auntRosieDataset = new aunt_rosieDataSet();     // Declare the dataset that is being loaded
+            employeeTableAdapter = new aunt_rosieDataSetTableAdapters.staffTableAdapter();      // Instantiate the employee table adapter
+            employeeTableAdapter.Fill(auntRosieDataset.staff);      // Fill the datatable
+
+            // Populate the listview
+            lstEmployees.ItemsSource = auntRosieDataset.staff;
+            lstEmployees.SelectedIndex = 0;     // Select the first employee by default
+            
+        }
+
+        private void lstEmployees_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // Get the selected row
+            DataRowView empRow = lstEmployees.Items.GetItemAt(lstEmployees.SelectedIndex) as DataRowView;
+
+            // If the row isn't null populate the boxes
+            if (empRow != null)
+            {
+                // Load all the information for the selected staff into a variable
+                empId = (int)empRow["staffId"];
+                string empFirstName = (String)empRow["staffFirstName"];
+                string empLastName = (String)empRow["staffLastName"];
+                string empType = (String)empRow["staffType"];
+                string empPhoneNumber = (String)empRow["staffPhoneNumber"];
+                string empMobileNumber = (String)empRow["staffMobileNumber"];
+                string empAddress = (String)empRow["staffStreetAddress"];
+                string empCity = (String)empRow["staffCity"];
+                string empProvince = (String)empRow["staffProvince"];
+                string empPostalCode = (String)empRow["staffPostalCode"];
+                double empSalary = Convert.ToDouble(empRow["staffSalary"]);
+                double empHoursWorked;
+
+                // Connection string
+                var conn = ConfigurationManager.ConnectionStrings["aunt_rosieConnectionString"].ConnectionString;
+                // Data adapter to get the pay period, formats start and end into a range
+                SqlDataAdapter payPeriodAdapter = new SqlDataAdapter("SELECT staffHoursStartDate, CONCAT(staffHoursStartDate, ' to ', staffHoursEndDate) as range FROM staffHours WHERE(staffId = '"+empId+"')", conn);
+                DataTable payPeriod = new DataTable();  // Data table that holds all the pay ranges for the selected employee
+
+                payPeriodAdapter.Fill(payPeriod);       // Fill the datatable with the pay ranges
+
+                // Populate the dropdown menu with the pay ranges
+                cmbPayPeriod.ItemsSource = payPeriod.DefaultView;
+                cmbPayPeriod.DisplayMemberPath = "range";       // Set the display to be the formatted range
+                cmbPayPeriod.SelectedValuePath = "staffHoursStartDate";     // Value is the start date
+                cmbPayPeriod.SelectedIndex = 0; // Set the first index to be selected by default
+
+
+                // Get hours worked
+                // Declare the connection
+                SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["aunt_rosieConnectionString"].ConnectionString);
+                connection.Open();      // Open the connection
+                SqlCommand hoursWorkedCommand = new SqlCommand("SELECT staffHoursNumberOfHours FROM staffHours WHERE staffId='" + empId + "' AND staffHoursStartDate='" + cmbPayPeriod.SelectedValue+ "'", connection);
+                empHoursWorked = Convert.ToDouble(hoursWorkedCommand.ExecuteScalar());    // Populate the number of hours worked in the range
+                txtHoursWorked.Text = empHoursWorked.ToString();        // Populate the hours worked textbox
+                connection.Close();     // Close the connection
+
+                // Load all the staff information into the textboxes
+                txtEmployeeFirstName.Text = empFirstName;
+                txtEmployeeLastName.Text = empLastName;
+                // TODO: DROPDOWN MENU FOR TYPE
+                txtPhoneNumber.Text = empPhoneNumber;
+                txtCellPhoneNumber.Text = empMobileNumber;
+                txtAddress.Text = empAddress;
+                txtCity.Text = empCity;
+                txtProvince.Text = empProvince;
+                txtPostalCode.Text = empPostalCode;
+                txtSalary.Text = Convert.ToString(empSalary);
+            }
+        }
     }
 }

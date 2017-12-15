@@ -7,7 +7,7 @@
     xmlns:viewmodels="clr-namespace:AuntRosiesBookkeeping.ViewModels"
     xmlns:views="clr-namespace:AuntRosiesBookkeeping.Views"
     mc:Ignorable="d"
-    Title="Aunt Rosie's Bookkeeping" MinHeight="496" MinWidth="696" Loaded="MainWindow_Loaded"
+    Title="Aunt Rosie's Bookkeeping" MinHeight="496" MinWidth="696" Height="496" Width="696" Loaded="MainWindow_Loaded"
         Background="WhiteSmoke"  >
 
     <Window.Resources>

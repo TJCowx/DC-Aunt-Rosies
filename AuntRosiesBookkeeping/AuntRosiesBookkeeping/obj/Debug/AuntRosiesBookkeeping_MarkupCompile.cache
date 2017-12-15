@@ -12,22 +12,8 @@ DEBUG;TRACE
 C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\App.xaml
 8-1137288191
 3-291139754
-<<<<<<< HEAD
-252028298134
-25635228711
-=======
-<<<<<<< HEAD
 261162351688
-=======
-<<<<<<< HEAD
-25-415280821
-24-1547231346
-=======
-252028298134
->>>>>>> 4662280ab2fabe6740be83d95715d72ebec227cd
-25271929757
->>>>>>> dcafc2f200caf9951b014a7e7f8dd6733342d306
->>>>>>> c143558ac3f7b6cc2a24fae5b06b9f5b4f173612
+25635228711
 MainWindow.xaml;Views\AdminLoginView.xaml;Views\ManageEmployeesView.xaml;Views\ManageInventoryView.xaml;Views\ManageProductsView.xaml;Views\RecipeView.xaml;Views\ReportsView.xaml;Views\TransactionView.xaml;
 
 False

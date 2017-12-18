@@ -33,5 +33,17 @@ namespace AuntRosiesBookkeeping.Properties {
                 return ((string)(this["aunt_rosieConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string ok {
+            get {
+                return ((string)(this["ok"]));
+            }
+            set {
+                this["ok"] = value;
+            }
+        }
     }
 }

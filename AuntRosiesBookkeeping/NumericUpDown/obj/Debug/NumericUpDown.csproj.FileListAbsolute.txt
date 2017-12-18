@@ -68,3 +68,4 @@ D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBo
 D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.dll
 D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.pdb
 D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.csprojResolveAssemblyReference.cache
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\NumericUpDown\bin\Debug\NumericUpDown.dll.config

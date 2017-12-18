@@ -24,15 +24,15 @@
             <ColumnDefinition  Width="0.1*"/>
         </Grid.ColumnDefinitions>
         <Label Name="lblInventoryList" Content="Inventory _List" Grid.Row="0" Grid.Column="4" VerticalContentAlignment="Bottom"/>
-        <ListView Name="lstInventoryList" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Grid.RowSpan ="3" Margin="5">
+        <ListView Name="lstInventoryList" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Grid.RowSpan ="3" Margin="0,5,10,5" SelectionChanged="lstInventoryList_SelectionChanged">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=InventoryId}" Header="ID"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=InventoryDescription}" Header="Inventory Name"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=InventoryType}" Header="Type"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=InventoryQuantity}" Header="Quantity"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Measurement}" Header="Measurement"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=InventoryPrice}" Header="Price"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=inventoryId}" Header="ID"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=inventoryDescription}" Header="Inventory Name"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=inventoryTypeDescription}" Header="Type"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=inventoryQuantity}" Header="Quantity"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=measurementDescription}" Header="Measurement"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=inventoryPrice}" Header="Price"/>
                 </GridView>
             </ListView.View>
         </ListView>

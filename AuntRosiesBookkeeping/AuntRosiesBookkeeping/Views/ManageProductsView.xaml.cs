@@ -26,6 +26,8 @@ namespace AuntRosiesBookkeeping.Views
         #region VARIABLES
         private aunt_rosieDataSet auntRosieDataset;
 
+        private aunt_rosieDataSetTableAdapters.productItemsViewTableAdapter productItemsViewTableAdapter;
+
         private SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["aunt_rosieConnectionString"].ConnectionString);
         #endregion
 
@@ -99,9 +101,21 @@ namespace AuntRosiesBookkeeping.Views
 
         }
 
+        /// <summary>
+        /// Update the products view
+        /// </summary>
+        /// <param name="selectedRecord"></param>
         private void RefreshProductsView(int selectedRecord)
         {
-            
+
+            // Load the dataset for the listview
+            auntRosieDataset = new aunt_rosieDataSet();     // Declare the dataset
+            productItemsViewTableAdapter = new aunt_rosieDataSetTableAdapters.productItemsViewTableAdapter();
+            productItemsViewTableAdapter.Fill(auntRosieDataset.productItemsView);
+
+            // Populate the listview
+            lstProductList.SelectedIndex = selectedRecord;  // Set the selected record
+            lstProductList.ItemsSource = auntRosieDataset.productItemsView;
         }
     }
 }

@@ -25,7 +25,7 @@ namespace AuntRosiesBookkeeping.Views
     {
         #region DECLARATIONS
         private aunt_rosieDataSet auntRosieDataset;
-        private aunt_rosieDataSetTableAdapters.inventoryTableAdapter inventoryTableAdapter;
+        private aunt_rosieDataSetTableAdapters.inventoryItemsViewTableAdapter inventoryItemsTableAdapter;
         private aunt_rosieDataSetTableAdapters.product_recipesTableAdapter productRecipiesTableAdapter;
         #endregion
 
@@ -49,8 +49,8 @@ namespace AuntRosiesBookkeeping.Views
         private void frmRecipeView_Loaded(object sender, RoutedEventArgs e)
         {
             auntRosieDataset = new aunt_rosieDataSet();
-            inventoryTableAdapter = new aunt_rosieDataSetTableAdapters.inventoryTableAdapter();
-            inventoryTableAdapter.Fill(auntRosieDataset.inventory);
+            //inventoryTableAdapter = new aunt_rosieDataSetTableAdapters.inventoryTableAdapter();
+            //inventoryTableAdapter.Fill(auntRosieDataset.inventory);
 
             lstIngredients.ItemsSource = auntRosieDataset.inventory;        // Fills the list from the data that is needed
             // Load the ingredients listview
@@ -110,6 +110,12 @@ namespace AuntRosiesBookkeeping.Views
             String sql = "UPDATE ";    // SQL command to be executed
 
             this.Close();   // Close this box
+        }
+
+
+        private void RefreshIngredients()
+        {
+            auntRosieDataset = new aunt_rosieDataSet();
         }
     }
 }

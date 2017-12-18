@@ -28,11 +28,11 @@
         <ListView Name="lstProductList" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Grid.RowSpan ="3" Margin="5">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=ProductId}" Header="ID"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=ProductDescription}" Header="Product Name"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=ProductQuantity}" Header="Quantity"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=ProductType}" Header="Type"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=ProductPrice}" Header="Price"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=productId}" Header="ID"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=productDescription}" Header="Product Name"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=productQuantity}" Header="Quantity"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=productTypeDescriptions}" Header="Type"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=productPrice}" Header="Price"/>
                 </GridView>
             </ListView.View>
         </ListView>

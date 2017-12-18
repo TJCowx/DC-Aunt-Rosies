@@ -4,16 +4,25 @@
 winexe
 C#
 .cs
-D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\
 AuntRosiesBookkeeping
 none
 false
 DEBUG;TRACE
-D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\App.xaml
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\App.xaml
 8-1137288191
 3-291139754
+<<<<<<< HEAD
 30-2137738977
+=======
+<<<<<<< HEAD
+291010269971
+24-1547231346
+=======
+29-1271792531
+>>>>>>> 4662280ab2fabe6740be83d95715d72ebec227cd
 25271929757
+>>>>>>> dcafc2f200caf9951b014a7e7f8dd6733342d306
 MainWindow.xaml;Views\AdminLoginView.xaml;Views\ManageEmployeesView.xaml;Views\ManageInventoryView.xaml;Views\ManageProductsView.xaml;Views\RecipeView.xaml;Views\ReportsView.xaml;Views\TransactionView.xaml;
 
 True

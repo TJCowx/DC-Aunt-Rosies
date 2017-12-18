@@ -1,0 +1,84 @@
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\NumericUpDown\bin\Debug\NumericUpDown.XML
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\NumericUpDown\bin\Debug\NumericUpDown.dll
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\NumericUpDown\bin\Debug\NumericUpDown.pdb
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.g.cs
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown_MarkupCompile.cache
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown_MarkupCompile.lref
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.baml
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.g.resources
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\eisiWare.Properties.Resources.resources
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.csproj.GenerateResource.Cache
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.dll
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.pdb
+C:\DC\2017Fall\DBAS\AuntRosiesBookkeeping\NumericUpDown\bin\Debug\NumericUpDown.XML
+C:\DC\2017Fall\DBAS\AuntRosiesBookkeeping\NumericUpDown\bin\Debug\NumericUpDown.dll
+C:\DC\2017Fall\DBAS\AuntRosiesBookkeeping\NumericUpDown\bin\Debug\NumericUpDown.pdb
+C:\DC\2017Fall\DBAS\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.csprojResolveAssemblyReference.cache
+C:\DC\2017Fall\DBAS\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.g.cs
+C:\DC\2017Fall\DBAS\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\DC\2017Fall\DBAS\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown_MarkupCompile.cache
+C:\DC\2017Fall\DBAS\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown_MarkupCompile.lref
+C:\DC\2017Fall\DBAS\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.baml
+C:\DC\2017Fall\DBAS\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.g.resources
+C:\DC\2017Fall\DBAS\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\eisiWare.Properties.Resources.resources
+C:\DC\2017Fall\DBAS\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.csproj.GenerateResource.Cache
+C:\DC\2017Fall\DBAS\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.dll
+C:\DC\2017Fall\DBAS\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.pdb
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\AuntRosiesBookkeeping\NumericUpDown\bin\Debug\NumericUpDown.XML
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\AuntRosiesBookkeeping\NumericUpDown\bin\Debug\NumericUpDown.dll
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\AuntRosiesBookkeeping\NumericUpDown\bin\Debug\NumericUpDown.pdb
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.csprojResolveAssemblyReference.cache
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.g.cs
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown_MarkupCompile.cache
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown_MarkupCompile.lref
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.baml
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.g.resources
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\eisiWare.Properties.Resources.resources
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.csproj.GenerateResource.Cache
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.dll
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.pdb
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\NumericUpDown\bin\Debug\NumericUpDown.XML
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\NumericUpDown\bin\Debug\NumericUpDown.dll
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\NumericUpDown\bin\Debug\NumericUpDown.pdb
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.csprojResolveAssemblyReference.cache
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.g.cs
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown_MarkupCompile.cache
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown_MarkupCompile.lref
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.baml
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.g.resources
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\eisiWare.Properties.Resources.resources
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.csproj.GenerateResource.Cache
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.dll
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.pdb
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\bin\Debug\NumericUpDown.dll.config
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\bin\Debug\NumericUpDown.XML
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\bin\Debug\NumericUpDown.dll
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\bin\Debug\NumericUpDown.pdb
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.g.cs
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown_MarkupCompile.cache
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown_MarkupCompile.lref
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.baml
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.g.resources
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\eisiWare.Properties.Resources.resources
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.csproj.GenerateResource.Cache
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.dll
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.pdb
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\bin\Debug\NumericUpDown.dll.config
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\bin\Debug\NumericUpDown.XML
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\bin\Debug\NumericUpDown.dll
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\bin\Debug\NumericUpDown.pdb
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.csprojResolveAssemblyReference.cache
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.g.cs
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown_MarkupCompile.cache
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown_MarkupCompile.lref
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.baml
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.g.resources
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\eisiWare.Properties.Resources.resources
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.csproj.GenerateResource.Cache
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.dll
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.pdb

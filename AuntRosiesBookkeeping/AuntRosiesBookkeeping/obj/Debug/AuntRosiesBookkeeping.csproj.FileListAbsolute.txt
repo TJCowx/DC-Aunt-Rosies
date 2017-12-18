@@ -151,8 +151,6 @@ C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\o
 C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\AuntRosiesBookkeeping.csproj.GenerateResource.Cache
 D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\Views\AdminLoginView.g.cs
 D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\Views\AdminLoginView.baml
-D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\aunt_rosie.mdf
-D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\aunt_rosie_log.ldf
 D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
 D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\CrystalDecisions.ReportSource.dll
 D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\CrystalDecisions.Shared.dll
@@ -192,6 +190,73 @@ C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\b
 C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\stdole.dll
 C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\ShockwaveFlashObjects.dll
-C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\AuntRosiesBookkeeping.csproj.AuntRosiesBookkeeping.exe.config
 C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\Views\AdminLoginView.g.cs
 C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\Views\AdminLoginView.baml
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\CrystalDecisions.Shared.dll
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\aunt_rosie.mdf
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\aunt_rosie_log.ldf
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\aunt_rosieDataSet1.Designer.cs
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\aunt_rosieDataSet1.xsc
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\aunt_rosieDataSet1.xsd
+D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\aunt_rosieDataSet1.xss
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\AuntRosiesBookkeeping.exe.config
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\AuntRosiesBookkeeping.exe
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\AuntRosiesBookkeeping.pdb
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\aunt_rosie.mdf
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\aunt_rosie_log.ldf
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\aunt_rosieDataSet1.Designer.cs
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\aunt_rosieDataSet1.xsc
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\aunt_rosieDataSet1.xsd
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\aunt_rosieDataSet1.xss
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\AuntRosiesBookkeeping.exe
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\AuntRosiesBookkeeping.pdb
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\NumericUpDown.dll
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\sapbusinessobjects.wpf.viewer.dll
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\SAPBusinessObjects.WPF.ViewerShared.dll
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\FlashControlV71.dll
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\stdole.dll
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\NumericUpDown.pdb
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\NumericUpDown.xml
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\AuntRosiesBookkeeping.csprojResolveAssemblyReference.cache
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\MainWindow.g.cs
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\Views\AdminLoginView.g.cs
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\Views\ManageEmployeesView.g.cs
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\Views\ManageInventoryView.g.cs
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\Views\ManageProductsView.g.cs
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\Views\RecipeView.g.cs
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\Views\ReportsView.g.cs
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\Views\TransactionView.g.cs
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\App.g.cs
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\AuntRosiesBookkeeping_Content.g.cs
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\AuntRosiesBookkeeping_MarkupCompile.cache
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\AuntRosiesBookkeeping_MarkupCompile.lref
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\MainWindow.baml
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\Views\AdminLoginView.baml
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\Views\ManageEmployeesView.baml
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\Views\ManageInventoryView.baml
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\Views\ManageProductsView.baml
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\Views\RecipeView.baml
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\Views\ReportsView.baml
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\Views\TransactionView.baml
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\AuntRosiesBookkeeping.g.resources
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\AuntRosiesBookkeeping.Properties.Resources.resources
+C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\AuntRosiesBookkeeping.csproj.GenerateResource.Cache

@@ -13,7 +13,11 @@ C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\A
 8-1137288191
 3-291139754
 261162351688
+<<<<<<< HEAD
 25635228711
+=======
+25271929757
+>>>>>>> parent of 67a3443... Merge branch 'DB-Addition' of https://github.com/TJCowx/DC-Aunt-Rosies into DB-Addition
 MainWindow.xaml;Views\AdminLoginView.xaml;Views\ManageEmployeesView.xaml;Views\ManageInventoryView.xaml;Views\ManageProductsView.xaml;Views\RecipeView.xaml;Views\ReportsView.xaml;Views\TransactionView.xaml;
 
 False

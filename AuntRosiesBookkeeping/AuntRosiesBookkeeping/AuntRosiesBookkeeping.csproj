@@ -85,6 +85,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>aunt_rosieDataSet1.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Reports\EmployeeReport.cs">
       <AutoGen>True</AutoGen>
@@ -110,7 +111,10 @@
       <DependentUpon>SalesReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="SpecialClass\InventoryItem.cs" />
+    <Compile Include="SpecialClass\ProductItem.cs" />
     <Compile Include="SpecialClass\ReportTabInfo.cs" />
+    <Compile Include="SpecialClass\TransactionItem.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
     <Compile Include="ViewModels\ManageEmployeeViewModel.cs" />
     <Compile Include="ViewModels\ManageInventoryViewModel.cs" />
@@ -217,14 +221,17 @@
     </EmbeddedResource>
     <None Include="aunt_rosieDataSet1.xsc">
       <DependentUpon>aunt_rosieDataSet1.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="aunt_rosieDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>aunt_rosieDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="aunt_rosieDataSet1.xss">
       <DependentUpon>aunt_rosieDataSet1.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -260,10 +267,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="aunt_rosie.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="aunt_rosie_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>aunt_rosie.mdf</DependentUpon>
     </Content>
     <Content Include="CustomControls\NumericUpDown.dll" />

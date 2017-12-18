@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -21,9 +23,17 @@ namespace AuntRosiesBookkeeping.Views
     /// </summary>
     public partial class ManageProductsView : UserControl
     {
+        #region VARIABLES
+        private aunt_rosieDataSet auntRosieDataset;
+
+        private SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["aunt_rosieConnectionString"].ConnectionString);
+        #endregion
+
+
         public ManageProductsView()
         {
             InitializeComponent();
+            RefreshProductsView(0);
         }
 
         /// <summary>
@@ -57,9 +67,41 @@ namespace AuntRosiesBookkeeping.Views
             }
         }
 
-        private void lstProductList_Loaded(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Only allows numbers to be entered in the quantity textbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void txtQtyProd_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-           
+            var quantity = sender as TextBox;     // Stores the textbox as a variable
+            //Tests if text is numeric
+            e.Handled = Regex.IsMatch(e.Text, "[^0-9]+");  // Allows only numbers 
+        }
+
+        /// <summary>
+        /// Add a new product into the databse
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnAddProduct_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Remove a product from the database
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnRemoveProduct_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RefreshProductsView(int selectedRecord)
+        {
+            
         }
     }
 }

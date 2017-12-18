@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace AuntRosiesBookkeeping.SpecialClass
 {
-    class ReportTabInfo
+    public class ReportTabInfo
     {
         public static int _tabIndex;
 
         public ReportTabInfo()
-        { }
+        {
+
+        }
 
         public ReportTabInfo(int v)
         {

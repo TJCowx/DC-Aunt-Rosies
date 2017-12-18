@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:AuntRosiesBookkeeping.Views"
              xmlns:custom="clr-namespace:eisiWare;assembly=NumericUpDown"
              mc:Ignorable="d"
-             Title="Recipe" MinHeight="496" MinWidth="696"  Background="WhiteSmoke" Loaded="frmRecipeView_Loaded">
+             Title="Recipe" MinHeight="496" MinWidth="696" Height="496" Width="696"
+             Background="WhiteSmoke" Loaded="frmRecipeView_Loaded">
     <Grid Margin="5,5,5,5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.1*"/>
@@ -37,13 +38,24 @@
         <Label Name="lblIngredients" Content="_Recipe" Grid.Column="1" Grid.Row="0" VerticalContentAlignment="Bottom"/>
         <Label Name="lblIngredientTitle" Content="_Ingredients" Grid.Column="5" Grid.Row="0" VerticalContentAlignment="Bottom"/>
         <!-- LISTBOXES FOR PRODUCTS -->
-        <ListView Name="lstRecipe" Grid.Row="1" Grid.Column="1" Grid.RowSpan="9"/>
+        <ListView Name="lstRecipe" Grid.Row="1" Grid.Column="1" Grid.RowSpan="9">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=InventoryDescription}" Header="Name" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=InventoryType}" Header="Type" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=InventoryQuantity}" Header="Quantity" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=MeasurementType }" Header="Measurement" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=InventoryPrice}" Header="Price" />
+                </GridView>
+            </ListView.View>
+        </ListView>
         <ListView Name="lstIngredients" Grid.Row="1" Grid.Column="5" Grid.ColumnSpan="2" Grid.RowSpan="9">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=inventoryDescription}" Header="Name" />
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=inventoryQuantity}" Header="Quantity" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=InventoryDescription}" Header="Name" />
                     <GridViewColumn DisplayMemberBinding="{Binding Path=InventoryType}" Header="Type" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=MeasurementType }" Header="Measurement" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=InventoryPrice}" Header="Price" />
                 </GridView>
             </ListView.View>
         </ListView>

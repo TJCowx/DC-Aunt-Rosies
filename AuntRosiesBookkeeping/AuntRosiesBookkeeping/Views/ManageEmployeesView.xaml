@@ -46,7 +46,7 @@
 
         <!-- PAY PERIOD -->
         <Label Name="lblPayPeriod" Content="_Pay Period" Grid.Row="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
-        <ComboBox Name="cmbPayPeriod" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="5" />
+        <ComboBox Name="cmbPayPeriod" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="5" SelectionChanged="cmbPayPeriod_SelectionChanged" />
         <Button Name="btnNewPayPeriod" Content="New Pay Period" Grid.Column="3" Grid.Row="2" Margin="5" Click="btnNewPayPeriod_Click" />
 
         <!-- EMPLOYEE INFORMATION OTHER HALF OF THE FORM -->
@@ -61,8 +61,8 @@
         <!-- Type ** Combobox(Part-time, Full-time) -->
         <Label Name="lblEmployeeType" Content="_Type" Grid.Row="5" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
         <ComboBox Name="cmbEmployeeType" Grid.Row="5" Grid.Column="1"  Margin="5">
-            <ComboBoxItem />
-            <ComboBoxItem />
+            <ComboBoxItem Content="PT"/>
+            <ComboBoxItem Content="FT"/>
         </ComboBox>
 
         <!-- Phone number ** textbox-->

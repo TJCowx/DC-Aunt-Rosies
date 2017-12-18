@@ -37,8 +37,25 @@
         <Label Name="lblCurrentTransactionTitle" Content="_Current Transaction" Grid.Column="1" Grid.Row="0" VerticalContentAlignment="Bottom"/>
         <Label Name="lblProductsTitle" Content="_Products" Grid.Column="5" Grid.Row="0" VerticalContentAlignment="Bottom"/>
         <!-- LISTBOXES FOR PRODUCTS -->
-        <ListView Name="lstCurrentTransaction" Grid.Row="1" Grid.Column="1" Grid.RowSpan="7"/>
-        <ListView Name="lstProducts" Grid.Row="1" Grid.Column="5" Grid.ColumnSpan="2" Grid.RowSpan="9"/>
+        <ListView Name="lstCurrentTransaction" Grid.Row="1" Grid.Column="1" Grid.RowSpan="7">
+            <ListView.View>
+                <GridView>
+ 
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=ProductDescription}" Header="Product" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=ProductQuantity}" Header="Quantity" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=ProductPrice}" Header="Price" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView Name="lstProducts" Grid.Row="1" Grid.Column="5" Grid.ColumnSpan="2" Grid.RowSpan="9">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=productDescription}" Header="Product" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=productQuantity}" Header="Remaining Quantity" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=productPrice}" Header="Price" />
+                </GridView>
+            </ListView.View>
+        </ListView>
         <!-- COSTING GROUP BOX/LABELS -->
         <Border BorderBrush="Black" BorderThickness="1" Grid.Row="9" Grid.Column="1" Grid.RowSpan="3">
             <Grid>
@@ -64,11 +81,11 @@
         </Border>
         <!-- INTERACTABLE OBJECTS & ACCOMPANYING LABELS-->
         <Label Name="lblQty" Content="_Qty" Grid.Column="3" Grid.Row="1" VerticalContentAlignment="Bottom"/>
-        <Button Name="btnAddProduct" Content="&lt;" Grid.Column="3" Grid.Row="3" Margin="5" />
-        <Button Name="btnRemoveProduct" Content="&gt;" Grid.Column="3" Grid.Row="4" Margin="5" />
-        <Button Name="btnRemoveAllProduct" Content="&gt;&gt;" Grid.Column="3" Grid.Row="5" Margin="5" />
-        <Button Name="btnCompleteTransaction" Content="Complete _Transaction" Grid.Row="11" Grid.Column="6" Margin="5,5,5,5"/>
-        <TextBox x:Name="txtQuant" Grid.Column="3" Grid.Row="2" Width="50" Height="28" Margin="5.2,10,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" PreviewTextInput="txtQuant_PreviewTextInput"/>
+        <Button Name="btnAddProduct" Content="&lt;" Grid.Column="3" Grid.Row="3" Margin="5" Click="btnAddProduct_Click" />
+        <Button Name="btnRemoveProduct" Content="&gt;" Grid.Column="3" Grid.Row="4" Margin="5,5,5,0" Height="38" VerticalAlignment="Top" Click="btnRemoveProduct_Click" />
+        <Button Name="btnRemoveAllProduct" Content="&gt;&gt;" Grid.Column="3" Grid.Row="5" Margin="5" Click="btnRemoveAllProduct_Click" />
+        <Button Name="btnCompleteTransaction" Content="Complete _Transaction" Grid.Row="11" Grid.Column="6" Margin="5,5,5,0" Height="38" VerticalAlignment="Top" Click="btnCompleteTransaction_Click"/>
+        <TextBox x:Name="txtQty" Grid.Column="3" Grid.Row="2" Width="50" Height="28" Margin="5.2,10,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" PreviewTextInput="txtQuant_PreviewTextInput"/>
 
 
     </Grid>

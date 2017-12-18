@@ -67,4 +67,3 @@ D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBo
 D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.csproj.GenerateResource.Cache
 D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.dll
 D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.pdb
-D:\School\Semester 5\DBAS-6206\AuntRosiesBookkeeping\DC-Aunt-Rosies\AuntRosiesBookkeeping\NumericUpDown\obj\Debug\NumericUpDown.csprojResolveAssemblyReference.cache

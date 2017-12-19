@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -15,6 +15,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Configuration;
+using System.ComponentModel;
 
 namespace AuntRosiesBookkeeping.Views
 {
@@ -29,6 +31,8 @@ namespace AuntRosiesBookkeeping.Views
         private aunt_rosieDataSetTableAdapters.productItemsViewTableAdapter productItemsViewTableAdapter;
 
         private SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["aunt_rosieConnectionString"].ConnectionString);
+
+        int productId;
         #endregion
 
 
@@ -45,7 +49,7 @@ namespace AuntRosiesBookkeeping.Views
         /// <param name="e"></param>
         private void btnChangeRecipe_Click(object sender, RoutedEventArgs e)
         {
-            RecipeView recipe = new RecipeView();
+            RecipeView recipe = new RecipeView(productId);
             recipe.Show();
         }
 
@@ -117,5 +121,73 @@ namespace AuntRosiesBookkeeping.Views
             lstProductList.SelectedIndex = selectedRecord;  // Set the selected record
             lstProductList.ItemsSource = auntRosieDataset.productItemsView;
         }
+
+        private void lstProductList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //When a product is selected
+            if (lstProductList.SelectedItem != null)
+            {
+                RefreshProductsInfo();
+            }
+        }
+
+        
+        #region CUSTOM FUNCTIONS
+        /// <summary>
+        /// Refresh the ingredients listview
+        /// </summary>
+        private void RefreshProductsInfo()
+        {
+            // Get the selected row
+            DataRowView productRow = lstProductList.Items.GetItemAt(lstProductList.SelectedIndex) as DataRowView;
+
+            // If the row isn't null
+            if (productRow != null)
+            {
+                
+                // Load the information from the record
+                productId = (int)productRow["productId"];
+
+                string productName = (String)productRow["productDescription"];
+                int productQuantity = (int)productRow["productQuantity"];
+                string productTypeDescription = (String)productRow["productTypeDescriptions"];
+                double productPrice = (double)productRow["productPrice"];
+
+                #region LOAD FIELDS
+                txtProductName.Text = productName;
+                txtQtyProd.Text = productQuantity.ToString();
+                txtPrice.Text = productPrice.ToString();
+
+                #region GET TYPE
+                var conn = ConfigurationManager.ConnectionStrings["aunt_rosieConnectionString"].ConnectionString;
+                // Data adapter to get the type
+                SqlDataAdapter typeAdapter = new SqlDataAdapter("SELECT productTypeDescriptions as string FROM product_types", conn);
+
+                DataTable type = new DataTable();  // Data table that holds units for the selected ingredient
+                typeAdapter.Fill(type);       // Fill the datatable with the units
+
+                cmbProductType.ItemsSource = type.DefaultView;
+                cmbProductType.DisplayMemberPath = "string";       // Set the display to be a string
+                cmbProductType.SelectedValuePath = "productTypeDescriptions";     // Value is the description
+
+                if (productTypeDescription == "Pie")
+                {
+                    cmbProductType.SelectedIndex = 0;
+                }
+                else if (productTypeDescription == "Preserves")
+                {
+                    cmbProductType.SelectedIndex = 1;
+                }
+                else if (productTypeDescription == "Preserve")
+                {
+                    cmbProductType.SelectedIndex = 1;
+                }
+                #endregion
+                #endregion
+
+            }
+        }
+
+        #endregion
     }
 }

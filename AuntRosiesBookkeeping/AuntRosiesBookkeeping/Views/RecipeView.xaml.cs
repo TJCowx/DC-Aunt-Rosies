@@ -27,11 +27,20 @@ namespace AuntRosiesBookkeeping.Views
         private aunt_rosieDataSet auntRosieDataset;
         private aunt_rosieDataSetTableAdapters.inventoryItemsViewTableAdapter inventoryItemsTableAdapter;
         private aunt_rosieDataSetTableAdapters.product_recipesTableAdapter productRecipiesTableAdapter;
+
+        private int productId;
         #endregion
 
         public RecipeView()
         {
             InitializeComponent();
+        }
+
+        public RecipeView(int productId)
+        {
+            InitializeComponent();
+            this.productId = productId;
+            RefreshProductsList(0);
         }
 
         private void txtQuant_PreviewTextInput(object sender, TextCompositionEventArgs e)
@@ -112,10 +121,19 @@ namespace AuntRosiesBookkeeping.Views
             this.Close();   // Close this box
         }
 
-
-        private void RefreshIngredients()
+        private void lstIngredients_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            auntRosieDataset = new aunt_rosieDataSet();
+
+        }
+        private void RefreshProductsList(int selectedRecord)
+        {
+            auntRosieDataset = new aunt_rosieDataSet();     // Declare the dataset
+            inventoryItemsTableAdapter = new aunt_rosieDataSetTableAdapters.inventoryItemsViewTableAdapter();
+            inventoryItemsTableAdapter.Fill(auntRosieDataset.inventoryItemsView);
+
+            // Populate the listview
+            lstIngredients.SelectedIndex = selectedRecord;  // Set the selected record
+            lstIngredients.ItemsSource = auntRosieDataset.inventoryItemsView;
         }
     }
 }

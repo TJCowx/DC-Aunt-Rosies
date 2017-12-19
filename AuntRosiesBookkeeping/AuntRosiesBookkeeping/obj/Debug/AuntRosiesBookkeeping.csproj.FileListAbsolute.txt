@@ -260,3 +260,7 @@ C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping
 C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\AuntRosiesBookkeeping.g.resources
 C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\AuntRosiesBookkeeping.Properties.Resources.resources
 C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\AuntRosiesBookkeeping.csproj.GenerateResource.Cache
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\aunt_rosieDataSet1.Designer.cs
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\aunt_rosieDataSet1.xsc
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\aunt_rosieDataSet1.xsd
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\bin\Debug\aunt_rosieDataSet1.xss

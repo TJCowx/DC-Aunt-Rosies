@@ -36,7 +36,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <GroupBox Header="Change Inventory" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="1" BorderBrush="Black">
+        <GroupBox Header="Change Inventory" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2" BorderBrush="Black" Margin="0.2,0,0.4,165.6">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.1*"/>
@@ -44,7 +44,8 @@
                     <RowDefinition />
                     <RowDefinition />
                     <RowDefinition />
-                    
+                    <RowDefinition />
+
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.70*"/>
@@ -58,7 +59,9 @@
                 <Label Name="lblQuantity" Content="_Quantity" Grid.Row="3" HorizontalContentAlignment="Right" />
                 <ComboBox Name="cmbMeasurementScale" Grid.Row="3" Grid.Column="2" Margin="5"/>
                 <TextBox Name="txtQty" Grid.Row="3" Grid.Column="1" Margin="5" PreviewTextInput="txtQty_PreviewTextInput" />
-                <Button Name="btnSaveChanges" Content="_Save Changes" Grid.Row="4" Grid.ColumnSpan="3" Margin="5"/>
+                <Label Name="lblPrice" Grid.Row="4" Content="_Price" HorizontalContentAlignment="Right"/>
+                <TextBox Name="txtPrice" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="5"/>
+                <Button Name="btnSaveChanges" Content="_Save Changes" Grid.Row="5" Grid.ColumnSpan="3" Margin="5"/>
             </Grid>
         </GroupBox>
 

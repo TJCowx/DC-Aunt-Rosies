@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\obj\Debug\
 AuntRosiesBookkeeping
 none
 false
 DEBUG;TRACE
-C:\Users\William\Desktop\DC-Aunt-Rosies (2)\DC-Aunt-Rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\App.xaml
+C:\Documents\GitHub\dc-aunt-rosies\AuntRosiesBookkeeping\AuntRosiesBookkeeping\App.xaml
 8-1137288191
 3-291139754
 28-1640404405
-25-5138529
+25635228711
 MainWindow.xaml;Views\AdminLoginView.xaml;Views\ManageEmployeesView.xaml;Views\ManageInventoryView.xaml;Views\ManageProductsView.xaml;Views\RecipeView.xaml;Views\ReportsView.xaml;Views\TransactionView.xaml;
 
 False

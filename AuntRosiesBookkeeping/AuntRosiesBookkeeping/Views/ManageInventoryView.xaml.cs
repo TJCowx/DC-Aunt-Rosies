@@ -49,8 +49,10 @@ namespace AuntRosiesBookkeeping.Views
 
         private void lstInventoryList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            //When a product is selected
             if (lstInventoryList.SelectedItem != null)
             {
+                RefreshIngredientsInfo();
                 if (!newInventory)
                 {
 
@@ -91,14 +93,20 @@ namespace AuntRosiesBookkeeping.Views
                 int inventoryQuantity = (int)inventoryRow["inventoryQuantity"];
                 string inventoryTypeDescription = (String)inventoryRow["inventoryTypeDescription"];
                 string measurementDescription = (String)inventoryRow["measurementDescription"];
-                double inventoryPrice = Convert.ToDouble(inventoryRow["productPrice"]);
+                double inventoryPrice = (double)inventoryRow["inventoryPrice"];
 
                 #region LOAD FIELDS
                 txtInventoryName.Text = inventoryName;
                 txtQty.Text = inventoryQuantity.ToString();
-                // TODO: PRICE
-                // TODO: MEASUREMENT
-                // TODO: TYPE
+                txtPrice.Text = inventoryPrice.ToString();
+
+                #region GET MEASUREMENT
+                //cmbMeasurementScale.Text = measurementDescription.ToString();
+                #endregion
+
+                #region GET TYPE
+                //TODO: TYPE
+                #endregion
 
                 #endregion
             }

@@ -202,23 +202,23 @@ namespace AuntRosiesBookkeeping.Views
                 {
                     // SQL statement to update the employee info
                     string sqlUpdateProduct = "UPDATE products SET " +
-                        " productDescription=@productDescription, productQuanitiy=@productQuanitiy, productTypeId=@productTypeId, " +
-                        " productPrice=@productPrice, " +
-                        " WHERE staffId='" + productId + "'";
+                        " productDescription=@productDescription, productQuantity=@productQuantity, " +
+                        " productPrice=@productPrice " +
+                        " WHERE productId='" + productId + "'";
                     SqlCommand cmd = new SqlCommand(sqlUpdateProduct, connection);    // Command to execute
 
                     // Add the parameters
                     cmd.Parameters.AddWithValue("@productDescription", txtProductName.Text);
-                    cmd.Parameters.AddWithValue("@productQuanitiy", txtQtyProd.Text);
-                    cmd.Parameters.AddWithValue("@productPrice", txtPrice);
+                    cmd.Parameters.AddWithValue("@productQuantity", txtQtyProd.Text);
+                    cmd.Parameters.AddWithValue("@productPrice", txtPrice.Text);
                     cmd.Parameters.AddWithValue("@productTypeId", cmbProductType.SelectedIndex);
 
                     // Execute the query
                     connection.Open();      // Open the connection
                     auntRosieDataset = new aunt_rosieDataSet();
-                    SqlDataAdapter staffEmployees = new SqlDataAdapter(cmd);     // Create the data adapter
+                    SqlDataAdapter productsAdapter = new SqlDataAdapter(cmd);     // Create the data adapter
                     cmd.ExecuteNonQuery();  // Execute the query
-                    staffEmployees.Update(auntRosieDataset.staff);      // Update the information into the dataset
+                    productsAdapter.Update(auntRosieDataset.staff);      // Update the information into the dataset
 
                     connection.Close(); // Close the connection
 

@@ -83,7 +83,7 @@ namespace AuntRosiesBookkeeping.Views
                                     // Execute the query and getthe autnumbered ID
                 int transId = Convert.ToInt16(cmd.ExecuteScalar());
                 insertTransaction.Update(auntRosieDataset.transactions);        // Update the database
-                MessageBox.Show(transId.ToString());
+                //MessageBox.Show(transId.ToString());
 
                 // Insert each transaction product into the table
                 for(int i = 0; i < lstCurrentTransaction.Items.Count; i++)

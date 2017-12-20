@@ -189,5 +189,49 @@ namespace AuntRosiesBookkeeping.Views
         }
 
         #endregion
+
+        private void btnSaveChanges_Click(object sender, RoutedEventArgs e)
+        {
+            string errorMessages = "";
+            #region VALIDATION
+            #endregion
+            if (errorMessages == "")
+            {
+                // TODO: CONFIRM SAVED CHANGES
+                if (MessageBox.Show("Save changes?", "Confirm Changes", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes)
+                {
+                    // SQL statement to update the employee info
+                    string sqlUpdateProduct = "UPDATE products SET " +
+                        " productDescription=@productDescription, productQuantity=@productQuantity, " +
+                        " productPrice=@productPrice " +
+                        " WHERE productId='" + productId + "'";
+                    SqlCommand cmd = new SqlCommand(sqlUpdateProduct, connection);    // Command to execute
+
+                    // Add the parameters
+                    cmd.Parameters.AddWithValue("@productDescription", txtProductName.Text);
+                    cmd.Parameters.AddWithValue("@productQuantity", txtQtyProd.Text);
+                    cmd.Parameters.AddWithValue("@productPrice", txtPrice.Text);
+                    cmd.Parameters.AddWithValue("@productTypeId", cmbProductType.SelectedIndex);
+
+                    // Execute the query
+                    connection.Open();      // Open the connection
+                    auntRosieDataset = new aunt_rosieDataSet();
+                    SqlDataAdapter productsAdapter = new SqlDataAdapter(cmd);     // Create the data adapter
+                    cmd.ExecuteNonQuery();  // Execute the query
+                    productsAdapter.Update(auntRosieDataset.staff);      // Update the information into the dataset
+
+                    connection.Close(); // Close the connection
+
+                    // Refresh the employee listview
+                    RefreshProductsView(productId);
+                    // RefreshEmployeeInfo(true);
+                }
+            }
+            else
+            {
+                // Display errors to the user
+                MessageBox.Show(errorMessages, "Invalid Input!", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
     }
 }

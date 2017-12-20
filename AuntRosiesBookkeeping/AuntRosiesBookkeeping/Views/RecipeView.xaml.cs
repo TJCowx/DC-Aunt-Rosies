@@ -14,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
+using System.Configuration;
 using System.Windows.Shapes;
 
 namespace AuntRosiesBookkeeping.Views
@@ -25,6 +26,7 @@ namespace AuntRosiesBookkeeping.Views
     {
         #region DECLARATIONS
         private aunt_rosieDataSet auntRosieDataset;
+        //private aunt_rosieDataSetTableAdapters.recipe_inventoryTableAdapter inventoryItemsTableAdapter;
         private aunt_rosieDataSetTableAdapters.inventoryItemsViewTableAdapter inventoryItemsTableAdapter;
         private aunt_rosieDataSetTableAdapters.product_recipesTableAdapter productRecipiesTableAdapter;
 
@@ -61,7 +63,7 @@ namespace AuntRosiesBookkeeping.Views
             //inventoryTableAdapter = new aunt_rosieDataSetTableAdapters.inventoryTableAdapter();
             //inventoryTableAdapter.Fill(auntRosieDataset.inventory);
 
-            lstIngredients.ItemsSource = auntRosieDataset.inventory;        // Fills the list from the data that is needed
+            //lstIngredients.ItemsSource = auntRosieDataset.inventory;        // Fills the list from the data that is needed
             // Load the ingredients listview
             // Populate the columns
 
@@ -125,8 +127,10 @@ namespace AuntRosiesBookkeeping.Views
         {
 
         }
+
         private void RefreshProductsList(int selectedRecord)
         {
+            
             auntRosieDataset = new aunt_rosieDataSet();     // Declare the dataset
             inventoryItemsTableAdapter = new aunt_rosieDataSetTableAdapters.inventoryItemsViewTableAdapter();
             inventoryItemsTableAdapter.Fill(auntRosieDataset.inventoryItemsView);

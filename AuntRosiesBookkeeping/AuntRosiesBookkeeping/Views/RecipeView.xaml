@@ -53,10 +53,10 @@
         <ListView Name="lstIngredients" Grid.Row="1" Grid.Column="5" Grid.ColumnSpan="3" Grid.RowSpan="9" SelectionChanged="lstIngredients_SelectionChanged" Margin="32.4,0.4,0.4,0">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=InventoryDescription}" Header="Name" />
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=InventoryType}" Header="Type" />
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=MeasurementType }" Header="Measurement" />
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=InventoryPrice}" Header="Price" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=inventoryDescription}" Header="Name" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=inventoryTypeDescription}" Header="Type" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=measurementDescription }" Header="Measurement" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=inventoryPrice}" Header="Price" />
                 </GridView>
             </ListView.View>
         </ListView>

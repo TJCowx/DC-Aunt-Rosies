@@ -65,6 +65,65 @@ namespace AuntRosiesBookkeeping.Views
             }
         }
 
+        /// <summary>
+        /// Saves changes that are made to the 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnSaveChanges_Click(object sender, RoutedEventArgs e)
+        {
+            string errorMessages = "";
+            
+            #region VALIDATION
+
+            #endregion
+
+            // If there is no errors
+            if(errorMessages == "")
+            {   
+                // Confirm changes
+                if (MessageBox.Show("Save changes?", "Confirm Changes", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes)
+                {
+                    int currentSelectedInventory = lstInventoryList.SelectedIndex;  // Get selected index
+
+                    // SQL to update the ingredient info
+                    string sqlUpdate = "UPDATE inventory SET " +
+                        " inventoryDescription=@inventoryDescription, " +
+                        " inventoryTypeId=@inventoryTypeId, " +
+                        " inventoryQuantity=@inventoryQuantity, " +
+                        " measurementId=@measurementId," +
+                        " inventoryPrice=@inventoryPrice " +
+                        " WHERE inventoryId='" + inventoryId +"'";
+
+                    SqlCommand cmd = new SqlCommand(sqlUpdate, connection);
+
+                    // Add the values
+                    cmd.Parameters.AddWithValue("@inventoryDescription", txtInventoryName.Text);
+                    cmd.Parameters.AddWithValue("@inventoryTypeId", cmbType.SelectedValue);
+                    cmd.Parameters.AddWithValue("@inventoryQuantity", Convert.ToDouble(txtQty.Text));
+                    cmd.Parameters.AddWithValue("@measurementId", cmbMeasurementScale.SelectedValue);
+                    cmd.Parameters.AddWithValue("@inventoryPrice", Convert.ToDouble(txtPrice.Text));
+
+                    // Execute the query
+                    connection.Open();
+
+                    // Declare dataset and adapter
+                    auntRosieDataset = new aunt_rosieDataSet();
+                    SqlDataAdapter inventoryItemAdapter = new SqlDataAdapter(cmd);
+
+                    cmd.ExecuteNonQuery();  // Execute
+
+                    // Update information
+                    inventoryItemAdapter.Update(auntRosieDataset.inventory);
+
+                    connection.Close();
+
+                    // Refresh the listview
+                    RefreshIngredientsView(currentSelectedInventory);
+                }
+            }
+        }
+
         #endregion
 
         #region CUSTOM FUNCTIONS
@@ -108,14 +167,14 @@ namespace AuntRosiesBookkeeping.Views
                 #region GET MEASUREMENT
                 var conn = ConfigurationManager.ConnectionStrings["aunt_rosieConnectionString"].ConnectionString;
                 // Data adapter to get the units
-                SqlDataAdapter unitsAdapter = new SqlDataAdapter("SELECT measurementDescription as string FROM measurement_type", conn);
+                SqlDataAdapter unitsAdapter = new SqlDataAdapter("SELECT measurementId, measurementDescription FROM measurement_type", conn);
 
                 DataTable units = new DataTable();  // Data table that holds units for the selected ingredient
                 unitsAdapter.Fill(units);       // Fill the datatable with the units
 
                 cmbMeasurementScale.ItemsSource = units.DefaultView;
-                cmbMeasurementScale.DisplayMemberPath = "string";       // Set the display to be a string
-                cmbMeasurementScale.SelectedValuePath = "measurementDescription";     // Value is the description
+                cmbMeasurementScale.DisplayMemberPath = "measurementDescription";       // Set the display to be a string
+                cmbMeasurementScale.SelectedValuePath = "measurementId";     // Value is the id
 
                 if (measurementDescription == "mL")
                 {
@@ -158,14 +217,14 @@ namespace AuntRosiesBookkeeping.Views
                 #region GET TYPE
                 conn = ConfigurationManager.ConnectionStrings["aunt_rosieConnectionString"].ConnectionString;
                 // Data adapter to get the types
-                SqlDataAdapter typesAdapter = new SqlDataAdapter("SELECT inventoryTypeDescription as string FROM inventory_type", conn);
+                SqlDataAdapter typesAdapter = new SqlDataAdapter("SELECT inventoryTypeId, inventoryTypeDescription FROM inventory_type", conn);
 
                 DataTable types = new DataTable();  // Data table that holds types for the selected ingredient
                 typesAdapter.Fill(types);       // Fill the datatable with the types
 
                 cmbType.ItemsSource = types.DefaultView;
-                cmbType.DisplayMemberPath = "string";       // Set the display to be a string
-                cmbType.SelectedValuePath = "inventoryTypeDescription";     // Value is the description
+                cmbType.DisplayMemberPath = "inventoryTypeDescription";       // Set the display to be a string
+                cmbType.SelectedValuePath = "inventoryTypeId";     // Value is the id
 
                 if (inventoryTypeDescription == "Ingredient")
                 {
@@ -181,5 +240,7 @@ namespace AuntRosiesBookkeeping.Views
             }
         }
         #endregion
+
+
     }
 }

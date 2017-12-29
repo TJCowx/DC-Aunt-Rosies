@@ -32,11 +32,13 @@ namespace AuntRosiesBookkeeping.Views
 
         private aunt_rosieDataSet auntRosieDataset;
         private aunt_rosieDataSetTableAdapters.productsTableAdapter productsTableAdapter;
+        private aunt_rosieDataSetTableAdapters.staffTableAdapter staffTableAdapter;
 
         private double subTotal;
         private double total;
         private double rounding;
         private double tax;
+        private int empId;
 
         #endregion
 
@@ -44,6 +46,16 @@ namespace AuntRosiesBookkeeping.Views
         {
             InitializeComponent();
             RefreshProductsList(0);
+
+            // Load the employee list
+            auntRosieDataset = new aunt_rosieDataSet();
+            staffTableAdapter = new aunt_rosieDataSetTableAdapters.staffTableAdapter();
+            staffTableAdapter.Fill(auntRosieDataset.staff);
+
+            cmbEmployeeId.ItemsSource = auntRosieDataset.staff;
+            cmbEmployeeId.SelectedValuePath = "staffId";
+            cmbEmployeeId.DisplayMemberPath = "staffId";
+            cmbEmployeeId.SelectedIndex = 0;
         }
 
         private void txtQuant_PreviewTextInput(object sender, TextCompositionEventArgs e)
@@ -69,9 +81,9 @@ namespace AuntRosiesBookkeeping.Views
 
             SqlCommand cmd = new SqlCommand(sqlInsertTransaction, connection);
             SqlDataAdapter insertTransaction = new SqlDataAdapter(cmd);     // SQL Adapter to insert the data into the dataset
-            // TODO: Create and execute SQL for adding the products for the transaction
-            //cmd.Parameters.Add("@transId");
-            cmd.Parameters.AddWithValue("@staffId", 1);         // TODO: Make it so employees can change
+            
+            // Parameters to be added
+            cmd.Parameters.AddWithValue("@staffId", empId);         // TODO: Make it so employees can change
             cmd.Parameters.AddWithValue("@transactionSubTotal", subTotal);
             cmd.Parameters.AddWithValue("@transactionTotal", total);
             cmd.Parameters.AddWithValue("@transactionDate", DateTime.Now);
@@ -263,5 +275,10 @@ namespace AuntRosiesBookkeeping.Views
             lstProducts.ItemsSource = auntRosieDataset.products;
         }
 
+        private void cmbEmployeeId_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(cmbEmployeeId.SelectedItem != null)
+                empId = Convert.ToInt32(cmbEmployeeId.SelectedValue);
+        }
     }
 }

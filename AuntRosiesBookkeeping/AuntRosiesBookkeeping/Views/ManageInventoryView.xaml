@@ -61,7 +61,7 @@
                 <TextBox Name="txtQty" Grid.Row="3" Grid.Column="1" Margin="5" PreviewTextInput="txtQty_PreviewTextInput" />
                 <Label Name="lblPrice" Grid.Row="4" Content="_Price" HorizontalContentAlignment="Right"/>
                 <TextBox Name="txtPrice" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="5"/>
-                <Button Name="btnSaveChanges" Content="_Save Changes" Grid.Row="5" Grid.ColumnSpan="3" Margin="5"/>
+                <Button Name="btnSaveChanges" Content="_Save Changes" Grid.Row="5" Grid.ColumnSpan="3" Margin="5" Click="btnSaveChanges_Click"/>
             </Grid>
         </GroupBox>
 

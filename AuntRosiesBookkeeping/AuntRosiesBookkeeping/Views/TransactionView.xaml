@@ -40,7 +40,6 @@
         <ListView Name="lstCurrentTransaction" Grid.Row="1" Grid.Column="1" Grid.RowSpan="7">
             <ListView.View>
                 <GridView>
- 
                     <GridViewColumn DisplayMemberBinding="{Binding Path=ProductDescription}" Header="Product" />
                     <GridViewColumn DisplayMemberBinding="{Binding Path=ProductQuantity}" Header="Quantity" />
                     <GridViewColumn DisplayMemberBinding="{Binding Path=ProductPrice}" Header="Price" />
@@ -84,6 +83,10 @@
         <Button Name="btnAddProduct" Content="&lt;" Grid.Column="3" Grid.Row="3" Margin="5" Click="btnAddProduct_Click" />
         <Button Name="btnRemoveProduct" Content="&gt;" Grid.Column="3" Grid.Row="4" Margin="5,5,5,0" Height="38" VerticalAlignment="Top" Click="btnRemoveProduct_Click" />
         <Button Name="btnRemoveAllProduct" Content="&gt;&gt;" Grid.Column="3" Grid.Row="5" Margin="5" Click="btnRemoveAllProduct_Click" />
+        <TextBlock Name="lblEmployeeId" Grid.Column="3" Grid.Row="6" TextWrapping="WrapWithOverflow" VerticalAlignment="Bottom" TextAlignment="Center" HorizontalAlignment="Center">
+            Employee ID
+        </TextBlock>
+        <ComboBox Name="cmbEmployeeId" Grid.Column="3" Grid.Row="7" SelectionChanged="cmbEmployeeId_SelectionChanged" />
         <Button Name="btnCompleteTransaction" Content="Complete _Transaction" Grid.Row="11" Grid.Column="6" Margin="5,5,5,0" Height="38" VerticalAlignment="Top" Click="btnCompleteTransaction_Click"/>
         <TextBox x:Name="txtQty" Grid.Column="3" Grid.Row="2" Width="50" Height="28" Margin="5.2,10,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" PreviewTextInput="txtQuant_PreviewTextInput"/>
 

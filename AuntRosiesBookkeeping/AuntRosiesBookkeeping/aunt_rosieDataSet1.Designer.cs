@@ -60,25 +60,25 @@ namespace AuntRosiesBookkeeping {
         
         private productQuantityReportDataTable tableproductQuantityReport;
         
-        private global::System.Data.DataRelation relationFK__inventory__inven__019E3B86;
+        private global::System.Data.DataRelation relationFK__inventory__inven__29AC2CE0;
         
-        private global::System.Data.DataRelation relationFK__inventory__measu__02925FBF;
+        private global::System.Data.DataRelation relationFK__inventory__measu__2AA05119;
         
-        private global::System.Data.DataRelation relationFK__product_r__produ__0D0FEE32;
+        private global::System.Data.DataRelation relationFK__product_r__produ__351DDF8C;
         
-        private global::System.Data.DataRelation relationFK__products__produc__0A338187;
+        private global::System.Data.DataRelation relationFK__products__produc__324172E1;
         
-        private global::System.Data.DataRelation relationFK__recipe_in__inven__10E07F16;
+        private global::System.Data.DataRelation relationFK__recipe_in__inven__38EE7070;
         
-        private global::System.Data.DataRelation relationFK__recipe_in__produ__0FEC5ADD;
+        private global::System.Data.DataRelation relationFK__recipe_in__produ__37FA4C37;
         
-        private global::System.Data.DataRelation relationFK__staffHour__staff__7AF13DF7;
+        private global::System.Data.DataRelation relationFK__staffHour__staff__22FF2F51;
         
-        private global::System.Data.DataRelation relationFK__transacti__produ__14B10FFA;
+        private global::System.Data.DataRelation relationFK__transacti__produ__3CBF0154;
         
-        private global::System.Data.DataRelation relationFK__transacti__trans__13BCEBC1;
+        private global::System.Data.DataRelation relationFK__transacti__trans__3BCADD1B;
         
-        private global::System.Data.DataRelation relationFK__transacti__staff__056ECC6A;
+        private global::System.Data.DataRelation relationFK__transacti__staff__2D7CBDC4;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -622,16 +622,16 @@ namespace AuntRosiesBookkeeping {
                     this.tableproductQuantityReport.InitVars();
                 }
             }
-            this.relationFK__inventory__inven__019E3B86 = this.Relations["FK__inventory__inven__019E3B86"];
-            this.relationFK__inventory__measu__02925FBF = this.Relations["FK__inventory__measu__02925FBF"];
-            this.relationFK__product_r__produ__0D0FEE32 = this.Relations["FK__product_r__produ__0D0FEE32"];
-            this.relationFK__products__produc__0A338187 = this.Relations["FK__products__produc__0A338187"];
-            this.relationFK__recipe_in__inven__10E07F16 = this.Relations["FK__recipe_in__inven__10E07F16"];
-            this.relationFK__recipe_in__produ__0FEC5ADD = this.Relations["FK__recipe_in__produ__0FEC5ADD"];
-            this.relationFK__staffHour__staff__7AF13DF7 = this.Relations["FK__staffHour__staff__7AF13DF7"];
-            this.relationFK__transacti__produ__14B10FFA = this.Relations["FK__transacti__produ__14B10FFA"];
-            this.relationFK__transacti__trans__13BCEBC1 = this.Relations["FK__transacti__trans__13BCEBC1"];
-            this.relationFK__transacti__staff__056ECC6A = this.Relations["FK__transacti__staff__056ECC6A"];
+            this.relationFK__inventory__inven__29AC2CE0 = this.Relations["FK__inventory__inven__29AC2CE0"];
+            this.relationFK__inventory__measu__2AA05119 = this.Relations["FK__inventory__measu__2AA05119"];
+            this.relationFK__product_r__produ__351DDF8C = this.Relations["FK__product_r__produ__351DDF8C"];
+            this.relationFK__products__produc__324172E1 = this.Relations["FK__products__produc__324172E1"];
+            this.relationFK__recipe_in__inven__38EE7070 = this.Relations["FK__recipe_in__inven__38EE7070"];
+            this.relationFK__recipe_in__produ__37FA4C37 = this.Relations["FK__recipe_in__produ__37FA4C37"];
+            this.relationFK__staffHour__staff__22FF2F51 = this.Relations["FK__staffHour__staff__22FF2F51"];
+            this.relationFK__transacti__produ__3CBF0154 = this.Relations["FK__transacti__produ__3CBF0154"];
+            this.relationFK__transacti__trans__3BCADD1B = this.Relations["FK__transacti__trans__3BCADD1B"];
+            this.relationFK__transacti__staff__2D7CBDC4 = this.Relations["FK__transacti__staff__2D7CBDC4"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -678,46 +678,46 @@ namespace AuntRosiesBookkeeping {
             base.Tables.Add(this.tableproductItemsView);
             this.tableproductQuantityReport = new productQuantityReportDataTable();
             base.Tables.Add(this.tableproductQuantityReport);
-            this.relationFK__inventory__inven__019E3B86 = new global::System.Data.DataRelation("FK__inventory__inven__019E3B86", new global::System.Data.DataColumn[] {
+            this.relationFK__inventory__inven__29AC2CE0 = new global::System.Data.DataRelation("FK__inventory__inven__29AC2CE0", new global::System.Data.DataColumn[] {
                         this.tableinventory_type.inventoryTypeIdColumn}, new global::System.Data.DataColumn[] {
                         this.tableinventory.inventoryTypeIdColumn}, false);
-            this.Relations.Add(this.relationFK__inventory__inven__019E3B86);
-            this.relationFK__inventory__measu__02925FBF = new global::System.Data.DataRelation("FK__inventory__measu__02925FBF", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__inventory__inven__29AC2CE0);
+            this.relationFK__inventory__measu__2AA05119 = new global::System.Data.DataRelation("FK__inventory__measu__2AA05119", new global::System.Data.DataColumn[] {
                         this.tablemeasurement_type.measurementIdColumn}, new global::System.Data.DataColumn[] {
                         this.tableinventory.measurementIdColumn}, false);
-            this.Relations.Add(this.relationFK__inventory__measu__02925FBF);
-            this.relationFK__product_r__produ__0D0FEE32 = new global::System.Data.DataRelation("FK__product_r__produ__0D0FEE32", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__inventory__measu__2AA05119);
+            this.relationFK__product_r__produ__351DDF8C = new global::System.Data.DataRelation("FK__product_r__produ__351DDF8C", new global::System.Data.DataColumn[] {
                         this.tableproducts.productIdColumn}, new global::System.Data.DataColumn[] {
                         this.tableproduct_recipes.productIdColumn}, false);
-            this.Relations.Add(this.relationFK__product_r__produ__0D0FEE32);
-            this.relationFK__products__produc__0A338187 = new global::System.Data.DataRelation("FK__products__produc__0A338187", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__product_r__produ__351DDF8C);
+            this.relationFK__products__produc__324172E1 = new global::System.Data.DataRelation("FK__products__produc__324172E1", new global::System.Data.DataColumn[] {
                         this.tableproduct_types.productTypeIdColumn}, new global::System.Data.DataColumn[] {
                         this.tableproducts.productTypeIdColumn}, false);
-            this.Relations.Add(this.relationFK__products__produc__0A338187);
-            this.relationFK__recipe_in__inven__10E07F16 = new global::System.Data.DataRelation("FK__recipe_in__inven__10E07F16", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__products__produc__324172E1);
+            this.relationFK__recipe_in__inven__38EE7070 = new global::System.Data.DataRelation("FK__recipe_in__inven__38EE7070", new global::System.Data.DataColumn[] {
                         this.tableinventory.inventoryIdColumn}, new global::System.Data.DataColumn[] {
                         this.tablerecipe_inventory.inventoryIdColumn}, false);
-            this.Relations.Add(this.relationFK__recipe_in__inven__10E07F16);
-            this.relationFK__recipe_in__produ__0FEC5ADD = new global::System.Data.DataRelation("FK__recipe_in__produ__0FEC5ADD", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__recipe_in__inven__38EE7070);
+            this.relationFK__recipe_in__produ__37FA4C37 = new global::System.Data.DataRelation("FK__recipe_in__produ__37FA4C37", new global::System.Data.DataColumn[] {
                         this.tableproduct_recipes.productRecipeIdColumn}, new global::System.Data.DataColumn[] {
                         this.tablerecipe_inventory.productRecipeIdColumn}, false);
-            this.Relations.Add(this.relationFK__recipe_in__produ__0FEC5ADD);
-            this.relationFK__staffHour__staff__7AF13DF7 = new global::System.Data.DataRelation("FK__staffHour__staff__7AF13DF7", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__recipe_in__produ__37FA4C37);
+            this.relationFK__staffHour__staff__22FF2F51 = new global::System.Data.DataRelation("FK__staffHour__staff__22FF2F51", new global::System.Data.DataColumn[] {
                         this.tablestaff.staffIdColumn}, new global::System.Data.DataColumn[] {
                         this.tablestaffHours.staffIdColumn}, false);
-            this.Relations.Add(this.relationFK__staffHour__staff__7AF13DF7);
-            this.relationFK__transacti__produ__14B10FFA = new global::System.Data.DataRelation("FK__transacti__produ__14B10FFA", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__staffHour__staff__22FF2F51);
+            this.relationFK__transacti__produ__3CBF0154 = new global::System.Data.DataRelation("FK__transacti__produ__3CBF0154", new global::System.Data.DataColumn[] {
                         this.tableproducts.productIdColumn}, new global::System.Data.DataColumn[] {
                         this.tabletransaction_products.productIdColumn}, false);
-            this.Relations.Add(this.relationFK__transacti__produ__14B10FFA);
-            this.relationFK__transacti__trans__13BCEBC1 = new global::System.Data.DataRelation("FK__transacti__trans__13BCEBC1", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__transacti__produ__3CBF0154);
+            this.relationFK__transacti__trans__3BCADD1B = new global::System.Data.DataRelation("FK__transacti__trans__3BCADD1B", new global::System.Data.DataColumn[] {
                         this.tabletransactions.transactionsIdColumn}, new global::System.Data.DataColumn[] {
                         this.tabletransaction_products.transactionsIdColumn}, false);
-            this.Relations.Add(this.relationFK__transacti__trans__13BCEBC1);
-            this.relationFK__transacti__staff__056ECC6A = new global::System.Data.DataRelation("FK__transacti__staff__056ECC6A", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__transacti__trans__3BCADD1B);
+            this.relationFK__transacti__staff__2D7CBDC4 = new global::System.Data.DataRelation("FK__transacti__staff__2D7CBDC4", new global::System.Data.DataColumn[] {
                         this.tablestaff.staffIdColumn}, new global::System.Data.DataColumn[] {
                         this.tabletransactions.staffIdColumn}, false);
-            this.Relations.Add(this.relationFK__transacti__staff__056ECC6A);
+            this.Relations.Add(this.relationFK__transacti__staff__2D7CBDC4);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1074,7 +1074,7 @@ namespace AuntRosiesBookkeeping {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public inventoryRow AddinventoryRow(string inventoryDescription, inventory_typeRow parentinventory_typeRowByFK__inventory__inven__019E3B86, int inventoryQuantity, measurement_typeRow parentmeasurement_typeRowByFK__inventory__measu__02925FBF, double inventoryPrice) {
+            public inventoryRow AddinventoryRow(string inventoryDescription, inventory_typeRow parentinventory_typeRowByFK__inventory__inven__29AC2CE0, int inventoryQuantity, measurement_typeRow parentmeasurement_typeRowByFK__inventory__measu__2AA05119, double inventoryPrice) {
                 inventoryRow rowinventoryRow = ((inventoryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1083,11 +1083,11 @@ namespace AuntRosiesBookkeeping {
                         inventoryQuantity,
                         null,
                         inventoryPrice};
-                if ((parentinventory_typeRowByFK__inventory__inven__019E3B86 != null)) {
-                    columnValuesArray[2] = parentinventory_typeRowByFK__inventory__inven__019E3B86[0];
+                if ((parentinventory_typeRowByFK__inventory__inven__29AC2CE0 != null)) {
+                    columnValuesArray[2] = parentinventory_typeRowByFK__inventory__inven__29AC2CE0[0];
                 }
-                if ((parentmeasurement_typeRowByFK__inventory__measu__02925FBF != null)) {
-                    columnValuesArray[4] = parentmeasurement_typeRowByFK__inventory__measu__02925FBF[0];
+                if ((parentmeasurement_typeRowByFK__inventory__measu__2AA05119 != null)) {
+                    columnValuesArray[4] = parentmeasurement_typeRowByFK__inventory__measu__2AA05119[0];
                 }
                 rowinventoryRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowinventoryRow);
@@ -1929,13 +1929,13 @@ namespace AuntRosiesBookkeeping {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public product_recipesRow Addproduct_recipesRow(productsRow parentproductsRowByFK__product_r__produ__0D0FEE32) {
+            public product_recipesRow Addproduct_recipesRow(productsRow parentproductsRowByFK__product_r__produ__351DDF8C) {
                 product_recipesRow rowproduct_recipesRow = ((product_recipesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null};
-                if ((parentproductsRowByFK__product_r__produ__0D0FEE32 != null)) {
-                    columnValuesArray[1] = parentproductsRowByFK__product_r__produ__0D0FEE32[0];
+                if ((parentproductsRowByFK__product_r__produ__351DDF8C != null)) {
+                    columnValuesArray[1] = parentproductsRowByFK__product_r__produ__351DDF8C[0];
                 }
                 rowproduct_recipesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowproduct_recipesRow);
@@ -2516,7 +2516,7 @@ namespace AuntRosiesBookkeeping {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public productsRow AddproductsRow(product_typesRow parentproduct_typesRowByFK__products__produc__0A338187, string productDescription, int productQuantity, double productPrice) {
+            public productsRow AddproductsRow(product_typesRow parentproduct_typesRowByFK__products__produc__324172E1, string productDescription, int productQuantity, double productPrice) {
                 productsRow rowproductsRow = ((productsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2524,8 +2524,8 @@ namespace AuntRosiesBookkeeping {
                         productDescription,
                         productQuantity,
                         productPrice};
-                if ((parentproduct_typesRowByFK__products__produc__0A338187 != null)) {
-                    columnValuesArray[1] = parentproduct_typesRowByFK__products__produc__0A338187[0];
+                if ((parentproduct_typesRowByFK__products__produc__324172E1 != null)) {
+                    columnValuesArray[1] = parentproduct_typesRowByFK__products__produc__324172E1[0];
                 }
                 rowproductsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowproductsRow);
@@ -2819,17 +2819,17 @@ namespace AuntRosiesBookkeeping {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public recipe_inventoryRow Addrecipe_inventoryRow(product_recipesRow parentproduct_recipesRowByFK__recipe_in__produ__0FEC5ADD, inventoryRow parentinventoryRowByFK__recipe_in__inven__10E07F16, double inventoryQty) {
+            public recipe_inventoryRow Addrecipe_inventoryRow(product_recipesRow parentproduct_recipesRowByFK__recipe_in__produ__37FA4C37, inventoryRow parentinventoryRowByFK__recipe_in__inven__38EE7070, double inventoryQty) {
                 recipe_inventoryRow rowrecipe_inventoryRow = ((recipe_inventoryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         inventoryQty};
-                if ((parentproduct_recipesRowByFK__recipe_in__produ__0FEC5ADD != null)) {
-                    columnValuesArray[0] = parentproduct_recipesRowByFK__recipe_in__produ__0FEC5ADD[0];
+                if ((parentproduct_recipesRowByFK__recipe_in__produ__37FA4C37 != null)) {
+                    columnValuesArray[0] = parentproduct_recipesRowByFK__recipe_in__produ__37FA4C37[0];
                 }
-                if ((parentinventoryRowByFK__recipe_in__inven__10E07F16 != null)) {
-                    columnValuesArray[1] = parentinventoryRowByFK__recipe_in__inven__10E07F16[0];
+                if ((parentinventoryRowByFK__recipe_in__inven__38EE7070 != null)) {
+                    columnValuesArray[1] = parentinventoryRowByFK__recipe_in__inven__38EE7070[0];
                 }
                 rowrecipe_inventoryRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowrecipe_inventoryRow);
@@ -3543,15 +3543,15 @@ namespace AuntRosiesBookkeeping {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public staffHoursRow AddstaffHoursRow(staffRow parentstaffRowByFK__staffHour__staff__7AF13DF7, System.DateTime staffHoursStartDate, System.DateTime staffHoursEndDate, int staffHoursNumberOfHours) {
+            public staffHoursRow AddstaffHoursRow(staffRow parentstaffRowByFK__staffHour__staff__22FF2F51, System.DateTime staffHoursStartDate, System.DateTime staffHoursEndDate, int staffHoursNumberOfHours) {
                 staffHoursRow rowstaffHoursRow = ((staffHoursRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         staffHoursStartDate,
                         staffHoursEndDate,
                         staffHoursNumberOfHours};
-                if ((parentstaffRowByFK__staffHour__staff__7AF13DF7 != null)) {
-                    columnValuesArray[0] = parentstaffRowByFK__staffHour__staff__7AF13DF7[0];
+                if ((parentstaffRowByFK__staffHour__staff__22FF2F51 != null)) {
+                    columnValuesArray[0] = parentstaffRowByFK__staffHour__staff__22FF2F51[0];
                 }
                 rowstaffHoursRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowstaffHoursRow);
@@ -3842,17 +3842,17 @@ namespace AuntRosiesBookkeeping {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public transaction_productsRow Addtransaction_productsRow(transactionsRow parenttransactionsRowByFK__transacti__trans__13BCEBC1, productsRow parentproductsRowByFK__transacti__produ__14B10FFA, int numberOfProductsSold) {
+            public transaction_productsRow Addtransaction_productsRow(transactionsRow parenttransactionsRowByFK__transacti__trans__3BCADD1B, productsRow parentproductsRowByFK__transacti__produ__3CBF0154, int numberOfProductsSold) {
                 transaction_productsRow rowtransaction_productsRow = ((transaction_productsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         numberOfProductsSold};
-                if ((parenttransactionsRowByFK__transacti__trans__13BCEBC1 != null)) {
-                    columnValuesArray[0] = parenttransactionsRowByFK__transacti__trans__13BCEBC1[0];
+                if ((parenttransactionsRowByFK__transacti__trans__3BCADD1B != null)) {
+                    columnValuesArray[0] = parenttransactionsRowByFK__transacti__trans__3BCADD1B[0];
                 }
-                if ((parentproductsRowByFK__transacti__produ__14B10FFA != null)) {
-                    columnValuesArray[1] = parentproductsRowByFK__transacti__produ__14B10FFA[0];
+                if ((parentproductsRowByFK__transacti__produ__3CBF0154 != null)) {
+                    columnValuesArray[1] = parentproductsRowByFK__transacti__produ__3CBF0154[0];
                 }
                 rowtransaction_productsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtransaction_productsRow);
@@ -4156,7 +4156,7 @@ namespace AuntRosiesBookkeeping {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public transactionsRow AddtransactionsRow(staffRow parentstaffRowByFK__transacti__staff__056ECC6A, System.DateTime transactionDate, double transactionSubTotal, double transactionTotal) {
+            public transactionsRow AddtransactionsRow(staffRow parentstaffRowByFK__transacti__staff__2D7CBDC4, System.DateTime transactionDate, double transactionSubTotal, double transactionTotal) {
                 transactionsRow rowtransactionsRow = ((transactionsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -4164,8 +4164,8 @@ namespace AuntRosiesBookkeeping {
                         transactionDate,
                         transactionSubTotal,
                         transactionTotal};
-                if ((parentstaffRowByFK__transacti__staff__056ECC6A != null)) {
-                    columnValuesArray[1] = parentstaffRowByFK__transacti__staff__056ECC6A[0];
+                if ((parentstaffRowByFK__transacti__staff__2D7CBDC4 != null)) {
+                    columnValuesArray[1] = parentstaffRowByFK__transacti__staff__2D7CBDC4[0];
                 }
                 rowtransactionsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtransactionsRow);
@@ -6590,10 +6590,10 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public inventory_typeRow inventory_typeRow {
                 get {
-                    return ((inventory_typeRow)(this.GetParentRow(this.Table.ParentRelations["FK__inventory__inven__019E3B86"])));
+                    return ((inventory_typeRow)(this.GetParentRow(this.Table.ParentRelations["FK__inventory__inven__29AC2CE0"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__inventory__inven__019E3B86"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__inventory__inven__29AC2CE0"]);
                 }
             }
             
@@ -6601,10 +6601,10 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public measurement_typeRow measurement_typeRow {
                 get {
-                    return ((measurement_typeRow)(this.GetParentRow(this.Table.ParentRelations["FK__inventory__measu__02925FBF"])));
+                    return ((measurement_typeRow)(this.GetParentRow(this.Table.ParentRelations["FK__inventory__measu__2AA05119"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__inventory__measu__02925FBF"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__inventory__measu__2AA05119"]);
                 }
             }
             
@@ -6647,11 +6647,11 @@ namespace AuntRosiesBookkeeping {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public recipe_inventoryRow[] Getrecipe_inventoryRows() {
-                if ((this.Table.ChildRelations["FK__recipe_in__inven__10E07F16"] == null)) {
+                if ((this.Table.ChildRelations["FK__recipe_in__inven__38EE7070"] == null)) {
                     return new recipe_inventoryRow[0];
                 }
                 else {
-                    return ((recipe_inventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__recipe_in__inven__10E07F16"])));
+                    return ((recipe_inventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__recipe_in__inven__38EE7070"])));
                 }
             }
         }
@@ -6713,11 +6713,11 @@ namespace AuntRosiesBookkeeping {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public inventoryRow[] GetinventoryRows() {
-                if ((this.Table.ChildRelations["FK__inventory__inven__019E3B86"] == null)) {
+                if ((this.Table.ChildRelations["FK__inventory__inven__29AC2CE0"] == null)) {
                     return new inventoryRow[0];
                 }
                 else {
-                    return ((inventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__inventory__inven__019E3B86"])));
+                    return ((inventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__inventory__inven__29AC2CE0"])));
                 }
             }
         }
@@ -6779,11 +6779,11 @@ namespace AuntRosiesBookkeeping {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public inventoryRow[] GetinventoryRows() {
-                if ((this.Table.ChildRelations["FK__inventory__measu__02925FBF"] == null)) {
+                if ((this.Table.ChildRelations["FK__inventory__measu__2AA05119"] == null)) {
                     return new inventoryRow[0];
                 }
                 else {
-                    return ((inventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__inventory__measu__02925FBF"])));
+                    return ((inventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__inventory__measu__2AA05119"])));
                 }
             }
         }
@@ -6828,21 +6828,21 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public productsRow productsRow {
                 get {
-                    return ((productsRow)(this.GetParentRow(this.Table.ParentRelations["FK__product_r__produ__0D0FEE32"])));
+                    return ((productsRow)(this.GetParentRow(this.Table.ParentRelations["FK__product_r__produ__351DDF8C"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__product_r__produ__0D0FEE32"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__product_r__produ__351DDF8C"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public recipe_inventoryRow[] Getrecipe_inventoryRows() {
-                if ((this.Table.ChildRelations["FK__recipe_in__produ__0FEC5ADD"] == null)) {
+                if ((this.Table.ChildRelations["FK__recipe_in__produ__37FA4C37"] == null)) {
                     return new recipe_inventoryRow[0];
                 }
                 else {
-                    return ((recipe_inventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__recipe_in__produ__0FEC5ADD"])));
+                    return ((recipe_inventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__recipe_in__produ__37FA4C37"])));
                 }
             }
         }
@@ -6904,11 +6904,11 @@ namespace AuntRosiesBookkeeping {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public productsRow[] GetproductsRows() {
-                if ((this.Table.ChildRelations["FK__products__produc__0A338187"] == null)) {
+                if ((this.Table.ChildRelations["FK__products__produc__324172E1"] == null)) {
                     return new productsRow[0];
                 }
                 else {
-                    return ((productsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__products__produc__0A338187"])));
+                    return ((productsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__products__produc__324172E1"])));
                 }
             }
         }
@@ -7001,10 +7001,10 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public product_typesRow product_typesRow {
                 get {
-                    return ((product_typesRow)(this.GetParentRow(this.Table.ParentRelations["FK__products__produc__0A338187"])));
+                    return ((product_typesRow)(this.GetParentRow(this.Table.ParentRelations["FK__products__produc__324172E1"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__products__produc__0A338187"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__products__produc__324172E1"]);
                 }
             }
             
@@ -7047,22 +7047,22 @@ namespace AuntRosiesBookkeeping {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public product_recipesRow[] Getproduct_recipesRows() {
-                if ((this.Table.ChildRelations["FK__product_r__produ__0D0FEE32"] == null)) {
+                if ((this.Table.ChildRelations["FK__product_r__produ__351DDF8C"] == null)) {
                     return new product_recipesRow[0];
                 }
                 else {
-                    return ((product_recipesRow[])(base.GetChildRows(this.Table.ChildRelations["FK__product_r__produ__0D0FEE32"])));
+                    return ((product_recipesRow[])(base.GetChildRows(this.Table.ChildRelations["FK__product_r__produ__351DDF8C"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public transaction_productsRow[] Gettransaction_productsRows() {
-                if ((this.Table.ChildRelations["FK__transacti__produ__14B10FFA"] == null)) {
+                if ((this.Table.ChildRelations["FK__transacti__produ__3CBF0154"] == null)) {
                     return new transaction_productsRow[0];
                 }
                 else {
-                    return ((transaction_productsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__transacti__produ__14B10FFA"])));
+                    return ((transaction_productsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__transacti__produ__3CBF0154"])));
                 }
             }
         }
@@ -7123,10 +7123,10 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public inventoryRow inventoryRow {
                 get {
-                    return ((inventoryRow)(this.GetParentRow(this.Table.ParentRelations["FK__recipe_in__inven__10E07F16"])));
+                    return ((inventoryRow)(this.GetParentRow(this.Table.ParentRelations["FK__recipe_in__inven__38EE7070"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__recipe_in__inven__10E07F16"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__recipe_in__inven__38EE7070"]);
                 }
             }
             
@@ -7134,10 +7134,10 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public product_recipesRow product_recipesRow {
                 get {
-                    return ((product_recipesRow)(this.GetParentRow(this.Table.ParentRelations["FK__recipe_in__produ__0FEC5ADD"])));
+                    return ((product_recipesRow)(this.GetParentRow(this.Table.ParentRelations["FK__recipe_in__produ__37FA4C37"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__recipe_in__produ__0FEC5ADD"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__recipe_in__produ__37FA4C37"]);
                 }
             }
             
@@ -7309,22 +7309,22 @@ namespace AuntRosiesBookkeeping {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public staffHoursRow[] GetstaffHoursRows() {
-                if ((this.Table.ChildRelations["FK__staffHour__staff__7AF13DF7"] == null)) {
+                if ((this.Table.ChildRelations["FK__staffHour__staff__22FF2F51"] == null)) {
                     return new staffHoursRow[0];
                 }
                 else {
-                    return ((staffHoursRow[])(base.GetChildRows(this.Table.ChildRelations["FK__staffHour__staff__7AF13DF7"])));
+                    return ((staffHoursRow[])(base.GetChildRows(this.Table.ChildRelations["FK__staffHour__staff__22FF2F51"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public transactionsRow[] GettransactionsRows() {
-                if ((this.Table.ChildRelations["FK__transacti__staff__056ECC6A"] == null)) {
+                if ((this.Table.ChildRelations["FK__transacti__staff__2D7CBDC4"] == null)) {
                     return new transactionsRow[0];
                 }
                 else {
-                    return ((transactionsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__transacti__staff__056ECC6A"])));
+                    return ((transactionsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__transacti__staff__2D7CBDC4"])));
                 }
             }
         }
@@ -7391,10 +7391,10 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public staffRow staffRow {
                 get {
-                    return ((staffRow)(this.GetParentRow(this.Table.ParentRelations["FK__staffHour__staff__7AF13DF7"])));
+                    return ((staffRow)(this.GetParentRow(this.Table.ParentRelations["FK__staffHour__staff__22FF2F51"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__staffHour__staff__7AF13DF7"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__staffHour__staff__22FF2F51"]);
                 }
             }
         }
@@ -7456,10 +7456,10 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public productsRow productsRow {
                 get {
-                    return ((productsRow)(this.GetParentRow(this.Table.ParentRelations["FK__transacti__produ__14B10FFA"])));
+                    return ((productsRow)(this.GetParentRow(this.Table.ParentRelations["FK__transacti__produ__3CBF0154"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__transacti__produ__14B10FFA"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__transacti__produ__3CBF0154"]);
                 }
             }
             
@@ -7467,10 +7467,10 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public transactionsRow transactionsRow {
                 get {
-                    return ((transactionsRow)(this.GetParentRow(this.Table.ParentRelations["FK__transacti__trans__13BCEBC1"])));
+                    return ((transactionsRow)(this.GetParentRow(this.Table.ParentRelations["FK__transacti__trans__3BCADD1B"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__transacti__trans__13BCEBC1"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__transacti__trans__3BCADD1B"]);
                 }
             }
             
@@ -7575,10 +7575,10 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public staffRow staffRow {
                 get {
-                    return ((staffRow)(this.GetParentRow(this.Table.ParentRelations["FK__transacti__staff__056ECC6A"])));
+                    return ((staffRow)(this.GetParentRow(this.Table.ParentRelations["FK__transacti__staff__2D7CBDC4"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__transacti__staff__056ECC6A"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__transacti__staff__2D7CBDC4"]);
                 }
             }
             
@@ -7621,11 +7621,11 @@ namespace AuntRosiesBookkeeping {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public transaction_productsRow[] Gettransaction_productsRows() {
-                if ((this.Table.ChildRelations["FK__transacti__trans__13BCEBC1"] == null)) {
+                if ((this.Table.ChildRelations["FK__transacti__trans__3BCADD1B"] == null)) {
                     return new transaction_productsRow[0];
                 }
                 else {
-                    return ((transaction_productsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__transacti__trans__13BCEBC1"])));
+                    return ((transaction_productsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__transacti__trans__3BCADD1B"])));
                 }
             }
         }

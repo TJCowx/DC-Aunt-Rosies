@@ -34,6 +34,11 @@ namespace AuntRosiesBookkeeping.Views
         private const int PROVINCE_MAX_LENGTH = 2;
         private const int POSTAL_CODE_LENGTH = 6;
         private const int HOURS_WORKED_MAX_LENGTH = 6;
+        private const string NEW_EMPLOYEE = "New Employee";
+        private const string CANCEL = "Cancel";
+        private const string ADD_EMPLOYEE = "Add Employee";
+        private const string SAVE_CHANGES = "Save Changes";
+
 
         private int empId;      // Employee that is currently selected
 
@@ -235,9 +240,11 @@ namespace AuntRosiesBookkeeping.Views
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             string errorMessages = "";      // Holds the error messages
+            DateTime startDate = DateTime.Today;
+            DateTime endDate = DateTime.Today;
+
 
             #region VALIDATION
-            // [ABCEGHJKLMNPRSTVXY][0-9][ABCEGHJKLMNPRSTVWXYZ][0-9][ABCEGHJKLMNPRSTVWXYZ][0-9]
             // Validate firstname textbox
             if (txtEmployeeFirstName.Text.Length > NAME_MAX_LENGTH)
             {
@@ -377,45 +384,149 @@ namespace AuntRosiesBookkeeping.Views
             // If there is no errors confirm changes to database
             if (errorMessages == "")
             {
-                // TODO: CONFIRM SAVED CHANGES
-                if (MessageBox.Show("Save changes?", "Confirm Changes", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes)
+                if (btnSave.Content.ToString() == SAVE_CHANGES)
                 {
-                    // TODO: INSERT CHANGES INTO THE DATABASE
-                    int currentSelectedEmp = lstEmployees.SelectedIndex;        // Get the selected view
+                    #region CHANGES MADE
+                    // Confirm save changes
+                    if (MessageBox.Show("Save changes?", "Confirm Changes", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes)
+                    {
+                        int currentSelectedEmp = lstEmployees.SelectedIndex;        // Get the selected view
+                        // Get date for horus to be inserted into
+                        DataRow selectedRangeRow = ((DataRowView)cmbPayPeriod.Items.GetItemAt(cmbPayPeriod.SelectedIndex)).Row;   // Get the selected range
+                        DateTime selectedStartDate = Convert.ToDateTime(selectedRangeRow["staffHoursStartDate"]);   // Get the previous range's start date
 
-                    // SQL statement to update the employee info
-                    string sqlUpdateEmployee = "UPDATE staff SET " +
-                        " staffFirstName=@staffFirstName, staffLastName=@staffLastName, staffType=@staffType, " +
-                        " staffPhoneNumber=@staffPhoneNumber, staffMobileNumber=@staffMobileNumber, staffStreetAddress=@staffAddress, " +
-                        " staffCity=@staffCity, staffProvince=@staffProvince, staffPostalCode=@staffPostalCode " +
-                        " WHERE staffId='" + empId + "'";
-                    SqlCommand cmd = new SqlCommand(sqlUpdateEmployee, connection);    // Command to execute
 
-                    // Add the parameters
-                    //cmd.Parameters.AddWithValue("@staffId", empId);
+                        // SQL statement to update the employee info
+                        string sqlUpdateEmployee = "UPDATE staff SET " +
+                            " staffFirstName=@staffFirstName, staffLastName=@staffLastName, staffType=@staffType, " +
+                            " staffPhoneNumber=@staffPhoneNumber, staffMobileNumber=@staffMobileNumber, staffStreetAddress=@staffAddress, " +
+                            " staffCity=@staffCity, staffProvince=@staffProvince, staffPostalCode=@staffPostalCode " +
+                            " WHERE staffId='" + empId + "'";
+
+                        string sqlUpdateHours = "UPDATE staffHours SET " +
+                            " staffHoursNumberOfHours=@staffHoursNumberOfHours " +
+                            " WHERE staffId='" + empId + "' AND staffHoursStartDate='"+selectedStartDate + "'";
+
+                        SqlCommand cmd = new SqlCommand(sqlUpdateEmployee, connection);    // Command to execute
+                        SqlCommand cmdHours = new SqlCommand(sqlUpdateHours, connection);   
+
+                        // Add the parameters
+                        //cmd.Parameters.AddWithValue("@staffId", empId);
+                        cmd.Parameters.AddWithValue("@staffFirstName", txtEmployeeFirstName.Text);
+                        cmd.Parameters.AddWithValue("@staffLastName", txtEmployeeLastName.Text);
+                        cmd.Parameters.AddWithValue("@staffType", cmbEmployeeType.SelectionBoxItem);
+                        cmd.Parameters.AddWithValue("@staffPhoneNumber", txtPhoneNumber.Text);
+                        cmd.Parameters.AddWithValue("@staffMobileNumber", txtCellPhoneNumber.Text);
+                        cmd.Parameters.AddWithValue("@staffAddress", txtAddress.Text);
+                        cmd.Parameters.AddWithValue("@staffCity", txtCity.Text);
+                        cmd.Parameters.AddWithValue("@staffProvince", txtProvince.Text);
+                        cmd.Parameters.AddWithValue("@staffPostalCode", txtPostalCode.Text);
+
+                        cmdHours.Parameters.AddWithValue("@staffHoursNumberOfHours", Convert.ToDouble(txtHoursWorked.Text));
+
+                        // Execute the query
+                        connection.Open();      // Open the connection
+                        auntRosieDataset = new aunt_rosieDataSet();
+                        SqlDataAdapter staffEmployees = new SqlDataAdapter(cmd);     // Create the data adapter
+                        SqlDataAdapter staffHours = new SqlDataAdapter(cmdHours);
+                        cmd.ExecuteNonQuery();  // Execute the query
+                        cmdHours.ExecuteNonQuery();
+                        staffEmployees.Update(auntRosieDataset.staff);      // Update the information into the dataset
+                        staffHours.Update(auntRosieDataset.staffHours);
+
+                        connection.Close(); // Close the connection
+
+                        // Refresh the employee listview
+                        RefreshEmployeeListView(currentSelectedEmp);       
+
+                    }
+                    #endregion
+                }
+                else if(btnSave.Content.ToString() == ADD_EMPLOYEE)
+                {
+                    #region Add Employee
+
+                    // SQL statement to add the employee
+                    string sqlInsertEmployee = "INSERT INTO staff (staffFirstName, " +
+                        " staffLastName, staffType, staffPhoneNumber, staffMobileNumber, " +
+                        " staffStreetAddress, staffCity, staffProvince, staffPostalCode, staffSalary) " +
+                        " VALUES(@staffFirstName, @staffLastName, @staffType, @staffPhoneNumber, " +
+                        " @staffMobileNumber, @staffStreetAddress, @staffCity, @staffProvince, " +
+                        " @staffPostalCode, @staffSalary); SELECT SCOPE_IDENTITY();";
+
+                    SqlCommand cmd = new SqlCommand(sqlInsertEmployee, connection);
+                    SqlDataAdapter insertEmployeeAdapter = new SqlDataAdapter(cmd);
+
+                    // Values to be added into the table
                     cmd.Parameters.AddWithValue("@staffFirstName", txtEmployeeFirstName.Text);
                     cmd.Parameters.AddWithValue("@staffLastName", txtEmployeeLastName.Text);
                     cmd.Parameters.AddWithValue("@staffType", cmbEmployeeType.SelectionBoxItem);
                     cmd.Parameters.AddWithValue("@staffPhoneNumber", txtPhoneNumber.Text);
                     cmd.Parameters.AddWithValue("@staffMobileNumber", txtCellPhoneNumber.Text);
-                    cmd.Parameters.AddWithValue("@staffAddress", txtAddress.Text);
+                    cmd.Parameters.AddWithValue("@staffStreetAddress", txtAddress.Text);
                     cmd.Parameters.AddWithValue("@staffCity", txtCity.Text);
                     cmd.Parameters.AddWithValue("@staffProvince", txtProvince.Text);
                     cmd.Parameters.AddWithValue("@staffPostalCode", txtPostalCode.Text);
-                    //cmd.Parameters.AddWithValue("@staffHoursNumberOfHours", Convert.ToDouble(txtSalary.Text));
+                    cmd.Parameters.AddWithValue("@staffSalary", Convert.ToDouble(txtSalary.Text));
 
-                    // Execute the query
-                    connection.Open();      // Open the connection
-                    auntRosieDataset = new aunt_rosieDataSet();
-                    SqlDataAdapter staffEmployees = new SqlDataAdapter(cmd);     // Create the data adapter
-                    cmd.ExecuteNonQuery();  // Execute the query
-                    staffEmployees.Update(auntRosieDataset.staff);      // Update the information into the dataset
+                    connection.Open();
+                    empId = Convert.ToInt32(cmd.ExecuteScalar());      // Execute the query
+                    insertEmployeeAdapter.Update(auntRosieDataset.staff);
+                    connection.Close();
 
-                    connection.Close(); // Close the connection
+                    #endregion
 
-                    // Refresh the employee listview
-                    RefreshEmployeeListView(currentSelectedEmp);
-                    // RefreshEmployeeInfo(true);
+                    #region ADD EMPLOYEES FIRST PAY RANGE
+                    // Insert the closest pay range
+                    /*string sqlClosestRange = "SELECT staffHoursStartDate, staffHoursEndDate " +
+                        " FROM staffHours ORDER BY staffHoursStartDate DESC FETCH FIRST 1 ROWS ONLY";*/
+                    string sqlClosestRange = "SELECT TOP 1 staffHoursStartDate, StaffHoursEndDate " +
+                        " FROM staffHours ORDER BY staffHoursStartDate DESC;";
+                    string sqlAddRange = "INSERT INTO staffHours (staffId, staffHoursStartDate, " +
+                        " staffHoursEndDate, staffHoursNumberOfHours) VALUES (@staffId, " +
+                        " @staffHoursStartDate, @staffHoursEndDate, @staffHoursNumberOfHours)";
+                    cmd = new SqlCommand(sqlClosestRange, connection);
+
+                    connection.Open();
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    // Fill the start date and end date into variables
+                    while(reader.Read())
+                    {
+                        startDate = Convert.ToDateTime(reader["staffHoursStartDate"]);
+                        endDate = Convert.ToDateTime(reader["staffHoursEndDate"]);
+                    }
+                    reader.Close();
+                    connection.Close();
+
+                    // Add the staff horus table with the most recent start and end date added
+                    cmd = new SqlCommand(sqlAddRange, connection);
+
+                    cmd.Parameters.AddWithValue("@staffId", empId);
+                    cmd.Parameters.AddWithValue("@staffHoursStartDate", startDate);
+                    cmd.Parameters.AddWithValue("@staffHoursEndDate", endDate);
+                    cmd.Parameters.AddWithValue("@staffHoursNumberOfHours", 0);
+
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                    
+
+                    #endregion
+
+                    // Enable the listview
+                    lstEmployees.IsEnabled = true;
+                    txtHoursWorked.IsEnabled = true;
+                    btnNewPayPeriod.IsEnabled = true;
+                    cmbPayPeriod.IsEnabled = true;
+                    btnNewPayPeriod.IsEnabled = true;
+
+                    btnNew.Content = ADD_EMPLOYEE;
+                    btnSave.Content = SAVE_CHANGES;
+
+                    // Select the new employee
+                    RefreshEmployeeListView(lstEmployees.Items.Count);
                 }
             }
             else
@@ -424,6 +535,37 @@ namespace AuntRosiesBookkeeping.Views
                 MessageBox.Show(errorMessages, "Invalid Input!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
+        }
+
+        /// <summary>
+        /// For adding a new employee
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnNew_Click(object sender, RoutedEventArgs e)
+        {
+            if(btnNew.Content.ToString() == CANCEL)
+            {
+                // Change the button content
+                btnNew.Content = NEW_EMPLOYEE;
+                btnSave.Content = SAVE_CHANGES;
+
+                lstEmployees.IsEnabled = true;  // Enable the textbox
+                cmbPayPeriod.IsEnabled = true;
+                btnNewPayPeriod.IsEnabled = true;
+                txtHoursWorked.IsEnabled = true;
+                RefreshEmployeeInfo(true);
+            }
+            else if (btnNew.Content.ToString() == NEW_EMPLOYEE)
+            {
+                // Disble the listview while creating a new  employee
+                lstEmployees.IsEnabled = false;
+                // Change button content
+                btnSave.Content = ADD_EMPLOYEE;
+                btnNew.Content = CANCEL;
+                NewEmployeeInfo();
+            }
+            
         }
 
         /// <summary>
@@ -479,6 +621,7 @@ namespace AuntRosiesBookkeeping.Views
             staffHoursAdapter.Update(auntRosieDataset.staffHours);      // Update the information into the dataset
             
             connection.Close(); // Close the connection
+
             RefreshEmployeeInfo(true);      // Refresh the info fields
             
         }
@@ -547,7 +690,7 @@ namespace AuntRosiesBookkeeping.Views
                 connection.Open();      // Open the connection
                 SqlCommand hoursWorkedCommand = new SqlCommand("SELECT staffHoursNumberOfHours FROM staffHours WHERE staffId='" + empId + "' AND staffHoursStartDate='" + cmbPayPeriod.SelectedValue + "'", connection);
                 empHoursWorked = Convert.ToDouble(hoursWorkedCommand.ExecuteScalar());    // Populate the number of hours worked in the range
-                txtHoursWorked.Text = empHoursWorked.ToString();        // Populate the hours worked textbox
+                
                 connection.Close();     // Close the connection
 
                 // Load all the staff information into the textboxes
@@ -561,6 +704,7 @@ namespace AuntRosiesBookkeeping.Views
                 txtProvince.Text = empProvince;
                 txtPostalCode.Text = empPostalCode;
                 txtSalary.Text = Convert.ToString(empSalary);
+                txtHoursWorked.Text = empHoursWorked.ToString();        // Populate the hours worked textbox
 
                 // Load the employee type
                 if (empType == "PT")
@@ -587,13 +731,41 @@ namespace AuntRosiesBookkeeping.Views
             employeeTableAdapter = new aunt_rosieDataSetTableAdapters.staffTableAdapter();      // Instantiate the employee table adapter
             employeeTableAdapter.Fill(auntRosieDataset.staff);      // Fill the datatable
 
-            // Populate the listview
-            lstEmployees.SelectedIndex = selectedRecord;     // Select the first employee by default
+            // Populate the listview       
             lstEmployees.ItemsSource = auntRosieDataset.staff;
+            lstEmployees.SelectedIndex = selectedRecord;     // Select the first employee by default
 
+        }
+
+        /// <summary>
+        /// Sets up the employee info for a new employee
+        /// </summary>
+        private void NewEmployeeInfo()
+        {
+            // Get the startdate and end
+
+            // Empties the textboxes
+            txtEmployeeFirstName.Text = "";
+            txtEmployeeLastName.Text = "";
+            txtPhoneNumber.Text = "";
+            txtCellPhoneNumber.Text = "";
+            txtAddress.Text = "";
+            txtCity.Text = "";
+            txtProvince.Text = "";
+            txtPostalCode.Text = "";
+            txtSalary.Text = "0.00";
+            txtHoursWorked.Text = "0";
+            txtHoursWorked.IsEnabled = false;
+            cmbPayPeriod.IsEnabled = false;
+            btnNewPayPeriod.IsEnabled = false;
+
+            // Set the default employee type to part-time
+            cmbEmployeeType.SelectedIndex = 0;
 
         }
 
         #endregion
+
+
     }
 }

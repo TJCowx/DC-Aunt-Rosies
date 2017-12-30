@@ -34,10 +34,17 @@ namespace AuntRosiesBookkeeping.Views
         private aunt_rosieDataSetTableAdapters.inventoryQuantityReportTableAdapter inventoryReportTableAdapter; // Inventory report
         private aunt_rosieDataSetTableAdapters.productQuantityReportTableAdapter productReportTableAdapter;     // Product report
 
+        private aunt_rosieDataSetTableAdapters.inventoryTableAdapter inventoryTableAdapter;     // Inventory
+        private aunt_rosieDataSetTableAdapters.measurement_typeTableAdapter measurementTableAdapter;    // Measurements
+        private aunt_rosieDataSetTableAdapters.recipe_inventoryTableAdapter recipeInventoryTableAdapter;    // Recipe inventory
+        private aunt_rosieDataSetTableAdapters.productsTableAdapter productsTableAdapter;   // Products
+        private aunt_rosieDataSetTableAdapters.product_recipesTableAdapter productRecipesTableAdapter; // Recipe table
+
         protected InventoryReport anInventoryReport = new InventoryReport();
         protected SalesReport aSalesReport = new SalesReport();
         protected ProductReport aProductReport = new ProductReport();
         protected EmployeeReport anEmployeeReport = new EmployeeReport();
+        protected RecipeReport aRecipeReport = new RecipeReport();
         #endregion
 
         public ReportsView()
@@ -66,6 +73,10 @@ namespace AuntRosiesBookkeeping.Views
             else if (ReportTabInfo._tabIndex == 3)
             {
                 loadProductReport();
+            }
+            else if (ReportTabInfo._tabIndex == 4)
+            {
+                loadRecipeReport();
             }
             
         }
@@ -141,9 +152,7 @@ namespace AuntRosiesBookkeeping.Views
         }
 
         private void loadInventoryReport()
-        {
-            
-
+        {         
             try
             {
                 // Donnect to the database
@@ -164,6 +173,43 @@ namespace AuntRosiesBookkeeping.Views
             }
         }
 
+        private void loadRecipeReport()
+        {
+            // String to get all the data needed
+            string sqlRecipe = "SELECT inventoryDescription FROM inventory; " +
+                "SELECT productDescription FROM products; " +
+                "SELECT inventoryQty FROM recipe_inventory; " +
+                "SELECT measurementDescription FROM measurement_type;"; 
+            try
+            {
+                // Donnect to the database
+                auntRosieDataset = new aunt_rosieDataSet();
+                // Set table adapters
+                inventoryTableAdapter = new aunt_rosieDataSetTableAdapters.inventoryTableAdapter();
+                productsTableAdapter = new aunt_rosieDataSetTableAdapters.productsTableAdapter();
+                recipeInventoryTableAdapter = new aunt_rosieDataSetTableAdapters.recipe_inventoryTableAdapter();
+                measurementTableAdapter = new aunt_rosieDataSetTableAdapters.measurement_typeTableAdapter();
+                productRecipesTableAdapter = new aunt_rosieDataSetTableAdapters.product_recipesTableAdapter();
+
+                // Set recipe Report & load it
+                inventoryTableAdapter.Fill(auntRosieDataset.inventory);
+                productsTableAdapter.Fill(auntRosieDataset.products);
+                recipeInventoryTableAdapter.Fill(auntRosieDataset.recipe_inventory);
+                measurementTableAdapter.Fill(auntRosieDataset.measurement_type);
+                productRecipesTableAdapter.Fill(auntRosieDataset.product_recipes);
+
+                aRecipeReport.SetDataSource(auntRosieDataset);
+                rptRecipes.ViewerCore.ReportSource = aRecipeReport;
+                
+
+
+            }
+            catch (Exception dataException)
+            {
+                MessageBox.Show("A data error encountered: " + dataException.Message);
+            }
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -171,9 +217,6 @@ namespace AuntRosiesBookkeeping.Views
         /// <param name="e"></param>
         private void tabReports_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
-
-
             if (ReportTabInfo._tabIndex != tabReports.SelectedIndex)
             {
                 ReportTabInfo._tabIndex = tabReports.SelectedIndex;
@@ -198,7 +241,10 @@ namespace AuntRosiesBookkeeping.Views
                 {
                     // if (!rptProducts.HasContent)
                     loadProductReport();
-
+                }
+                else if(tabRecipe.IsSelected)
+                {
+                    loadRecipeReport();
                 }
             }
         }

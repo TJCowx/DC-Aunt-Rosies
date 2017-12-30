@@ -19,12 +19,16 @@
             <TabItem x:Name="tabSales" Header="Sales" Margin="-1,0,-3,-2">
                 <Viewer:CrystalReportsViewer x:Name="rptSales" />
             </TabItem>
-            <TabItem x:Name="tabInventory" Header="Ingredient Inventory">
+            <TabItem x:Name="tabInventory" Header="Ingredient &amp; Tool Inventory">
                 <Viewer:CrystalReportsViewer x:Name="rptInventory" />
             </TabItem>
 
             <TabItem x:Name="tabProducts" Header="Product Inventory">
                 <Viewer:CrystalReportsViewer x:Name="rptProducts" />
+            </TabItem>
+
+            <TabItem x:Name="tabRecipe" Header="Recipes">
+                <Viewer:CrystalReportsViewer x:Name="rptRecipes" />
             </TabItem>
         </TabControl>
     </Grid>

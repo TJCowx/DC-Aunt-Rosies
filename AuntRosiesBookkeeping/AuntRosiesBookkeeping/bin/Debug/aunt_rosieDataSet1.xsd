@@ -694,24 +694,6 @@ SELECT transactionsId, staffId, transactionDate, transactionSubTotal, transactio
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BiweeklyReportTableAdapter" GeneratorDataComponentClassName="BiweeklyReportTableAdapter" Name="BiweeklyReport" UserDataComponentName="BiweeklyReportTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="aunt_rosieConnectionString (Settings)" DbObjectName="dbo.BiweeklyReport" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT [Employee Number], Employee, [Total Pay] FROM dbo.BiweeklyReport</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="Employee Number" DataSetColumn="Employee Number" />
-              <Mapping SourceColumn="Employee" DataSetColumn="Employee" />
-              <Mapping SourceColumn="Total Pay" DataSetColumn="Total Pay" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dailySalesReportTableAdapter" GeneratorDataComponentClassName="dailySalesReportTableAdapter" Name="dailySalesReport" UserDataComponentName="dailySalesReportTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="aunt_rosieConnectionString (Settings)" DbObjectName="dbo.dailySalesReport" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
@@ -806,6 +788,24 @@ SELECT transactionsId, staffId, transactionDate, transactionSubTotal, transactio
               <Mapping SourceColumn="productTypeDescriptions" DataSetColumn="productTypeDescriptions" />
               <Mapping SourceColumn="productQuantity" DataSetColumn="productQuantity" />
               <Mapping SourceColumn="Product Price" DataSetColumn="Product Price" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="recipeItemsViewTableAdapter" GeneratorDataComponentClassName="recipeItemsViewTableAdapter" Name="recipeItemsView" UserDataComponentName="recipeItemsViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="aunt_rosieConnectionString (Settings)" DbObjectName="dbo.recipeItemsView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT inventoryDescription, inventoryQuantity, measurementDescription FROM dbo.recipeItemsView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="inventoryDescription" DataSetColumn="inventoryDescription" />
+              <Mapping SourceColumn="inventoryQuantity" DataSetColumn="inventoryQuantity" />
+              <Mapping SourceColumn="measurementDescription" DataSetColumn="measurementDescription" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -1043,27 +1043,6 @@ SELECT transactionsId, staffId, transactionDate, transactionSubTotal, transactio
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="BiweeklyReport" msprop:Generator_TableClassName="BiweeklyReportDataTable" msprop:Generator_TableVarName="tableBiweeklyReport" msprop:Generator_TablePropName="BiweeklyReport" msprop:Generator_RowDeletingName="BiweeklyReportRowDeleting" msprop:Generator_RowChangingName="BiweeklyReportRowChanging" msprop:Generator_RowEvHandlerName="BiweeklyReportRowChangeEventHandler" msprop:Generator_RowDeletedName="BiweeklyReportRowDeleted" msprop:Generator_UserTableName="BiweeklyReport" msprop:Generator_RowChangedName="BiweeklyReportRowChanged" msprop:Generator_RowEvArgName="BiweeklyReportRowChangeEvent" msprop:Generator_RowClassName="BiweeklyReportRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="Employee_x0020_Number" msprop:Generator_ColumnVarNameInTable="columnEmployee_Number" msprop:Generator_ColumnPropNameInRow="Employee_Number" msprop:Generator_ColumnPropNameInTable="Employee_NumberColumn" msprop:Generator_UserColumnName="Employee Number" type="xs:int" />
-              <xs:element name="Employee" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEmployee" msprop:Generator_ColumnPropNameInRow="Employee" msprop:Generator_ColumnPropNameInTable="EmployeeColumn" msprop:Generator_UserColumnName="Employee" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="61" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Total_x0020_Pay" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotal_Pay" msprop:Generator_ColumnPropNameInRow="Total_Pay" msprop:Generator_ColumnPropNameInTable="Total_PayColumn" msprop:Generator_UserColumnName="Total Pay" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="24" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
         <xs:element name="dailySalesReport" msprop:Generator_TableClassName="dailySalesReportDataTable" msprop:Generator_TableVarName="tabledailySalesReport" msprop:Generator_TablePropName="dailySalesReport" msprop:Generator_RowDeletingName="dailySalesReportRowDeleting" msprop:Generator_RowChangingName="dailySalesReportRowChanging" msprop:Generator_RowEvHandlerName="dailySalesReportRowChangeEventHandler" msprop:Generator_RowDeletedName="dailySalesReportRowDeleted" msprop:Generator_UserTableName="dailySalesReport" msprop:Generator_RowChangedName="dailySalesReportRowChanged" msprop:Generator_RowEvArgName="dailySalesReportRowChangeEvent" msprop:Generator_RowClassName="dailySalesReportRow">
           <xs:complexType>
             <xs:sequence>
@@ -1182,6 +1161,27 @@ SELECT transactionsId, staffId, transactionDate, transactionSubTotal, transactio
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="recipeItemsView" msprop:Generator_TableClassName="recipeItemsViewDataTable" msprop:Generator_TableVarName="tablerecipeItemsView" msprop:Generator_TablePropName="recipeItemsView" msprop:Generator_RowDeletingName="recipeItemsViewRowDeleting" msprop:Generator_RowChangingName="recipeItemsViewRowChanging" msprop:Generator_RowEvHandlerName="recipeItemsViewRowChangeEventHandler" msprop:Generator_RowDeletedName="recipeItemsViewRowDeleted" msprop:Generator_UserTableName="recipeItemsView" msprop:Generator_RowChangedName="recipeItemsViewRowChanged" msprop:Generator_RowEvArgName="recipeItemsViewRowChangeEvent" msprop:Generator_RowClassName="recipeItemsViewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="inventoryDescription" msprop:Generator_ColumnVarNameInTable="columninventoryDescription" msprop:Generator_ColumnPropNameInRow="inventoryDescription" msprop:Generator_ColumnPropNameInTable="inventoryDescriptionColumn" msprop:Generator_UserColumnName="inventoryDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="65" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="inventoryQuantity" msprop:Generator_ColumnVarNameInTable="columninventoryQuantity" msprop:Generator_ColumnPropNameInRow="inventoryQuantity" msprop:Generator_ColumnPropNameInTable="inventoryQuantityColumn" msprop:Generator_UserColumnName="inventoryQuantity" type="xs:int" minOccurs="0" />
+              <xs:element name="measurementDescription" msprop:Generator_ColumnVarNameInTable="columnmeasurementDescription" msprop:Generator_ColumnPropNameInRow="measurementDescription" msprop:Generator_ColumnPropNameInTable="measurementDescriptionColumn" msprop:Generator_UserColumnName="measurementDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -1232,10 +1232,6 @@ SELECT transactionsId, staffId, transactionDate, transactionSubTotal, transactio
       <xs:selector xpath=".//mstns:transactions" />
       <xs:field xpath="mstns:transactionsId" />
     </xs:unique>
-    <xs:unique name="BiweeklyReport_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:BiweeklyReport" />
-      <xs:field xpath="mstns:Employee_x0020_Number" />
-    </xs:unique>
     <xs:unique name="inventoryItemsView_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:inventoryItemsView" />
       <xs:field xpath="mstns:inventoryId" />
@@ -1247,16 +1243,16 @@ SELECT transactionsId, staffId, transactionDate, transactionSubTotal, transactio
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__inventory__inven__29AC2CE0" msdata:parent="inventory_type" msdata:child="inventory" msdata:parentkey="inventoryTypeId" msdata:childkey="inventoryTypeId" msprop:Generator_UserChildTable="inventory" msprop:Generator_ChildPropName="GetinventoryRows" msprop:Generator_UserRelationName="FK__inventory__inven__29AC2CE0" msprop:Generator_RelationVarName="relationFK__inventory__inven__29AC2CE0" msprop:Generator_UserParentTable="inventory_type" msprop:Generator_ParentPropName="inventory_typeRow" />
-      <msdata:Relationship name="FK__inventory__measu__2AA05119" msdata:parent="measurement_type" msdata:child="inventory" msdata:parentkey="measurementId" msdata:childkey="measurementId" msprop:Generator_UserChildTable="inventory" msprop:Generator_ChildPropName="GetinventoryRows" msprop:Generator_UserRelationName="FK__inventory__measu__2AA05119" msprop:Generator_RelationVarName="relationFK__inventory__measu__2AA05119" msprop:Generator_UserParentTable="measurement_type" msprop:Generator_ParentPropName="measurement_typeRow" />
-      <msdata:Relationship name="FK__product_r__produ__351DDF8C" msdata:parent="products" msdata:child="product_recipes" msdata:parentkey="productId" msdata:childkey="productId" msprop:Generator_UserChildTable="product_recipes" msprop:Generator_ChildPropName="Getproduct_recipesRows" msprop:Generator_UserRelationName="FK__product_r__produ__351DDF8C" msprop:Generator_RelationVarName="relationFK__product_r__produ__351DDF8C" msprop:Generator_UserParentTable="products" msprop:Generator_ParentPropName="productsRow" />
-      <msdata:Relationship name="FK__products__produc__324172E1" msdata:parent="product_types" msdata:child="products" msdata:parentkey="productTypeId" msdata:childkey="productTypeId" msprop:Generator_UserChildTable="products" msprop:Generator_ChildPropName="GetproductsRows" msprop:Generator_UserRelationName="FK__products__produc__324172E1" msprop:Generator_ParentPropName="product_typesRow" msprop:Generator_RelationVarName="relationFK__products__produc__324172E1" msprop:Generator_UserParentTable="product_types" />
-      <msdata:Relationship name="FK__recipe_in__inven__38EE7070" msdata:parent="inventory" msdata:child="recipe_inventory" msdata:parentkey="inventoryId" msdata:childkey="inventoryId" msprop:Generator_UserChildTable="recipe_inventory" msprop:Generator_ChildPropName="Getrecipe_inventoryRows" msprop:Generator_UserRelationName="FK__recipe_in__inven__38EE7070" msprop:Generator_ParentPropName="inventoryRow" msprop:Generator_RelationVarName="relationFK__recipe_in__inven__38EE7070" msprop:Generator_UserParentTable="inventory" />
-      <msdata:Relationship name="FK__recipe_in__produ__37FA4C37" msdata:parent="product_recipes" msdata:child="recipe_inventory" msdata:parentkey="productRecipeId" msdata:childkey="productRecipeId" msprop:Generator_UserChildTable="recipe_inventory" msprop:Generator_ChildPropName="Getrecipe_inventoryRows" msprop:Generator_UserRelationName="FK__recipe_in__produ__37FA4C37" msprop:Generator_ParentPropName="product_recipesRow" msprop:Generator_RelationVarName="relationFK__recipe_in__produ__37FA4C37" msprop:Generator_UserParentTable="product_recipes" />
-      <msdata:Relationship name="FK__staffHour__staff__22FF2F51" msdata:parent="staff" msdata:child="staffHours" msdata:parentkey="staffId" msdata:childkey="staffId" msprop:Generator_UserChildTable="staffHours" msprop:Generator_ChildPropName="GetstaffHoursRows" msprop:Generator_UserRelationName="FK__staffHour__staff__22FF2F51" msprop:Generator_ParentPropName="staffRow" msprop:Generator_RelationVarName="relationFK__staffHour__staff__22FF2F51" msprop:Generator_UserParentTable="staff" />
-      <msdata:Relationship name="FK__transacti__produ__3CBF0154" msdata:parent="products" msdata:child="transaction_products" msdata:parentkey="productId" msdata:childkey="productId" msprop:Generator_UserChildTable="transaction_products" msprop:Generator_ChildPropName="Gettransaction_productsRows" msprop:Generator_UserRelationName="FK__transacti__produ__3CBF0154" msprop:Generator_ParentPropName="productsRow" msprop:Generator_RelationVarName="relationFK__transacti__produ__3CBF0154" msprop:Generator_UserParentTable="products" />
-      <msdata:Relationship name="FK__transacti__trans__3BCADD1B" msdata:parent="transactions" msdata:child="transaction_products" msdata:parentkey="transactionsId" msdata:childkey="transactionsId" msprop:Generator_UserChildTable="transaction_products" msprop:Generator_ChildPropName="Gettransaction_productsRows" msprop:Generator_UserRelationName="FK__transacti__trans__3BCADD1B" msprop:Generator_RelationVarName="relationFK__transacti__trans__3BCADD1B" msprop:Generator_UserParentTable="transactions" msprop:Generator_ParentPropName="transactionsRow" />
-      <msdata:Relationship name="FK__transacti__staff__2D7CBDC4" msdata:parent="staff" msdata:child="transactions" msdata:parentkey="staffId" msdata:childkey="staffId" msprop:Generator_UserChildTable="transactions" msprop:Generator_ChildPropName="GettransactionsRows" msprop:Generator_UserRelationName="FK__transacti__staff__2D7CBDC4" msprop:Generator_ParentPropName="staffRow" msprop:Generator_RelationVarName="relationFK__transacti__staff__2D7CBDC4" msprop:Generator_UserParentTable="staff" />
+      <msdata:Relationship name="FK__inventory__inven__4DE98D56" msdata:parent="inventory_type" msdata:child="inventory" msdata:parentkey="inventoryTypeId" msdata:childkey="inventoryTypeId" msprop:Generator_UserChildTable="inventory" msprop:Generator_ChildPropName="GetinventoryRows" msprop:Generator_UserRelationName="FK__inventory__inven__4DE98D56" msprop:Generator_RelationVarName="relationFK__inventory__inven__4DE98D56" msprop:Generator_UserParentTable="inventory_type" msprop:Generator_ParentPropName="inventory_typeRow" />
+      <msdata:Relationship name="FK__inventory__measu__4EDDB18F" msdata:parent="measurement_type" msdata:child="inventory" msdata:parentkey="measurementId" msdata:childkey="measurementId" msprop:Generator_UserChildTable="inventory" msprop:Generator_ChildPropName="GetinventoryRows" msprop:Generator_UserRelationName="FK__inventory__measu__4EDDB18F" msprop:Generator_RelationVarName="relationFK__inventory__measu__4EDDB18F" msprop:Generator_UserParentTable="measurement_type" msprop:Generator_ParentPropName="measurement_typeRow" />
+      <msdata:Relationship name="FK__product_r__produ__595B4002" msdata:parent="products" msdata:child="product_recipes" msdata:parentkey="productId" msdata:childkey="productId" msprop:Generator_UserChildTable="product_recipes" msprop:Generator_ChildPropName="Getproduct_recipesRows" msprop:Generator_UserRelationName="FK__product_r__produ__595B4002" msprop:Generator_RelationVarName="relationFK__product_r__produ__595B4002" msprop:Generator_UserParentTable="products" msprop:Generator_ParentPropName="productsRow" />
+      <msdata:Relationship name="FK__products__produc__567ED357" msdata:parent="product_types" msdata:child="products" msdata:parentkey="productTypeId" msdata:childkey="productTypeId" msprop:Generator_UserChildTable="products" msprop:Generator_ChildPropName="GetproductsRows" msprop:Generator_UserRelationName="FK__products__produc__567ED357" msprop:Generator_ParentPropName="product_typesRow" msprop:Generator_RelationVarName="relationFK__products__produc__567ED357" msprop:Generator_UserParentTable="product_types" />
+      <msdata:Relationship name="FK__recipe_in__inven__5D2BD0E6" msdata:parent="inventory" msdata:child="recipe_inventory" msdata:parentkey="inventoryId" msdata:childkey="inventoryId" msprop:Generator_UserChildTable="recipe_inventory" msprop:Generator_ChildPropName="Getrecipe_inventoryRows" msprop:Generator_UserRelationName="FK__recipe_in__inven__5D2BD0E6" msprop:Generator_ParentPropName="inventoryRow" msprop:Generator_RelationVarName="relationFK__recipe_in__inven__5D2BD0E6" msprop:Generator_UserParentTable="inventory" />
+      <msdata:Relationship name="FK__recipe_in__produ__5C37ACAD" msdata:parent="product_recipes" msdata:child="recipe_inventory" msdata:parentkey="productRecipeId" msdata:childkey="productRecipeId" msprop:Generator_UserChildTable="recipe_inventory" msprop:Generator_ChildPropName="Getrecipe_inventoryRows" msprop:Generator_UserRelationName="FK__recipe_in__produ__5C37ACAD" msprop:Generator_ParentPropName="product_recipesRow" msprop:Generator_RelationVarName="relationFK__recipe_in__produ__5C37ACAD" msprop:Generator_UserParentTable="product_recipes" />
+      <msdata:Relationship name="FK__staffHour__staff__473C8FC7" msdata:parent="staff" msdata:child="staffHours" msdata:parentkey="staffId" msdata:childkey="staffId" msprop:Generator_UserChildTable="staffHours" msprop:Generator_ChildPropName="GetstaffHoursRows" msprop:Generator_UserRelationName="FK__staffHour__staff__473C8FC7" msprop:Generator_ParentPropName="staffRow" msprop:Generator_RelationVarName="relationFK__staffHour__staff__473C8FC7" msprop:Generator_UserParentTable="staff" />
+      <msdata:Relationship name="FK__transacti__produ__60FC61CA" msdata:parent="products" msdata:child="transaction_products" msdata:parentkey="productId" msdata:childkey="productId" msprop:Generator_UserChildTable="transaction_products" msprop:Generator_ChildPropName="Gettransaction_productsRows" msprop:Generator_UserRelationName="FK__transacti__produ__60FC61CA" msprop:Generator_ParentPropName="productsRow" msprop:Generator_RelationVarName="relationFK__transacti__produ__60FC61CA" msprop:Generator_UserParentTable="products" />
+      <msdata:Relationship name="FK__transacti__trans__60083D91" msdata:parent="transactions" msdata:child="transaction_products" msdata:parentkey="transactionsId" msdata:childkey="transactionsId" msprop:Generator_UserChildTable="transaction_products" msprop:Generator_ChildPropName="Gettransaction_productsRows" msprop:Generator_UserRelationName="FK__transacti__trans__60083D91" msprop:Generator_RelationVarName="relationFK__transacti__trans__60083D91" msprop:Generator_UserParentTable="transactions" msprop:Generator_ParentPropName="transactionsRow" />
+      <msdata:Relationship name="FK__transacti__staff__51BA1E3A" msdata:parent="staff" msdata:child="transactions" msdata:parentkey="staffId" msdata:childkey="staffId" msprop:Generator_UserChildTable="transactions" msprop:Generator_ChildPropName="GettransactionsRows" msprop:Generator_UserRelationName="FK__transacti__staff__51BA1E3A" msprop:Generator_ParentPropName="staffRow" msprop:Generator_RelationVarName="relationFK__transacti__staff__51BA1E3A" msprop:Generator_UserParentTable="staff" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

@@ -48,8 +48,6 @@ namespace AuntRosiesBookkeeping {
         
         private BiWeeklyEmployeePayReportDataTable tableBiWeeklyEmployeePayReport;
         
-        private BiweeklyReportDataTable tableBiweeklyReport;
-        
         private dailySalesReportDataTable tabledailySalesReport;
         
         private inventoryItemsViewDataTable tableinventoryItemsView;
@@ -60,25 +58,27 @@ namespace AuntRosiesBookkeeping {
         
         private productQuantityReportDataTable tableproductQuantityReport;
         
-        private global::System.Data.DataRelation relationFK__inventory__inven__29AC2CE0;
+        private recipeItemsViewDataTable tablerecipeItemsView;
         
-        private global::System.Data.DataRelation relationFK__inventory__measu__2AA05119;
+        private global::System.Data.DataRelation relationFK__inventory__inven__4DE98D56;
         
-        private global::System.Data.DataRelation relationFK__product_r__produ__351DDF8C;
+        private global::System.Data.DataRelation relationFK__inventory__measu__4EDDB18F;
         
-        private global::System.Data.DataRelation relationFK__products__produc__324172E1;
+        private global::System.Data.DataRelation relationFK__product_r__produ__595B4002;
         
-        private global::System.Data.DataRelation relationFK__recipe_in__inven__38EE7070;
+        private global::System.Data.DataRelation relationFK__products__produc__567ED357;
         
-        private global::System.Data.DataRelation relationFK__recipe_in__produ__37FA4C37;
+        private global::System.Data.DataRelation relationFK__recipe_in__inven__5D2BD0E6;
         
-        private global::System.Data.DataRelation relationFK__staffHour__staff__22FF2F51;
+        private global::System.Data.DataRelation relationFK__recipe_in__produ__5C37ACAD;
         
-        private global::System.Data.DataRelation relationFK__transacti__produ__3CBF0154;
+        private global::System.Data.DataRelation relationFK__staffHour__staff__473C8FC7;
         
-        private global::System.Data.DataRelation relationFK__transacti__trans__3BCADD1B;
+        private global::System.Data.DataRelation relationFK__transacti__produ__60FC61CA;
         
-        private global::System.Data.DataRelation relationFK__transacti__staff__2D7CBDC4;
+        private global::System.Data.DataRelation relationFK__transacti__trans__60083D91;
+        
+        private global::System.Data.DataRelation relationFK__transacti__staff__51BA1E3A;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -144,9 +144,6 @@ namespace AuntRosiesBookkeeping {
                 if ((ds.Tables["BiWeeklyEmployeePayReport"] != null)) {
                     base.Tables.Add(new BiWeeklyEmployeePayReportDataTable(ds.Tables["BiWeeklyEmployeePayReport"]));
                 }
-                if ((ds.Tables["BiweeklyReport"] != null)) {
-                    base.Tables.Add(new BiweeklyReportDataTable(ds.Tables["BiweeklyReport"]));
-                }
                 if ((ds.Tables["dailySalesReport"] != null)) {
                     base.Tables.Add(new dailySalesReportDataTable(ds.Tables["dailySalesReport"]));
                 }
@@ -161,6 +158,9 @@ namespace AuntRosiesBookkeeping {
                 }
                 if ((ds.Tables["productQuantityReport"] != null)) {
                     base.Tables.Add(new productQuantityReportDataTable(ds.Tables["productQuantityReport"]));
+                }
+                if ((ds.Tables["recipeItemsView"] != null)) {
+                    base.Tables.Add(new recipeItemsViewDataTable(ds.Tables["recipeItemsView"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -304,16 +304,6 @@ namespace AuntRosiesBookkeeping {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public BiweeklyReportDataTable BiweeklyReport {
-            get {
-                return this.tableBiweeklyReport;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public dailySalesReportDataTable dailySalesReport {
             get {
                 return this.tabledailySalesReport;
@@ -357,6 +347,16 @@ namespace AuntRosiesBookkeeping {
         public productQuantityReportDataTable productQuantityReport {
             get {
                 return this.tableproductQuantityReport;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public recipeItemsViewDataTable recipeItemsView {
+            get {
+                return this.tablerecipeItemsView;
             }
         }
         
@@ -463,9 +463,6 @@ namespace AuntRosiesBookkeeping {
                 if ((ds.Tables["BiWeeklyEmployeePayReport"] != null)) {
                     base.Tables.Add(new BiWeeklyEmployeePayReportDataTable(ds.Tables["BiWeeklyEmployeePayReport"]));
                 }
-                if ((ds.Tables["BiweeklyReport"] != null)) {
-                    base.Tables.Add(new BiweeklyReportDataTable(ds.Tables["BiweeklyReport"]));
-                }
                 if ((ds.Tables["dailySalesReport"] != null)) {
                     base.Tables.Add(new dailySalesReportDataTable(ds.Tables["dailySalesReport"]));
                 }
@@ -480,6 +477,9 @@ namespace AuntRosiesBookkeeping {
                 }
                 if ((ds.Tables["productQuantityReport"] != null)) {
                     base.Tables.Add(new productQuantityReportDataTable(ds.Tables["productQuantityReport"]));
+                }
+                if ((ds.Tables["recipeItemsView"] != null)) {
+                    base.Tables.Add(new recipeItemsViewDataTable(ds.Tables["recipeItemsView"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -586,12 +586,6 @@ namespace AuntRosiesBookkeeping {
                     this.tableBiWeeklyEmployeePayReport.InitVars();
                 }
             }
-            this.tableBiweeklyReport = ((BiweeklyReportDataTable)(base.Tables["BiweeklyReport"]));
-            if ((initTable == true)) {
-                if ((this.tableBiweeklyReport != null)) {
-                    this.tableBiweeklyReport.InitVars();
-                }
-            }
             this.tabledailySalesReport = ((dailySalesReportDataTable)(base.Tables["dailySalesReport"]));
             if ((initTable == true)) {
                 if ((this.tabledailySalesReport != null)) {
@@ -622,16 +616,22 @@ namespace AuntRosiesBookkeeping {
                     this.tableproductQuantityReport.InitVars();
                 }
             }
-            this.relationFK__inventory__inven__29AC2CE0 = this.Relations["FK__inventory__inven__29AC2CE0"];
-            this.relationFK__inventory__measu__2AA05119 = this.Relations["FK__inventory__measu__2AA05119"];
-            this.relationFK__product_r__produ__351DDF8C = this.Relations["FK__product_r__produ__351DDF8C"];
-            this.relationFK__products__produc__324172E1 = this.Relations["FK__products__produc__324172E1"];
-            this.relationFK__recipe_in__inven__38EE7070 = this.Relations["FK__recipe_in__inven__38EE7070"];
-            this.relationFK__recipe_in__produ__37FA4C37 = this.Relations["FK__recipe_in__produ__37FA4C37"];
-            this.relationFK__staffHour__staff__22FF2F51 = this.Relations["FK__staffHour__staff__22FF2F51"];
-            this.relationFK__transacti__produ__3CBF0154 = this.Relations["FK__transacti__produ__3CBF0154"];
-            this.relationFK__transacti__trans__3BCADD1B = this.Relations["FK__transacti__trans__3BCADD1B"];
-            this.relationFK__transacti__staff__2D7CBDC4 = this.Relations["FK__transacti__staff__2D7CBDC4"];
+            this.tablerecipeItemsView = ((recipeItemsViewDataTable)(base.Tables["recipeItemsView"]));
+            if ((initTable == true)) {
+                if ((this.tablerecipeItemsView != null)) {
+                    this.tablerecipeItemsView.InitVars();
+                }
+            }
+            this.relationFK__inventory__inven__4DE98D56 = this.Relations["FK__inventory__inven__4DE98D56"];
+            this.relationFK__inventory__measu__4EDDB18F = this.Relations["FK__inventory__measu__4EDDB18F"];
+            this.relationFK__product_r__produ__595B4002 = this.Relations["FK__product_r__produ__595B4002"];
+            this.relationFK__products__produc__567ED357 = this.Relations["FK__products__produc__567ED357"];
+            this.relationFK__recipe_in__inven__5D2BD0E6 = this.Relations["FK__recipe_in__inven__5D2BD0E6"];
+            this.relationFK__recipe_in__produ__5C37ACAD = this.Relations["FK__recipe_in__produ__5C37ACAD"];
+            this.relationFK__staffHour__staff__473C8FC7 = this.Relations["FK__staffHour__staff__473C8FC7"];
+            this.relationFK__transacti__produ__60FC61CA = this.Relations["FK__transacti__produ__60FC61CA"];
+            this.relationFK__transacti__trans__60083D91 = this.Relations["FK__transacti__trans__60083D91"];
+            this.relationFK__transacti__staff__51BA1E3A = this.Relations["FK__transacti__staff__51BA1E3A"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -666,8 +666,6 @@ namespace AuntRosiesBookkeeping {
             base.Tables.Add(this.tabletransactions);
             this.tableBiWeeklyEmployeePayReport = new BiWeeklyEmployeePayReportDataTable();
             base.Tables.Add(this.tableBiWeeklyEmployeePayReport);
-            this.tableBiweeklyReport = new BiweeklyReportDataTable();
-            base.Tables.Add(this.tableBiweeklyReport);
             this.tabledailySalesReport = new dailySalesReportDataTable();
             base.Tables.Add(this.tabledailySalesReport);
             this.tableinventoryItemsView = new inventoryItemsViewDataTable();
@@ -678,46 +676,48 @@ namespace AuntRosiesBookkeeping {
             base.Tables.Add(this.tableproductItemsView);
             this.tableproductQuantityReport = new productQuantityReportDataTable();
             base.Tables.Add(this.tableproductQuantityReport);
-            this.relationFK__inventory__inven__29AC2CE0 = new global::System.Data.DataRelation("FK__inventory__inven__29AC2CE0", new global::System.Data.DataColumn[] {
+            this.tablerecipeItemsView = new recipeItemsViewDataTable();
+            base.Tables.Add(this.tablerecipeItemsView);
+            this.relationFK__inventory__inven__4DE98D56 = new global::System.Data.DataRelation("FK__inventory__inven__4DE98D56", new global::System.Data.DataColumn[] {
                         this.tableinventory_type.inventoryTypeIdColumn}, new global::System.Data.DataColumn[] {
                         this.tableinventory.inventoryTypeIdColumn}, false);
-            this.Relations.Add(this.relationFK__inventory__inven__29AC2CE0);
-            this.relationFK__inventory__measu__2AA05119 = new global::System.Data.DataRelation("FK__inventory__measu__2AA05119", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__inventory__inven__4DE98D56);
+            this.relationFK__inventory__measu__4EDDB18F = new global::System.Data.DataRelation("FK__inventory__measu__4EDDB18F", new global::System.Data.DataColumn[] {
                         this.tablemeasurement_type.measurementIdColumn}, new global::System.Data.DataColumn[] {
                         this.tableinventory.measurementIdColumn}, false);
-            this.Relations.Add(this.relationFK__inventory__measu__2AA05119);
-            this.relationFK__product_r__produ__351DDF8C = new global::System.Data.DataRelation("FK__product_r__produ__351DDF8C", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__inventory__measu__4EDDB18F);
+            this.relationFK__product_r__produ__595B4002 = new global::System.Data.DataRelation("FK__product_r__produ__595B4002", new global::System.Data.DataColumn[] {
                         this.tableproducts.productIdColumn}, new global::System.Data.DataColumn[] {
                         this.tableproduct_recipes.productIdColumn}, false);
-            this.Relations.Add(this.relationFK__product_r__produ__351DDF8C);
-            this.relationFK__products__produc__324172E1 = new global::System.Data.DataRelation("FK__products__produc__324172E1", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__product_r__produ__595B4002);
+            this.relationFK__products__produc__567ED357 = new global::System.Data.DataRelation("FK__products__produc__567ED357", new global::System.Data.DataColumn[] {
                         this.tableproduct_types.productTypeIdColumn}, new global::System.Data.DataColumn[] {
                         this.tableproducts.productTypeIdColumn}, false);
-            this.Relations.Add(this.relationFK__products__produc__324172E1);
-            this.relationFK__recipe_in__inven__38EE7070 = new global::System.Data.DataRelation("FK__recipe_in__inven__38EE7070", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__products__produc__567ED357);
+            this.relationFK__recipe_in__inven__5D2BD0E6 = new global::System.Data.DataRelation("FK__recipe_in__inven__5D2BD0E6", new global::System.Data.DataColumn[] {
                         this.tableinventory.inventoryIdColumn}, new global::System.Data.DataColumn[] {
                         this.tablerecipe_inventory.inventoryIdColumn}, false);
-            this.Relations.Add(this.relationFK__recipe_in__inven__38EE7070);
-            this.relationFK__recipe_in__produ__37FA4C37 = new global::System.Data.DataRelation("FK__recipe_in__produ__37FA4C37", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__recipe_in__inven__5D2BD0E6);
+            this.relationFK__recipe_in__produ__5C37ACAD = new global::System.Data.DataRelation("FK__recipe_in__produ__5C37ACAD", new global::System.Data.DataColumn[] {
                         this.tableproduct_recipes.productRecipeIdColumn}, new global::System.Data.DataColumn[] {
                         this.tablerecipe_inventory.productRecipeIdColumn}, false);
-            this.Relations.Add(this.relationFK__recipe_in__produ__37FA4C37);
-            this.relationFK__staffHour__staff__22FF2F51 = new global::System.Data.DataRelation("FK__staffHour__staff__22FF2F51", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__recipe_in__produ__5C37ACAD);
+            this.relationFK__staffHour__staff__473C8FC7 = new global::System.Data.DataRelation("FK__staffHour__staff__473C8FC7", new global::System.Data.DataColumn[] {
                         this.tablestaff.staffIdColumn}, new global::System.Data.DataColumn[] {
                         this.tablestaffHours.staffIdColumn}, false);
-            this.Relations.Add(this.relationFK__staffHour__staff__22FF2F51);
-            this.relationFK__transacti__produ__3CBF0154 = new global::System.Data.DataRelation("FK__transacti__produ__3CBF0154", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__staffHour__staff__473C8FC7);
+            this.relationFK__transacti__produ__60FC61CA = new global::System.Data.DataRelation("FK__transacti__produ__60FC61CA", new global::System.Data.DataColumn[] {
                         this.tableproducts.productIdColumn}, new global::System.Data.DataColumn[] {
                         this.tabletransaction_products.productIdColumn}, false);
-            this.Relations.Add(this.relationFK__transacti__produ__3CBF0154);
-            this.relationFK__transacti__trans__3BCADD1B = new global::System.Data.DataRelation("FK__transacti__trans__3BCADD1B", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__transacti__produ__60FC61CA);
+            this.relationFK__transacti__trans__60083D91 = new global::System.Data.DataRelation("FK__transacti__trans__60083D91", new global::System.Data.DataColumn[] {
                         this.tabletransactions.transactionsIdColumn}, new global::System.Data.DataColumn[] {
                         this.tabletransaction_products.transactionsIdColumn}, false);
-            this.Relations.Add(this.relationFK__transacti__trans__3BCADD1B);
-            this.relationFK__transacti__staff__2D7CBDC4 = new global::System.Data.DataRelation("FK__transacti__staff__2D7CBDC4", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__transacti__trans__60083D91);
+            this.relationFK__transacti__staff__51BA1E3A = new global::System.Data.DataRelation("FK__transacti__staff__51BA1E3A", new global::System.Data.DataColumn[] {
                         this.tablestaff.staffIdColumn}, new global::System.Data.DataColumn[] {
                         this.tabletransactions.staffIdColumn}, false);
-            this.Relations.Add(this.relationFK__transacti__staff__2D7CBDC4);
+            this.Relations.Add(this.relationFK__transacti__staff__51BA1E3A);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -794,12 +794,6 @@ namespace AuntRosiesBookkeeping {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeBiweeklyReport() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializedailySalesReport() {
             return false;
         }
@@ -825,6 +819,12 @@ namespace AuntRosiesBookkeeping {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeproductQuantityReport() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializerecipeItemsView() {
             return false;
         }
         
@@ -920,9 +920,6 @@ namespace AuntRosiesBookkeeping {
         public delegate void BiWeeklyEmployeePayReportRowChangeEventHandler(object sender, BiWeeklyEmployeePayReportRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void BiweeklyReportRowChangeEventHandler(object sender, BiweeklyReportRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void dailySalesReportRowChangeEventHandler(object sender, dailySalesReportRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -936,6 +933,9 @@ namespace AuntRosiesBookkeeping {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void productQuantityReportRowChangeEventHandler(object sender, productQuantityReportRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void recipeItemsViewRowChangeEventHandler(object sender, recipeItemsViewRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1074,7 +1074,7 @@ namespace AuntRosiesBookkeeping {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public inventoryRow AddinventoryRow(string inventoryDescription, inventory_typeRow parentinventory_typeRowByFK__inventory__inven__29AC2CE0, int inventoryQuantity, measurement_typeRow parentmeasurement_typeRowByFK__inventory__measu__2AA05119, double inventoryPrice) {
+            public inventoryRow AddinventoryRow(string inventoryDescription, inventory_typeRow parentinventory_typeRowByFK__inventory__inven__4DE98D56, int inventoryQuantity, measurement_typeRow parentmeasurement_typeRowByFK__inventory__measu__4EDDB18F, double inventoryPrice) {
                 inventoryRow rowinventoryRow = ((inventoryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1083,11 +1083,11 @@ namespace AuntRosiesBookkeeping {
                         inventoryQuantity,
                         null,
                         inventoryPrice};
-                if ((parentinventory_typeRowByFK__inventory__inven__29AC2CE0 != null)) {
-                    columnValuesArray[2] = parentinventory_typeRowByFK__inventory__inven__29AC2CE0[0];
+                if ((parentinventory_typeRowByFK__inventory__inven__4DE98D56 != null)) {
+                    columnValuesArray[2] = parentinventory_typeRowByFK__inventory__inven__4DE98D56[0];
                 }
-                if ((parentmeasurement_typeRowByFK__inventory__measu__2AA05119 != null)) {
-                    columnValuesArray[4] = parentmeasurement_typeRowByFK__inventory__measu__2AA05119[0];
+                if ((parentmeasurement_typeRowByFK__inventory__measu__4EDDB18F != null)) {
+                    columnValuesArray[4] = parentmeasurement_typeRowByFK__inventory__measu__4EDDB18F[0];
                 }
                 rowinventoryRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowinventoryRow);
@@ -1929,13 +1929,13 @@ namespace AuntRosiesBookkeeping {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public product_recipesRow Addproduct_recipesRow(productsRow parentproductsRowByFK__product_r__produ__351DDF8C) {
+            public product_recipesRow Addproduct_recipesRow(productsRow parentproductsRowByFK__product_r__produ__595B4002) {
                 product_recipesRow rowproduct_recipesRow = ((product_recipesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null};
-                if ((parentproductsRowByFK__product_r__produ__351DDF8C != null)) {
-                    columnValuesArray[1] = parentproductsRowByFK__product_r__produ__351DDF8C[0];
+                if ((parentproductsRowByFK__product_r__produ__595B4002 != null)) {
+                    columnValuesArray[1] = parentproductsRowByFK__product_r__produ__595B4002[0];
                 }
                 rowproduct_recipesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowproduct_recipesRow);
@@ -2516,7 +2516,7 @@ namespace AuntRosiesBookkeeping {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public productsRow AddproductsRow(product_typesRow parentproduct_typesRowByFK__products__produc__324172E1, string productDescription, int productQuantity, double productPrice) {
+            public productsRow AddproductsRow(product_typesRow parentproduct_typesRowByFK__products__produc__567ED357, string productDescription, int productQuantity, double productPrice) {
                 productsRow rowproductsRow = ((productsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2524,8 +2524,8 @@ namespace AuntRosiesBookkeeping {
                         productDescription,
                         productQuantity,
                         productPrice};
-                if ((parentproduct_typesRowByFK__products__produc__324172E1 != null)) {
-                    columnValuesArray[1] = parentproduct_typesRowByFK__products__produc__324172E1[0];
+                if ((parentproduct_typesRowByFK__products__produc__567ED357 != null)) {
+                    columnValuesArray[1] = parentproduct_typesRowByFK__products__produc__567ED357[0];
                 }
                 rowproductsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowproductsRow);
@@ -2819,17 +2819,17 @@ namespace AuntRosiesBookkeeping {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public recipe_inventoryRow Addrecipe_inventoryRow(product_recipesRow parentproduct_recipesRowByFK__recipe_in__produ__37FA4C37, inventoryRow parentinventoryRowByFK__recipe_in__inven__38EE7070, double inventoryQty) {
+            public recipe_inventoryRow Addrecipe_inventoryRow(product_recipesRow parentproduct_recipesRowByFK__recipe_in__produ__5C37ACAD, inventoryRow parentinventoryRowByFK__recipe_in__inven__5D2BD0E6, double inventoryQty) {
                 recipe_inventoryRow rowrecipe_inventoryRow = ((recipe_inventoryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         inventoryQty};
-                if ((parentproduct_recipesRowByFK__recipe_in__produ__37FA4C37 != null)) {
-                    columnValuesArray[0] = parentproduct_recipesRowByFK__recipe_in__produ__37FA4C37[0];
+                if ((parentproduct_recipesRowByFK__recipe_in__produ__5C37ACAD != null)) {
+                    columnValuesArray[0] = parentproduct_recipesRowByFK__recipe_in__produ__5C37ACAD[0];
                 }
-                if ((parentinventoryRowByFK__recipe_in__inven__38EE7070 != null)) {
-                    columnValuesArray[1] = parentinventoryRowByFK__recipe_in__inven__38EE7070[0];
+                if ((parentinventoryRowByFK__recipe_in__inven__5D2BD0E6 != null)) {
+                    columnValuesArray[1] = parentinventoryRowByFK__recipe_in__inven__5D2BD0E6[0];
                 }
                 rowrecipe_inventoryRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowrecipe_inventoryRow);
@@ -3543,15 +3543,15 @@ namespace AuntRosiesBookkeeping {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public staffHoursRow AddstaffHoursRow(staffRow parentstaffRowByFK__staffHour__staff__22FF2F51, System.DateTime staffHoursStartDate, System.DateTime staffHoursEndDate, int staffHoursNumberOfHours) {
+            public staffHoursRow AddstaffHoursRow(staffRow parentstaffRowByFK__staffHour__staff__473C8FC7, System.DateTime staffHoursStartDate, System.DateTime staffHoursEndDate, int staffHoursNumberOfHours) {
                 staffHoursRow rowstaffHoursRow = ((staffHoursRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         staffHoursStartDate,
                         staffHoursEndDate,
                         staffHoursNumberOfHours};
-                if ((parentstaffRowByFK__staffHour__staff__22FF2F51 != null)) {
-                    columnValuesArray[0] = parentstaffRowByFK__staffHour__staff__22FF2F51[0];
+                if ((parentstaffRowByFK__staffHour__staff__473C8FC7 != null)) {
+                    columnValuesArray[0] = parentstaffRowByFK__staffHour__staff__473C8FC7[0];
                 }
                 rowstaffHoursRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowstaffHoursRow);
@@ -3842,17 +3842,17 @@ namespace AuntRosiesBookkeeping {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public transaction_productsRow Addtransaction_productsRow(transactionsRow parenttransactionsRowByFK__transacti__trans__3BCADD1B, productsRow parentproductsRowByFK__transacti__produ__3CBF0154, int numberOfProductsSold) {
+            public transaction_productsRow Addtransaction_productsRow(transactionsRow parenttransactionsRowByFK__transacti__trans__60083D91, productsRow parentproductsRowByFK__transacti__produ__60FC61CA, int numberOfProductsSold) {
                 transaction_productsRow rowtransaction_productsRow = ((transaction_productsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null,
                         numberOfProductsSold};
-                if ((parenttransactionsRowByFK__transacti__trans__3BCADD1B != null)) {
-                    columnValuesArray[0] = parenttransactionsRowByFK__transacti__trans__3BCADD1B[0];
+                if ((parenttransactionsRowByFK__transacti__trans__60083D91 != null)) {
+                    columnValuesArray[0] = parenttransactionsRowByFK__transacti__trans__60083D91[0];
                 }
-                if ((parentproductsRowByFK__transacti__produ__3CBF0154 != null)) {
-                    columnValuesArray[1] = parentproductsRowByFK__transacti__produ__3CBF0154[0];
+                if ((parentproductsRowByFK__transacti__produ__60FC61CA != null)) {
+                    columnValuesArray[1] = parentproductsRowByFK__transacti__produ__60FC61CA[0];
                 }
                 rowtransaction_productsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtransaction_productsRow);
@@ -4156,7 +4156,7 @@ namespace AuntRosiesBookkeeping {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public transactionsRow AddtransactionsRow(staffRow parentstaffRowByFK__transacti__staff__2D7CBDC4, System.DateTime transactionDate, double transactionSubTotal, double transactionTotal) {
+            public transactionsRow AddtransactionsRow(staffRow parentstaffRowByFK__transacti__staff__51BA1E3A, System.DateTime transactionDate, double transactionSubTotal, double transactionTotal) {
                 transactionsRow rowtransactionsRow = ((transactionsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -4164,8 +4164,8 @@ namespace AuntRosiesBookkeeping {
                         transactionDate,
                         transactionSubTotal,
                         transactionTotal};
-                if ((parentstaffRowByFK__transacti__staff__2D7CBDC4 != null)) {
-                    columnValuesArray[1] = parentstaffRowByFK__transacti__staff__2D7CBDC4[0];
+                if ((parentstaffRowByFK__transacti__staff__51BA1E3A != null)) {
+                    columnValuesArray[1] = parentstaffRowByFK__transacti__staff__51BA1E3A[0];
                 }
                 rowtransactionsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtransactionsRow);
@@ -4652,296 +4652,6 @@ namespace AuntRosiesBookkeeping {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "BiWeeklyEmployeePayReportDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class BiweeklyReportDataTable : global::System.Data.TypedTableBase<BiweeklyReportRow> {
-            
-            private global::System.Data.DataColumn columnEmployee_Number;
-            
-            private global::System.Data.DataColumn columnEmployee;
-            
-            private global::System.Data.DataColumn columnTotal_Pay;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BiweeklyReportDataTable() {
-                this.TableName = "BiweeklyReport";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal BiweeklyReportDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected BiweeklyReportDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Employee_NumberColumn {
-                get {
-                    return this.columnEmployee_Number;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn EmployeeColumn {
-                get {
-                    return this.columnEmployee;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Total_PayColumn {
-                get {
-                    return this.columnTotal_Pay;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BiweeklyReportRow this[int index] {
-                get {
-                    return ((BiweeklyReportRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event BiweeklyReportRowChangeEventHandler BiweeklyReportRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event BiweeklyReportRowChangeEventHandler BiweeklyReportRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event BiweeklyReportRowChangeEventHandler BiweeklyReportRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event BiweeklyReportRowChangeEventHandler BiweeklyReportRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddBiweeklyReportRow(BiweeklyReportRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BiweeklyReportRow AddBiweeklyReportRow(int Employee_Number, string Employee, string Total_Pay) {
-                BiweeklyReportRow rowBiweeklyReportRow = ((BiweeklyReportRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        Employee_Number,
-                        Employee,
-                        Total_Pay};
-                rowBiweeklyReportRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowBiweeklyReportRow);
-                return rowBiweeklyReportRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BiweeklyReportRow FindByEmployee_Number(int Employee_Number) {
-                return ((BiweeklyReportRow)(this.Rows.Find(new object[] {
-                            Employee_Number})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                BiweeklyReportDataTable cln = ((BiweeklyReportDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new BiweeklyReportDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal void InitVars() {
-                this.columnEmployee_Number = base.Columns["Employee Number"];
-                this.columnEmployee = base.Columns["Employee"];
-                this.columnTotal_Pay = base.Columns["Total Pay"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            private void InitClass() {
-                this.columnEmployee_Number = new global::System.Data.DataColumn("Employee Number", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEmployee_Number);
-                this.columnEmployee = new global::System.Data.DataColumn("Employee", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEmployee);
-                this.columnTotal_Pay = new global::System.Data.DataColumn("Total Pay", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTotal_Pay);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnEmployee_Number}, true));
-                this.columnEmployee_Number.AllowDBNull = false;
-                this.columnEmployee_Number.Unique = true;
-                this.columnEmployee.ReadOnly = true;
-                this.columnEmployee.MaxLength = 61;
-                this.columnTotal_Pay.ReadOnly = true;
-                this.columnTotal_Pay.MaxLength = 24;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BiweeklyReportRow NewBiweeklyReportRow() {
-                return ((BiweeklyReportRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new BiweeklyReportRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(BiweeklyReportRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.BiweeklyReportRowChanged != null)) {
-                    this.BiweeklyReportRowChanged(this, new BiweeklyReportRowChangeEvent(((BiweeklyReportRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.BiweeklyReportRowChanging != null)) {
-                    this.BiweeklyReportRowChanging(this, new BiweeklyReportRowChangeEvent(((BiweeklyReportRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.BiweeklyReportRowDeleted != null)) {
-                    this.BiweeklyReportRowDeleted(this, new BiweeklyReportRowChangeEvent(((BiweeklyReportRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.BiweeklyReportRowDeleting != null)) {
-                    this.BiweeklyReportRowDeleting(this, new BiweeklyReportRowChangeEvent(((BiweeklyReportRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveBiweeklyReportRow(BiweeklyReportRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                aunt_rosieDataSet ds = new aunt_rosieDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "BiweeklyReportDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -6492,6 +6202,283 @@ namespace AuntRosiesBookkeeping {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class recipeItemsViewDataTable : global::System.Data.TypedTableBase<recipeItemsViewRow> {
+            
+            private global::System.Data.DataColumn columninventoryDescription;
+            
+            private global::System.Data.DataColumn columninventoryQuantity;
+            
+            private global::System.Data.DataColumn columnmeasurementDescription;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public recipeItemsViewDataTable() {
+                this.TableName = "recipeItemsView";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal recipeItemsViewDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected recipeItemsViewDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn inventoryDescriptionColumn {
+                get {
+                    return this.columninventoryDescription;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn inventoryQuantityColumn {
+                get {
+                    return this.columninventoryQuantity;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn measurementDescriptionColumn {
+                get {
+                    return this.columnmeasurementDescription;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public recipeItemsViewRow this[int index] {
+                get {
+                    return ((recipeItemsViewRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event recipeItemsViewRowChangeEventHandler recipeItemsViewRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event recipeItemsViewRowChangeEventHandler recipeItemsViewRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event recipeItemsViewRowChangeEventHandler recipeItemsViewRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event recipeItemsViewRowChangeEventHandler recipeItemsViewRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddrecipeItemsViewRow(recipeItemsViewRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public recipeItemsViewRow AddrecipeItemsViewRow(string inventoryDescription, int inventoryQuantity, string measurementDescription) {
+                recipeItemsViewRow rowrecipeItemsViewRow = ((recipeItemsViewRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        inventoryDescription,
+                        inventoryQuantity,
+                        measurementDescription};
+                rowrecipeItemsViewRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowrecipeItemsViewRow);
+                return rowrecipeItemsViewRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                recipeItemsViewDataTable cln = ((recipeItemsViewDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new recipeItemsViewDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columninventoryDescription = base.Columns["inventoryDescription"];
+                this.columninventoryQuantity = base.Columns["inventoryQuantity"];
+                this.columnmeasurementDescription = base.Columns["measurementDescription"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columninventoryDescription = new global::System.Data.DataColumn("inventoryDescription", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columninventoryDescription);
+                this.columninventoryQuantity = new global::System.Data.DataColumn("inventoryQuantity", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columninventoryQuantity);
+                this.columnmeasurementDescription = new global::System.Data.DataColumn("measurementDescription", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmeasurementDescription);
+                this.columninventoryDescription.MaxLength = 65;
+                this.columnmeasurementDescription.MaxLength = 7;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public recipeItemsViewRow NewrecipeItemsViewRow() {
+                return ((recipeItemsViewRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new recipeItemsViewRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(recipeItemsViewRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.recipeItemsViewRowChanged != null)) {
+                    this.recipeItemsViewRowChanged(this, new recipeItemsViewRowChangeEvent(((recipeItemsViewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.recipeItemsViewRowChanging != null)) {
+                    this.recipeItemsViewRowChanging(this, new recipeItemsViewRowChangeEvent(((recipeItemsViewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.recipeItemsViewRowDeleted != null)) {
+                    this.recipeItemsViewRowDeleted(this, new recipeItemsViewRowChangeEvent(((recipeItemsViewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.recipeItemsViewRowDeleting != null)) {
+                    this.recipeItemsViewRowDeleting(this, new recipeItemsViewRowChangeEvent(((recipeItemsViewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoverecipeItemsViewRow(recipeItemsViewRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                aunt_rosieDataSet ds = new aunt_rosieDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "recipeItemsViewDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class inventoryRow : global::System.Data.DataRow {
@@ -6590,10 +6577,10 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public inventory_typeRow inventory_typeRow {
                 get {
-                    return ((inventory_typeRow)(this.GetParentRow(this.Table.ParentRelations["FK__inventory__inven__29AC2CE0"])));
+                    return ((inventory_typeRow)(this.GetParentRow(this.Table.ParentRelations["FK__inventory__inven__4DE98D56"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__inventory__inven__29AC2CE0"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__inventory__inven__4DE98D56"]);
                 }
             }
             
@@ -6601,10 +6588,10 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public measurement_typeRow measurement_typeRow {
                 get {
-                    return ((measurement_typeRow)(this.GetParentRow(this.Table.ParentRelations["FK__inventory__measu__2AA05119"])));
+                    return ((measurement_typeRow)(this.GetParentRow(this.Table.ParentRelations["FK__inventory__measu__4EDDB18F"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__inventory__measu__2AA05119"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__inventory__measu__4EDDB18F"]);
                 }
             }
             
@@ -6647,11 +6634,11 @@ namespace AuntRosiesBookkeeping {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public recipe_inventoryRow[] Getrecipe_inventoryRows() {
-                if ((this.Table.ChildRelations["FK__recipe_in__inven__38EE7070"] == null)) {
+                if ((this.Table.ChildRelations["FK__recipe_in__inven__5D2BD0E6"] == null)) {
                     return new recipe_inventoryRow[0];
                 }
                 else {
-                    return ((recipe_inventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__recipe_in__inven__38EE7070"])));
+                    return ((recipe_inventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__recipe_in__inven__5D2BD0E6"])));
                 }
             }
         }
@@ -6713,11 +6700,11 @@ namespace AuntRosiesBookkeeping {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public inventoryRow[] GetinventoryRows() {
-                if ((this.Table.ChildRelations["FK__inventory__inven__29AC2CE0"] == null)) {
+                if ((this.Table.ChildRelations["FK__inventory__inven__4DE98D56"] == null)) {
                     return new inventoryRow[0];
                 }
                 else {
-                    return ((inventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__inventory__inven__29AC2CE0"])));
+                    return ((inventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__inventory__inven__4DE98D56"])));
                 }
             }
         }
@@ -6779,11 +6766,11 @@ namespace AuntRosiesBookkeeping {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public inventoryRow[] GetinventoryRows() {
-                if ((this.Table.ChildRelations["FK__inventory__measu__2AA05119"] == null)) {
+                if ((this.Table.ChildRelations["FK__inventory__measu__4EDDB18F"] == null)) {
                     return new inventoryRow[0];
                 }
                 else {
-                    return ((inventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__inventory__measu__2AA05119"])));
+                    return ((inventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__inventory__measu__4EDDB18F"])));
                 }
             }
         }
@@ -6828,21 +6815,21 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public productsRow productsRow {
                 get {
-                    return ((productsRow)(this.GetParentRow(this.Table.ParentRelations["FK__product_r__produ__351DDF8C"])));
+                    return ((productsRow)(this.GetParentRow(this.Table.ParentRelations["FK__product_r__produ__595B4002"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__product_r__produ__351DDF8C"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__product_r__produ__595B4002"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public recipe_inventoryRow[] Getrecipe_inventoryRows() {
-                if ((this.Table.ChildRelations["FK__recipe_in__produ__37FA4C37"] == null)) {
+                if ((this.Table.ChildRelations["FK__recipe_in__produ__5C37ACAD"] == null)) {
                     return new recipe_inventoryRow[0];
                 }
                 else {
-                    return ((recipe_inventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__recipe_in__produ__37FA4C37"])));
+                    return ((recipe_inventoryRow[])(base.GetChildRows(this.Table.ChildRelations["FK__recipe_in__produ__5C37ACAD"])));
                 }
             }
         }
@@ -6904,11 +6891,11 @@ namespace AuntRosiesBookkeeping {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public productsRow[] GetproductsRows() {
-                if ((this.Table.ChildRelations["FK__products__produc__324172E1"] == null)) {
+                if ((this.Table.ChildRelations["FK__products__produc__567ED357"] == null)) {
                     return new productsRow[0];
                 }
                 else {
-                    return ((productsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__products__produc__324172E1"])));
+                    return ((productsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__products__produc__567ED357"])));
                 }
             }
         }
@@ -7001,10 +6988,10 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public product_typesRow product_typesRow {
                 get {
-                    return ((product_typesRow)(this.GetParentRow(this.Table.ParentRelations["FK__products__produc__324172E1"])));
+                    return ((product_typesRow)(this.GetParentRow(this.Table.ParentRelations["FK__products__produc__567ED357"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__products__produc__324172E1"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__products__produc__567ED357"]);
                 }
             }
             
@@ -7047,22 +7034,22 @@ namespace AuntRosiesBookkeeping {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public product_recipesRow[] Getproduct_recipesRows() {
-                if ((this.Table.ChildRelations["FK__product_r__produ__351DDF8C"] == null)) {
+                if ((this.Table.ChildRelations["FK__product_r__produ__595B4002"] == null)) {
                     return new product_recipesRow[0];
                 }
                 else {
-                    return ((product_recipesRow[])(base.GetChildRows(this.Table.ChildRelations["FK__product_r__produ__351DDF8C"])));
+                    return ((product_recipesRow[])(base.GetChildRows(this.Table.ChildRelations["FK__product_r__produ__595B4002"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public transaction_productsRow[] Gettransaction_productsRows() {
-                if ((this.Table.ChildRelations["FK__transacti__produ__3CBF0154"] == null)) {
+                if ((this.Table.ChildRelations["FK__transacti__produ__60FC61CA"] == null)) {
                     return new transaction_productsRow[0];
                 }
                 else {
-                    return ((transaction_productsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__transacti__produ__3CBF0154"])));
+                    return ((transaction_productsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__transacti__produ__60FC61CA"])));
                 }
             }
         }
@@ -7123,10 +7110,10 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public inventoryRow inventoryRow {
                 get {
-                    return ((inventoryRow)(this.GetParentRow(this.Table.ParentRelations["FK__recipe_in__inven__38EE7070"])));
+                    return ((inventoryRow)(this.GetParentRow(this.Table.ParentRelations["FK__recipe_in__inven__5D2BD0E6"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__recipe_in__inven__38EE7070"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__recipe_in__inven__5D2BD0E6"]);
                 }
             }
             
@@ -7134,10 +7121,10 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public product_recipesRow product_recipesRow {
                 get {
-                    return ((product_recipesRow)(this.GetParentRow(this.Table.ParentRelations["FK__recipe_in__produ__37FA4C37"])));
+                    return ((product_recipesRow)(this.GetParentRow(this.Table.ParentRelations["FK__recipe_in__produ__5C37ACAD"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__recipe_in__produ__37FA4C37"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__recipe_in__produ__5C37ACAD"]);
                 }
             }
             
@@ -7309,22 +7296,22 @@ namespace AuntRosiesBookkeeping {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public staffHoursRow[] GetstaffHoursRows() {
-                if ((this.Table.ChildRelations["FK__staffHour__staff__22FF2F51"] == null)) {
+                if ((this.Table.ChildRelations["FK__staffHour__staff__473C8FC7"] == null)) {
                     return new staffHoursRow[0];
                 }
                 else {
-                    return ((staffHoursRow[])(base.GetChildRows(this.Table.ChildRelations["FK__staffHour__staff__22FF2F51"])));
+                    return ((staffHoursRow[])(base.GetChildRows(this.Table.ChildRelations["FK__staffHour__staff__473C8FC7"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public transactionsRow[] GettransactionsRows() {
-                if ((this.Table.ChildRelations["FK__transacti__staff__2D7CBDC4"] == null)) {
+                if ((this.Table.ChildRelations["FK__transacti__staff__51BA1E3A"] == null)) {
                     return new transactionsRow[0];
                 }
                 else {
-                    return ((transactionsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__transacti__staff__2D7CBDC4"])));
+                    return ((transactionsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__transacti__staff__51BA1E3A"])));
                 }
             }
         }
@@ -7391,10 +7378,10 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public staffRow staffRow {
                 get {
-                    return ((staffRow)(this.GetParentRow(this.Table.ParentRelations["FK__staffHour__staff__22FF2F51"])));
+                    return ((staffRow)(this.GetParentRow(this.Table.ParentRelations["FK__staffHour__staff__473C8FC7"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__staffHour__staff__22FF2F51"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__staffHour__staff__473C8FC7"]);
                 }
             }
         }
@@ -7456,10 +7443,10 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public productsRow productsRow {
                 get {
-                    return ((productsRow)(this.GetParentRow(this.Table.ParentRelations["FK__transacti__produ__3CBF0154"])));
+                    return ((productsRow)(this.GetParentRow(this.Table.ParentRelations["FK__transacti__produ__60FC61CA"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__transacti__produ__3CBF0154"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__transacti__produ__60FC61CA"]);
                 }
             }
             
@@ -7467,10 +7454,10 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public transactionsRow transactionsRow {
                 get {
-                    return ((transactionsRow)(this.GetParentRow(this.Table.ParentRelations["FK__transacti__trans__3BCADD1B"])));
+                    return ((transactionsRow)(this.GetParentRow(this.Table.ParentRelations["FK__transacti__trans__60083D91"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__transacti__trans__3BCADD1B"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__transacti__trans__60083D91"]);
                 }
             }
             
@@ -7575,10 +7562,10 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public staffRow staffRow {
                 get {
-                    return ((staffRow)(this.GetParentRow(this.Table.ParentRelations["FK__transacti__staff__2D7CBDC4"])));
+                    return ((staffRow)(this.GetParentRow(this.Table.ParentRelations["FK__transacti__staff__51BA1E3A"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__transacti__staff__2D7CBDC4"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__transacti__staff__51BA1E3A"]);
                 }
             }
             
@@ -7621,11 +7608,11 @@ namespace AuntRosiesBookkeeping {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public transaction_productsRow[] Gettransaction_productsRows() {
-                if ((this.Table.ChildRelations["FK__transacti__trans__3BCADD1B"] == null)) {
+                if ((this.Table.ChildRelations["FK__transacti__trans__60083D91"] == null)) {
                     return new transaction_productsRow[0];
                 }
                 else {
-                    return ((transaction_productsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__transacti__trans__3BCADD1B"])));
+                    return ((transaction_productsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__transacti__trans__60083D91"])));
                 }
             }
         }
@@ -7771,88 +7758,6 @@ namespace AuntRosiesBookkeeping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTotal_PayNull() {
                 this[this.tableBiWeeklyEmployeePayReport.Total_PayColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class BiweeklyReportRow : global::System.Data.DataRow {
-            
-            private BiweeklyReportDataTable tableBiweeklyReport;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal BiweeklyReportRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableBiweeklyReport = ((BiweeklyReportDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Employee_Number {
-                get {
-                    return ((int)(this[this.tableBiweeklyReport.Employee_NumberColumn]));
-                }
-                set {
-                    this[this.tableBiweeklyReport.Employee_NumberColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Employee {
-                get {
-                    try {
-                        return ((string)(this[this.tableBiweeklyReport.EmployeeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Employee\' in table \'BiweeklyReport\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBiweeklyReport.EmployeeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Total_Pay {
-                get {
-                    try {
-                        return ((string)(this[this.tableBiweeklyReport.Total_PayColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Total Pay\' in table \'BiweeklyReport\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableBiweeklyReport.Total_PayColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsEmployeeNull() {
-                return this.IsNull(this.tableBiweeklyReport.EmployeeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetEmployeeNull() {
-                this[this.tableBiweeklyReport.EmployeeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTotal_PayNull() {
-                return this.IsNull(this.tableBiweeklyReport.Total_PayColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTotal_PayNull() {
-                this[this.tableBiweeklyReport.Total_PayColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -8527,6 +8432,107 @@ namespace AuntRosiesBookkeeping {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class recipeItemsViewRow : global::System.Data.DataRow {
+            
+            private recipeItemsViewDataTable tablerecipeItemsView;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal recipeItemsViewRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablerecipeItemsView = ((recipeItemsViewDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string inventoryDescription {
+                get {
+                    try {
+                        return ((string)(this[this.tablerecipeItemsView.inventoryDescriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'inventoryDescription\' in table \'recipeItemsView\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablerecipeItemsView.inventoryDescriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int inventoryQuantity {
+                get {
+                    try {
+                        return ((int)(this[this.tablerecipeItemsView.inventoryQuantityColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'inventoryQuantity\' in table \'recipeItemsView\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerecipeItemsView.inventoryQuantityColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string measurementDescription {
+                get {
+                    try {
+                        return ((string)(this[this.tablerecipeItemsView.measurementDescriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'measurementDescription\' in table \'recipeItemsView\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tablerecipeItemsView.measurementDescriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsinventoryDescriptionNull() {
+                return this.IsNull(this.tablerecipeItemsView.inventoryDescriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetinventoryDescriptionNull() {
+                this[this.tablerecipeItemsView.inventoryDescriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsinventoryQuantityNull() {
+                return this.IsNull(this.tablerecipeItemsView.inventoryQuantityColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetinventoryQuantityNull() {
+                this[this.tablerecipeItemsView.inventoryQuantityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsmeasurementDescriptionNull() {
+                return this.IsNull(this.tablerecipeItemsView.measurementDescriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetmeasurementDescriptionNull() {
+                this[this.tablerecipeItemsView.measurementDescriptionColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -8938,40 +8944,6 @@ namespace AuntRosiesBookkeeping {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class BiweeklyReportRowChangeEvent : global::System.EventArgs {
-            
-            private BiweeklyReportRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BiweeklyReportRowChangeEvent(BiweeklyReportRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public BiweeklyReportRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public class dailySalesReportRowChangeEvent : global::System.EventArgs {
             
             private dailySalesReportRow eventRow;
@@ -9124,6 +9096,40 @@ namespace AuntRosiesBookkeeping {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public productQuantityReportRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class recipeItemsViewRowChangeEvent : global::System.EventArgs {
+            
+            private recipeItemsViewRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public recipeItemsViewRowChangeEvent(recipeItemsViewRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public recipeItemsViewRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -13414,175 +13420,6 @@ SELECT transactionsId, staffId, transactionDate, transactionSubTotal, transactio
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class BiweeklyReportTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public BiweeklyReportTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "BiweeklyReport";
-            tableMapping.ColumnMappings.Add("Employee Number", "Employee Number");
-            tableMapping.ColumnMappings.Add("Employee", "Employee");
-            tableMapping.ColumnMappings.Add("Total Pay", "Total Pay");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::AuntRosiesBookkeeping.Properties.Settings.Default.aunt_rosieConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [Employee Number], Employee, [Total Pay] FROM dbo.BiweeklyReport";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(aunt_rosieDataSet.BiweeklyReportDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual aunt_rosieDataSet.BiweeklyReportDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            aunt_rosieDataSet.BiweeklyReportDataTable dataTable = new aunt_rosieDataSet.BiweeklyReportDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class dailySalesReportTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
@@ -14425,6 +14262,176 @@ SELECT transactionsId, staffId, transactionDate, transactionSubTotal, transactio
         public virtual aunt_rosieDataSet.productQuantityReportDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             aunt_rosieDataSet.productQuantityReportDataTable dataTable = new aunt_rosieDataSet.productQuantityReportDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class recipeItemsViewTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public recipeItemsViewTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "recipeItemsView";
+            tableMapping.ColumnMappings.Add("inventoryDescription", "inventoryDescription");
+            tableMapping.ColumnMappings.Add("inventoryQuantity", "inventoryQuantity");
+            tableMapping.ColumnMappings.Add("measurementDescription", "measurementDescription");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::AuntRosiesBookkeeping.Properties.Settings.Default.aunt_rosieConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT inventoryDescription, inventoryQuantity, measurementDescription FROM dbo.r" +
+                "ecipeItemsView";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(aunt_rosieDataSet.recipeItemsViewDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual aunt_rosieDataSet.recipeItemsViewDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            aunt_rosieDataSet.recipeItemsViewDataTable dataTable = new aunt_rosieDataSet.recipeItemsViewDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

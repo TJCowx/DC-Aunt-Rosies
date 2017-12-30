@@ -194,6 +194,7 @@ namespace AuntRosiesBookkeeping.Views
         {
             string errorMessages = "";
             #region VALIDATION
+                
             #endregion
             if (errorMessages == "")
             {

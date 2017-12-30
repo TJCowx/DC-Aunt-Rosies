@@ -109,6 +109,17 @@ namespace AuntRosiesBookkeeping
             ReportTabInfo._tabIndex = 0;        //Opens the tab to the employees tab
         }
 
+        /// <summary>
+        /// Opens the recipe report
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void mnuRptRecipes_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new ReportsViewModel();       //Opens new view
+            ReportTabInfo._tabIndex = 4;        //Opens the tab to the employees tab
+        }
+
         #endregion
 
         #region "Tools"
@@ -213,8 +224,9 @@ namespace AuntRosiesBookkeeping
             DataContext = new TransactionViewModel();
         }
 
+
         #endregion
 
-        
+
     }
 }

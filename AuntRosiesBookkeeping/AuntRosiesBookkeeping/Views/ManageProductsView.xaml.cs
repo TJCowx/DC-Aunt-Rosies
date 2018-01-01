@@ -303,6 +303,78 @@ namespace AuntRosiesBookkeeping.Views
                 errorMessages += "\nYou must enter a valid numerical value";
             }
 
+            // Validate for enough ingredients       
+            if(btnSaveChanges.Content.ToString() == SAVE_CHANGES && errorMessages == "")
+            {
+                DataRowView productRow = lstProductList.Items.GetItemAt(lstProductList.SelectedIndex) as DataRowView;
+                
+
+                if (Convert.ToInt32(txtQtyProd.Text) > Convert.ToInt32(productRow["productQuantity"]))
+                {
+                    int recipeId;       // Recipe ID
+                    double toBeRemoveQty;      // Quantity to be removed
+                    int currentQty;         // Current amount of ingredient quantity
+                    string inventoryname;
+                    int numProdToBeAdded = Convert.ToInt32(txtQtyProd.Text) - Convert.ToInt32(productRow["productQuantity"]);   // Number of the product to be added
+                    bool firstNotEnough = true;
+
+                    // Check to see if there is enough items to be removed
+                    string sqlGetRecipeId = "SELECT productRecipeId FROM product_recipes " +
+                        "WHERE productId='" + productId + "';";
+                    SqlCommand cmd = new SqlCommand(sqlGetRecipeId, connection);
+                    // Store the recipeId
+                    connection.Open();
+                    recipeId = Convert.ToInt32(cmd.ExecuteScalar());
+                    connection.Close();
+
+                    // SQL string 
+                    string sqlGetRecipeItems = "SELECT inventoryId, inventoryQty FROM recipe_inventory " +
+                        "WHERE productRecipeId='" + recipeId + "';";
+                    DataTable recipeTable = new DataTable();    // Table that all the recipe items are going to be stored from
+                    cmd = new SqlCommand(sqlGetRecipeItems, connection);
+
+                    connection.Open();
+                    SqlDataAdapter recipeItemAdapter = new SqlDataAdapter(cmd);
+                    recipeItemAdapter.Fill(recipeTable);    // Fill the tabl
+                    connection.Close();
+
+                    // Iterate through the table to see if there is enough
+                    foreach (DataRow row in recipeTable.Rows)
+                    {
+                        // Check if there is the ability to remove enough ingredients
+                        toBeRemoveQty = Convert.ToDouble(row["inventoryQty"]) * numProdToBeAdded;
+                        // Get the quantity in the ingredient
+                        string sqlGetCurrentQuantity = "SELECT inventoryQuantity FROM inventory " +
+                            "WHERE inventoryId='" + Convert.ToInt32(row["inventoryId"]) + "';";
+                        cmd = new SqlCommand(sqlGetCurrentQuantity, connection);
+                        connection.Open();
+                        currentQty = Convert.ToInt32(cmd.ExecuteScalar());  // Get the current quantity
+                        connection.Close();
+
+                        // Compare to be removed qty to current
+                        if (toBeRemoveQty > currentQty)
+                        {
+                            // get the inventory name
+                            string sqlGetInventoryName = "SELECT inventoryDescription FROM inventory " +
+                                "WHERE inventoryId='" + row["inventoryId"] + "';";
+                            cmd = new SqlCommand(sqlGetInventoryName, connection);
+                            connection.Open();
+                            inventoryname = cmd.ExecuteScalar().ToString();
+                            connection.Close();
+                            if (firstNotEnough)
+                            {
+                                errorMessages = "Not enough ingredients on inventory itemss:\n" + inventoryname;
+                                firstNotEnough = false;
+                            }
+                            else
+                            {
+                                errorMessages += "\n" + inventoryname;
+                            }
+                        }
+                    }
+                }
+            }
+
             #endregion
 
             // If there are no error messages
@@ -310,15 +382,26 @@ namespace AuntRosiesBookkeeping.Views
             {
                 if (btnSaveChanges.Content.ToString() == SAVE_CHANGES)
                 {
+                    // Prompt for confirming saving changes
                     if (MessageBox.Show("Save changes?", "Confirm Changes", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes)
                     {
+                        double currentQty;
+
+                        string getCurrentQty = "SELECT productQuantity FROM products " +
+                            "WHERE productId='" + productId + "';";
+                        SqlCommand cmd = new SqlCommand(getCurrentQty, connection);
+                        connection.Open();
+                        currentQty = Convert.ToDouble(cmd.ExecuteScalar());
+                        connection.Close();
+
                         #region UPDATE PRODUCT
+
                         // SQL statement to update the employee info
                         string sqlUpdateProduct = "UPDATE products SET " +
                             " productDescription=@productDescription, productQuantity=@productQuantity, " +
                             " productPrice=@productPrice " +
                             " WHERE productId='" + productId + "'";
-                        SqlCommand cmd = new SqlCommand(sqlUpdateProduct, connection);    // Command to execute
+                        cmd = new SqlCommand(sqlUpdateProduct, connection);    // Command to execute
 
                         // Add the parameters
                         cmd.Parameters.AddWithValue("@productDescription", txtProductName.Text);
@@ -337,6 +420,49 @@ namespace AuntRosiesBookkeeping.Views
 
                         // Refresh the employee listview
                         RefreshProductsView(productId);
+
+                        #endregion
+
+                        #region REMOVE INGREDIENTS
+                        int recipeId;
+                        int inventoryId;
+                        double removeQty;
+                        ;
+
+                        // Check to see if there is enough items to be removed
+                        string sqlGetRecipeId = "SELECT productRecipeId FROM product_recipes " +
+                            "WHERE productId='" + productId + "';";
+                        cmd = new SqlCommand(sqlGetRecipeId, connection);
+                        // Store the recipeId
+                        connection.Open();
+                        recipeId = Convert.ToInt32(cmd.ExecuteScalar());
+                        connection.Close();
+
+                        // SQL string 
+                        string sqlGetRecipeItems = "SELECT inventoryId, inventoryQty FROM recipe_inventory " +
+                            "WHERE productRecipeId='" + recipeId + "';";
+                        DataTable recipeTable = new DataTable();    // Table that all the recipe items are going to be stored from
+                        cmd = new SqlCommand(sqlGetRecipeItems, connection);
+
+                        connection.Open();
+                        SqlDataAdapter recipeItemAdapter = new SqlDataAdapter(cmd);
+                        recipeItemAdapter.Fill(recipeTable);    // Fill the tabl
+                        connection.Close();
+
+                        foreach(DataRow row in recipeTable.Rows)
+                        {
+                            inventoryId = Convert.ToInt32(row["inventoryId"]);
+
+                          
+                            removeQty = Convert.ToDouble(row["inventoryQty"]) * (Convert.ToInt32(txtQtyProd.Text) - currentQty);
+                            string sqlRemoveQuantity = "UPDATE inventory SET inventoryQuantity = inventoryQuantity - @removeQuantity " +
+                                "WHERE inventoryId='" + inventoryId + "';";
+                            cmd = new SqlCommand(sqlRemoveQuantity, connection);
+                            cmd.Parameters.AddWithValue("@removeQuantity", removeQty);
+                            connection.Open();
+                            cmd.ExecuteNonQuery();
+                            connection.Close();
+                        }
 
                         #endregion
                     }

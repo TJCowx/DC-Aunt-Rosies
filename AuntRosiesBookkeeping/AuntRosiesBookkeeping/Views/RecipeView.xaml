@@ -45,7 +45,7 @@
                     <GridViewColumn DisplayMemberBinding="{Binding Path=InventoryDescription}" Header="Name" />
                     <GridViewColumn DisplayMemberBinding="{Binding Path=InventoryType}" Header="Type" />
                     <GridViewColumn DisplayMemberBinding="{Binding Path=InventoryQuantity}" Header="Quantity" />
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=MeasurementType }" Header="Measurement" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Measurement }" Header="Measurement" />
                 </GridView>
             </ListView.View>
         </ListView>

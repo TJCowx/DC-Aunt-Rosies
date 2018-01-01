@@ -17,10 +17,9 @@ namespace AuntRosiesBookkeeping.SpecialClass
 
         public string InventoryType { get; set; }
 
-        public int InventoryQuantity { get; set; }
+        public double InventoryQuantity { get; set; }
 
         public string Measurement { get; set; }
 
-        public double InventoryPrice { get; set; }
     }
 }

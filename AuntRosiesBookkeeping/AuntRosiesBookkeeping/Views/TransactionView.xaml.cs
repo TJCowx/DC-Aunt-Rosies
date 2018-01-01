@@ -72,12 +72,16 @@ namespace AuntRosiesBookkeeping.Views
         /// <param name="e"></param>
         private void btnCompleteTransaction_Click(object sender, RoutedEventArgs e)
         {
-            // TODO: Create SQL script for adding a new transaction
+            double productQuantity = 0;
+            int productId = 0;
+            int selectedRecord = lstCurrentTransaction.SelectedIndex;
+
+            // SQL for inserting data
             string sqlInsertTransaction = "INSERT INTO transactions(staffId, transactionDate, transactionSubTotal, transactionTotal) " +
                 "VALUES(@staffID, @transactionDate, @transactionSubTotal, @transactionTotal); SELECT SCOPE_IDENTITY();";
             string sqlInsertTransactionProducts = "INSERT INTO transaction_products(transactionsId, productId, numberOfProductsSold) " +
                 "VALUES(@transId, @productId, @quantity)";
-
+            
 
             SqlCommand cmd = new SqlCommand(sqlInsertTransaction, connection);
             SqlDataAdapter insertTransaction = new SqlDataAdapter(cmd);     // SQL Adapter to insert the data into the dataset
@@ -101,20 +105,38 @@ namespace AuntRosiesBookkeeping.Views
                 for(int i = 0; i < lstCurrentTransaction.Items.Count; i++)
                 {
                     TransactionItem product = (TransactionItem)lstCurrentTransaction.Items.GetItemAt(i);    // Get the info stored in the listview item
-                    
+                    productQuantity = product.ProductQuantity;
+                    productId = product.ProductId;
 
                     // Insert info into the transaction_products table
                     cmd = new SqlCommand(sqlInsertTransactionProducts, connection);
                     cmd.Parameters.AddWithValue("@transId", transId);
-                    cmd.Parameters.AddWithValue("@productId", product.ProductId);
-                    cmd.Parameters.AddWithValue("@quantity", product.ProductQuantity);
+                    cmd.Parameters.AddWithValue("@productId", productId);
+                    cmd.Parameters.AddWithValue("@quantity", productQuantity);
 
                     insertTransaction = new SqlDataAdapter(cmd);        // Adapter to update the dataset
 
                     // Execyte the query
                     cmd.ExecuteNonQuery();
 
-                    insertTransaction.Update(auntRosieDataset.transaction_products);
+                    insertTransaction.Update(auntRosieDataset.transaction_products);    // Update the dataset
+
+
+
+                    // Update the product totals
+                    // SQL for updating quantities
+                    string sqlUpdateQuantity = "UPDATE products SET productQuantity=productQuantity - @productQuantity " +
+                        " WHERE productId='"+productId +"';";
+                    // Command to update table
+                    SqlCommand cmdUpdate = new SqlCommand(sqlUpdateQuantity, connection);
+
+                    // Add parameters
+                    cmdUpdate.Parameters.AddWithValue("@productQuantity", productQuantity);
+
+                    SqlDataAdapter updateProduct = new SqlDataAdapter(cmdUpdate);     // Adapter
+                    cmdUpdate.ExecuteNonQuery();      // Execute the query
+                    updateProduct.Update(auntRosieDataset.products);        // Update the dataset
+
                 }
 
             }
@@ -129,6 +151,7 @@ namespace AuntRosiesBookkeeping.Views
                 subTotal = 0;
                 lstCurrentTransaction.Items.Clear();
                 UpdateTotals();
+                RefreshProductsList(selectedRecord);
             }
 
         }
@@ -140,8 +163,10 @@ namespace AuntRosiesBookkeeping.Views
         /// <param name="e"></param>
         private void btnAddProduct_Click(object sender, RoutedEventArgs e)
         {
-            int quantity;
+            int quantity;       // Quantity of the price to be added
             bool updatedProduct = false;    // Flag to check if a product was updated
+            
+
             // Stores the product to be added information
             int productQuantity;
             int productId;
@@ -149,64 +174,94 @@ namespace AuntRosiesBookkeeping.Views
             double productPrice;
             double addedProductPrice = 0;
 
-            // Parse the quantity
-            if (int.TryParse(txtQty.Text, out quantity))
+            if (lstProducts.SelectedItem != null)
             {
-                // Check if there is a quantity above 0 
-                if (quantity > 0)
+                // Parse the quantity
+                if (int.TryParse(txtQty.Text, out quantity))
                 {
-                    // Get the productID
-                    productId = (int)((DataRowView)lstProducts.SelectedItems[0])["productId"];
-                    // Get the quantity of the product
-                    productQuantity = (int)((DataRowView)lstProducts.SelectedItems[0])["productQuantity"];
-                    // Get the product name
-                    productName = (string)((DataRowView)lstProducts.SelectedItems[0])["productDescription"];
-                    // Get the product price
-                    productPrice = (double)((DataRowView)lstProducts.SelectedItems[0])["productPrice"];
-
-                    // Search for a matching item in the transaction listview
-                    for (int i = 0; i < lstCurrentTransaction.Items.Count; i++)
+                    // Check if there is a quantity above 0 
+                    if (quantity > 0)
                     {
-                        TransactionItem product = (TransactionItem)lstCurrentTransaction.Items.GetItemAt(i);
-                        // Compare items to see if there is already a product in the transaction
-                        if(product.ProductDescription == productName)
-                        {        
-                            addedProductPrice = quantity * productPrice;    // Get the price to be added
-                            subTotal += addedProductPrice;     // Add the price to the subtotal
-                            addedProductPrice += Convert.ToDouble(product.ProductPrice);
-                            // Update the transaction item
-                            // Add new values
-                            lstCurrentTransaction.Items.Add(new TransactionItem { ProductId = product.ProductId, ProductDescription = product.ProductDescription, ProductPrice = string.Format("{0:0.00}",addedProductPrice), ProductQuantity = (product.ProductQuantity += quantity) });
-                            lstCurrentTransaction.Items.RemoveAt(i);    // Remove old values
+                        // Get the productID
+                        productId = (int)((DataRowView)lstProducts.SelectedItems[0])["productId"];
+                        // Get the quantity of the product
+                        productQuantity = (int)((DataRowView)lstProducts.SelectedItems[0])["productQuantity"];
+                        // Get the product name
+                        productName = (string)((DataRowView)lstProducts.SelectedItems[0])["productDescription"];
+                        // Get the product price
+                        productPrice = (double)((DataRowView)lstProducts.SelectedItems[0])["productPrice"];
 
-                            updatedProduct = true;      // Flag that there was a product in the transaction view
+                        // Check if the initial quantity is more than
+                        if (quantity > productQuantity)
+                        {
+                            MessageBox.Show("Not enough supply to match the request, try again with a lower number.",
+                                "Not enough supply", MessageBoxButton.OK, MessageBoxImage.Information);
+                        }
+                        else
+                        {
+                            // Search for a matching item in the transaction listview
+                            for (int i = 0; i < lstCurrentTransaction.Items.Count; i++)
+                            {
+                                TransactionItem product = (TransactionItem)lstCurrentTransaction.Items.GetItemAt(i);
+                                // Compare items to see if there is already a product in the transaction
+                                if (product.ProductDescription == productName)
+                                {
+                                    // Check if added product is too much
+                                    if ((quantity + product.ProductQuantity > productQuantity))
+                                    {
+                                        MessageBox.Show("Not enough supply to match the request, try again with a lower number.",
+                                            "Not enough supply", MessageBoxButton.OK, MessageBoxImage.Information);
+                                    }
+                                    else
+                                    {
+                                        addedProductPrice = quantity * productPrice;    // Get the price to be added
+                                        subTotal += addedProductPrice;     // Add the price to the subtotal
+                                        addedProductPrice += Convert.ToDouble(product.ProductPrice);
+                                        // Update the transaction item
+                                        // Add new values
+                                        lstCurrentTransaction.Items.Add(new TransactionItem
+                                        {
+                                            ProductId = product.ProductId,
+                                            ProductDescription = product.ProductDescription,
+                                            ProductPrice = string.Format("{0:0.00}", addedProductPrice),
+                                                                            ProductQuantity = (product.ProductQuantity += quantity)
+                                        });
+
+                                        lstCurrentTransaction.Items.RemoveAt(i);    // Remove old values
+
+                                    }
+
+                                    updatedProduct = true;      // Flag that there was a product in the transaction view
+                                }
+                            }
+
+                            // If there wasn't a product already in the current transaction view
+                            if (!updatedProduct)
+                            {
+                                addedProductPrice = productPrice * quantity;    // get the total product price
+                                Math.Round(addedProductPrice, 2);       // Round to two decimal points
+                                                                        // Add the item to the current transaction
+                                lstCurrentTransaction.Items.Add(new TransactionItem { ProductId = productId,
+                                    ProductDescription = productName,
+                                    ProductPrice = string.Format("{0:0.00}", addedProductPrice),
+                                                                    ProductQuantity = quantity });
+                                subTotal += addedProductPrice;     // Add the price to the subtotal
+                            }
+
+                            UpdateTotals();     // Refresh the totals textboxes
+
+                            txtQty.Text = "1";        // reset the quantity textbox to the default
                         }
                     }
-
-                    // If there wasn't a product already in the current transaction view
-                    if (!updatedProduct)
+                    else
                     {
-                        addedProductPrice = productPrice * quantity;    // get the total product price
-                        Math.Round(addedProductPrice, 2);       // Round to two decimal points
-                        // Add the item to the current transaction
-                        lstCurrentTransaction.Items.Add(new TransactionItem { ProductId=productId, ProductDescription = productName, ProductPrice = string.Format("{0:0.00}", addedProductPrice), ProductQuantity = quantity });
-                        subTotal += addedProductPrice;     // Add the price to the subtotal
+                        MessageBox.Show("You must have a number above 0!", "Error", MessageBoxButton.OK);
                     }
-
-                    
-
-                    UpdateTotals();     // Refresh the totals textboxes
-
-                    txtQty.Text = "1";        // reset the quantity textbox to the default
                 }
                 else
                 {
-                    MessageBox.Show("You must have a number above 0!", "Error", MessageBoxButton.OK);
+                    MessageBox.Show("You must have a whole number!", "Error!", MessageBoxButton.OK);
                 }
-            }
-            else
-            {
-                MessageBox.Show("You must have a whole number!", "Error!", MessageBoxButton.OK);
             }
             
         }

@@ -29,6 +29,12 @@ namespace AuntRosiesBookkeeping.Views
         bool newInventory = false;
         int inventoryId;
 
+        // Constants for button contents
+        private const string ADD_INVENTORY = "Add Inventory";
+        private const string CANCEL = "Cancel";
+        private const string SAVE_CHANGES = "Save Changes";
+
+
         private aunt_rosieDataSet auntRosieDataset;
 
         private aunt_rosieDataSetTableAdapters.inventoryItemsViewTableAdapter inventoryItemsViewTableAdapter;
@@ -75,27 +81,104 @@ namespace AuntRosiesBookkeeping.Views
             string errorMessages = "";
             
             #region VALIDATION
+            // Validate inventory name
+            if (txtInventoryName.Text.Length <= 0)
+            {
+                errorMessages += "\nYou must have an inventory name";
+            }
+            else if(txtInventoryName.Text.Length > 100)
+            {
+                errorMessages += "\nMust only have a max of 100 characters";
+            }
+
+            // Validate quantity
+            if (txtQty.Text.Length == 0)
+            {
+                errorMessages += "\nMust enter a quantity";
+            }
+            else if(!Regex.IsMatch(txtQty.Text, @"\d+(\.\d{1,2})?"))
+            {
+                errorMessages += "\nQuantity must be a numerical value";
+            }
+
+            // Validate price
+            if(txtPrice.Text.Length == 0)
+            {
+                errorMessages += "\nYou must enter a price!";
+            }
+            else if(!Regex.IsMatch(txtPrice.Text, @"\d+(\.\d{1,2})?"))
+            {
+                errorMessages += "\nThe price must be a numerical value";
+            }
 
             #endregion
 
             // If there is no errors
             if(errorMessages == "")
-            {   
-                // Confirm changes
-                if (MessageBox.Show("Save changes?", "Confirm Changes", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes)
+            {
+                int currentSelectedInventory = lstInventoryList.SelectedIndex;  // Get selected index
+
+                if (btnSaveChanges.Content.ToString() == SAVE_CHANGES)
                 {
-                    int currentSelectedInventory = lstInventoryList.SelectedIndex;  // Get selected index
+                    // Confirm changes
+                    if (MessageBox.Show("Save changes?", "Confirm Changes", MessageBoxButton.YesNo, MessageBoxImage.Information) == MessageBoxResult.Yes)
+                    {
+                        #region UPDATE INVENTORY
 
-                    // SQL to update the ingredient info
-                    string sqlUpdate = "UPDATE inventory SET " +
-                        " inventoryDescription=@inventoryDescription, " +
-                        " inventoryTypeId=@inventoryTypeId, " +
-                        " inventoryQuantity=@inventoryQuantity, " +
-                        " measurementId=@measurementId," +
-                        " inventoryPrice=@inventoryPrice " +
-                        " WHERE inventoryId='" + inventoryId +"'";
+                        // SQL to update the ingredient info
+                        string sqlUpdate = "UPDATE inventory SET " +
+                            " inventoryDescription=@inventoryDescription, " +
+                            " inventoryTypeId=@inventoryTypeId, " +
+                            " inventoryQuantity=@inventoryQuantity, " +
+                            " measurementId=@measurementId," +
+                            " inventoryPrice=@inventoryPrice " +
+                            " WHERE inventoryId='" + inventoryId + "'";
 
-                    SqlCommand cmd = new SqlCommand(sqlUpdate, connection);
+                        SqlCommand cmd = new SqlCommand(sqlUpdate, connection);
+
+                        // Add the values
+                        cmd.Parameters.AddWithValue("@inventoryDescription", txtInventoryName.Text);
+                        cmd.Parameters.AddWithValue("@inventoryTypeId", cmbType.SelectedValue);
+                        cmd.Parameters.AddWithValue("@inventoryQuantity", Convert.ToDouble(txtQty.Text));
+                        cmd.Parameters.AddWithValue("@measurementId", cmbMeasurementScale.SelectedValue);
+                        cmd.Parameters.AddWithValue("@inventoryPrice", Convert.ToDouble(txtPrice.Text));
+
+                        // Execute the query
+                        connection.Open();
+
+                        // Declare dataset and adapter
+                        auntRosieDataset = new aunt_rosieDataSet();
+                        SqlDataAdapter inventoryItemAdapter = new SqlDataAdapter(cmd);
+
+                        cmd.ExecuteNonQuery();  // Execute
+
+                        // Update information
+                        inventoryItemAdapter.Update(auntRosieDataset.inventory);
+
+                        connection.Close();
+
+                        // Refresh the listview
+                        RefreshIngredientsView(currentSelectedInventory);
+                        
+                        #endregion
+                    }
+                }
+                else
+                {
+                    #region ADD INVENTORY ITEM
+                    // SQL to insert product info
+                    string sqlInsertInventory = "INSERT INTO inventory (" +
+                        " inventoryDescription, inventoryTypeId, " +
+                        " inventoryQuantity, measurementId, " +
+                        " inventoryPrice) VALUES (" +
+                        " @inventoryDescription, @inventoryTypeId," +
+                        " @inventoryQuantity, @measurementId, " +
+                        " @inventoryPrice)";
+
+                    SqlCommand cmd = new SqlCommand(sqlInsertInventory, connection);
+                    // Declare dataset and adapter
+                    SqlDataAdapter insertInventoryAdapter = new SqlDataAdapter(cmd);
+                    auntRosieDataset = new aunt_rosieDataSet();
 
                     // Add the values
                     cmd.Parameters.AddWithValue("@inventoryDescription", txtInventoryName.Text);
@@ -104,23 +187,52 @@ namespace AuntRosiesBookkeeping.Views
                     cmd.Parameters.AddWithValue("@measurementId", cmbMeasurementScale.SelectedValue);
                     cmd.Parameters.AddWithValue("@inventoryPrice", Convert.ToDouble(txtPrice.Text));
 
-                    // Execute the query
+
+                    // Open connection
                     connection.Open();
-
-                    // Declare dataset and adapter
-                    auntRosieDataset = new aunt_rosieDataSet();
-                    SqlDataAdapter inventoryItemAdapter = new SqlDataAdapter(cmd);
-
-                    cmd.ExecuteNonQuery();  // Execute
+                    // Execute the query
+                    cmd.ExecuteNonQuery();
 
                     // Update information
-                    inventoryItemAdapter.Update(auntRosieDataset.inventory);
+                    insertInventoryAdapter.Update(auntRosieDataset.inventory);
 
+                    // Close the connection
                     connection.Close();
-
+                    #endregion
+                    DisableFields(false);   // Renable the fields
                     // Refresh the listview
-                    RefreshIngredientsView(currentSelectedInventory);
+                    RefreshIngredientsView(lstInventoryList.Items.Count);
                 }
+            }
+            else
+            {
+                // Display errors to the user
+                MessageBox.Show(errorMessages, "Invalid Input!", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        /// <summary>
+        /// Sets up form to add new product
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnAddProduct_Click(object sender, RoutedEventArgs e)
+        {
+            if (btnAddProduct.Content.ToString() == ADD_INVENTORY)
+            {
+                DisableFields(true);
+
+                // Empty the text boxes
+                txtInventoryName.Text = "";
+                txtPrice.Text = "";
+                txtQty.Text = "";
+                cmbMeasurementScale.SelectedIndex = 0;
+                cmbType.SelectedIndex = 0;
+            }
+            else
+            {
+                DisableFields(false);
+                RefreshIngredientsView(0);
             }
         }
 
@@ -137,9 +249,9 @@ namespace AuntRosiesBookkeeping.Views
             inventoryItemsViewTableAdapter = new aunt_rosieDataSetTableAdapters.inventoryItemsViewTableAdapter();
             inventoryItemsViewTableAdapter.Fill(auntRosieDataset.inventoryItemsView);
 
-            // Populate the listview
-            lstInventoryList.SelectedIndex = selectedRecord;  // Set the selected record
+            // Populate the listview            
             lstInventoryList.ItemsSource = auntRosieDataset.inventoryItemsView;
+            lstInventoryList.SelectedIndex = selectedRecord;  // Set the selected record
         }
 
         private void RefreshIngredientsInfo()
@@ -239,8 +351,62 @@ namespace AuntRosiesBookkeeping.Views
                 #endregion
             }
         }
+
+
+        /// <summary>
+        /// Disable fields and rename buttons depending on enabling or not
+        /// used for adding new inventory items
+        /// </summary>
+        /// <param name="disable"></param>
+        private void DisableFields(bool disable)
+        {
+            if(disable)
+            {
+                // Rename the buttons
+                btnAddProduct.Content = CANCEL;
+                btnSaveChanges.Content = ADD_INVENTORY;
+
+                // Enable the fields
+                btnRemoveProduct.IsEnabled = false;
+                lstInventoryList.IsEnabled = false;
+            }
+            else
+            {
+                // Rename the buttons
+                btnSaveChanges.Content = SAVE_CHANGES;
+                btnAddProduct.Content = ADD_INVENTORY;
+
+                // Enable the fields
+                btnRemoveProduct.IsEnabled = true;
+                lstInventoryList.IsEnabled = true;
+            }
+        }
+
+
         #endregion
 
+        private void btnRemoveProduct_Click(object sender, RoutedEventArgs e)
+        {
+            DataRowView inventoryRow = lstInventoryList.Items.GetItemAt(lstInventoryList.SelectedIndex) as DataRowView;
 
+            if (inventoryRow != null)
+            {
+                if (MessageBox.Show("Are you sure you want to delete the inventory item?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+                {
+                    int inventoryId = (int)inventoryRow["inventoryId"];
+
+                    string sqlRemoveIngredient = "DELETE FROM inventory " +
+                        "WHERE inventoryId='" + inventoryId + "'; " +
+                        "DELETE FROM recipe_inventory " +
+                        "WHERE inventoryId='" + inventoryId + "';";
+                    SqlCommand cmd = new SqlCommand(sqlRemoveIngredient, connection);
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+
+                    RefreshIngredientsView(0);
+                }
+            }
+        }
     }
 }

@@ -61,11 +61,11 @@
                 <TextBox Name="txtQty" Grid.Row="3" Grid.Column="1" Margin="5" PreviewTextInput="txtQty_PreviewTextInput" />
                 <Label Name="lblPrice" Grid.Row="4" Content="_Price" HorizontalContentAlignment="Right"/>
                 <TextBox Name="txtPrice" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="5"/>
-                <Button Name="btnSaveChanges" Content="_Save Changes" Grid.Row="5" Grid.ColumnSpan="3" Margin="5" Click="btnSaveChanges_Click"/>
+                <Button Name="btnSaveChanges" Content="Save Changes" Grid.Row="5" Grid.ColumnSpan="3" Margin="5" Click="btnSaveChanges_Click"/>
             </Grid>
         </GroupBox>
 
-        <Button Name="btnAddProduct" Content="_Add Inventory" Grid.Column="1" Grid.Row="3" Margin="5"/>
-        <Button Name="btnRemoveProduct" Content="_Remove Inventory" Grid.Column="2" Grid.Row="3" Margin="5"/>
+        <Button Name="btnAddProduct" Content="Add Inventory" Grid.Column="1" Grid.Row="3" Margin="5" Click="btnAddProduct_Click"/>
+        <Button Name="btnRemoveProduct" Content="Remove Inventory" Grid.Column="2" Grid.Row="3" Margin="5" Click="btnRemoveProduct_Click"/>
     </Grid>
 </UserControl>

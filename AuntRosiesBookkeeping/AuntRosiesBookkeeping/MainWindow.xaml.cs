@@ -27,6 +27,7 @@ namespace AuntRosiesBookkeeping
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
         /// <summary>

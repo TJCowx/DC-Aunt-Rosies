@@ -8,7 +8,7 @@
     xmlns:views="clr-namespace:AuntRosiesBookkeeping.Views"
     mc:Ignorable="d"
     Title="Aunt Rosie's Bookkeeping" MinHeight="496" MinWidth="696" Height="496" Width="696" Loaded="MainWindow_Loaded"
-        Background="WhiteSmoke"  >
+        Background="WhiteSmoke" Icon="pack://application:,,,/Resources/logo_icon.ico"  >
 
     <Window.Resources>
         <!-- FILES ITEMS VIEWS -->
